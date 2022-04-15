@@ -1,0 +1,71 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "**/.*",
+      "node_modules",
+      "pages",
+      "public",
+      "src",
+      "firebase.json",
+      "next-env.d.ts",
+      "next.config.js",
+      "package-lock.json",
+      "package.json",
+      "tsconfig.json",
+      "tsconfig.tsbuildinfo"
+    ],
+    "headers": [
+      {
+        "source": "/_next/static/**/*",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(js|css)",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          }
+        ]
+      },
+      {
+        "source": "{/,/404}",
+        "headers": [
+          {
+            "key": "Content-Security-Policy",
+            "value": "default-src 'none'; base-uri 'self'; child-src 'none'; connect-src https://api.emailjs.com/api/v1.0/email/send 'self'; font-src 'none'; form-action 'none'; img-src 'self' data: https://agustin-garcia.imgix.net/; media-src 'none'; object-src 'none'; style-src 'self'; script-src 'self'; block-all-mixed-content; upgrade-insecure-requests; manifest-src 'self';"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "deny"
+          }
+        ]
+      },
+      {
+        "source": "{/sitemap.xml,/robots.txt,/image.png,/agustin-garcia-cv.pdf}",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-store"
+          }
+        ]
+      },
+      {
+        "source": "{/android-chrome-192x192.png,/android-chrome-512x512.png,/apple-touch-icon.png,/favicon-16x16.png./favicon-32x32.png,/favicon.ico,/site.webmanifest}",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
+    ],
+    "cleanUrls": true
+  }
+}

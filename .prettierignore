@@ -1,0 +1,8 @@
+.DS_Store
+.git
+.next
+node_modules
+out
+public
+package-lock.json
+tsconfig.tsbuildinfo
