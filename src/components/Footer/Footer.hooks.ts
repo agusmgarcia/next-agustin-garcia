@@ -18,7 +18,7 @@ const socialLinks: {
     src: github.src,
     alt: "Github logo",
     title: "Github",
-    url: "https://github.com/agusss19",
+    url: "https://github.com/agusmgarcia",
   },
   {
     src: gmail.src,

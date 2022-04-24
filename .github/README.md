@@ -2,7 +2,7 @@
 
 The app is deployed here: [https://agustin-garcia.web.app/](https://agustin-garcia.web.app/)
 
-[![Deploy to firebase](https://github.com/agusss19/next-agustin-garcia/actions/workflows/deploy-site.yml/badge.svg)](https://github.com/agusss19/next-agustin-garcia/actions/workflows/deploy-site.yml)
+[![Deploy to firebase](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/deploy-site.yml/badge.svg)](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/deploy-site.yml)
 
 This is a simple web application to register money transactions grouped by categories.
 
@@ -11,7 +11,7 @@ This is a simple web application to register money transactions grouped by categ
 Clone the repository in your local machine
 
 ```bash
-git clone https://github.com/agusss19/next-agustin-garcia.git
+git clone https://github.com/agusmgarcia/next-agustin-garcia.git
 ```
 
 Install dependencies

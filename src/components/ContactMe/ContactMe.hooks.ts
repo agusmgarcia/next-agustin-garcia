@@ -1,4 +1,4 @@
-import { useForm, YupValidator } from "@agusss19/form";
+import { useForm, YupValidator } from "@agusmgarcia/form";
 import { toast, ToastOptions } from "react-toastify";
 import * as yup from "yup";
 

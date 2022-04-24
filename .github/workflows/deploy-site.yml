@@ -19,7 +19,7 @@ jobs:
           node-version: "15.x"
           cache: npm
           registry-url: "https://npm.pkg.github.com"
-          scope: "@agusss19"
+          scope: "@agusmgarcia"
 
       - run: npm install
         env:

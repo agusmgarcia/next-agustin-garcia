@@ -1,5 +1,5 @@
 {
-  "name": "@agusss19/agustin-garcia",
+  "name": "@agusmgarcia/agustin-garcia",
   "version": "1.0.0",
   "private": true,
   "description": "I'm a software engineer who loves creating and architecting new apps using the best design patterns. My favourite languages are C#, Typescript and Golang.",
@@ -10,7 +10,7 @@
     "format": "next lint -- --fix && prettier --write ."
   },
   "dependencies": {
-    "@agusss19/form": "1.0.0",
+    "@agusmgarcia/form": "1.0.1",
     "@fortawesome/fontawesome-svg-core": "1.2.35",
     "@fortawesome/free-solid-svg-icons": "5.15.3",
     "@fortawesome/react-fontawesome": "0.1.14",
