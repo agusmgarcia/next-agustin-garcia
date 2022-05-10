@@ -47,7 +47,7 @@ export default function ContactMe() {
           disabled={isSubmitting}
         />
         <input
-          type="phone"
+          type="tel"
           name="phoneNumber"
           aria-label="The person's phone numebr"
           placeholder="Phone Number"

@@ -10,7 +10,6 @@
     "format": "next lint -- --fix && prettier --write ."
   },
   "dependencies": {
-    "@agusmgarcia/form": "1.0.1",
     "@fortawesome/fontawesome-svg-core": "1.2.35",
     "@fortawesome/free-solid-svg-icons": "5.15.3",
     "@fortawesome/react-fontawesome": "0.1.14",
@@ -28,7 +27,6 @@
     "@types/react": "17.0.39",
     "@types/react-imgix": "9.0.5",
     "@types/smoothscroll-polyfill": "0.3.1",
-    "@types/yup": "0.29.9",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.3",
     "eslint-plugin-simple-import-sort": "7.0.0",
