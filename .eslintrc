@@ -6,11 +6,17 @@
   "env": {
     "es6": true
   },
-  "plugins": ["simple-import-sort", "unused-imports", "import"],
+  "plugins": [
+    "simple-import-sort",
+    "unused-imports",
+    "import",
+    "sort-keys-fix"
+  ],
   "rules": {
     "jsx-a11y/alt-text": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
+    "sort-keys-fix/sort-keys-fix": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",

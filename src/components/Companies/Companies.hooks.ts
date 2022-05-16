@@ -14,50 +14,50 @@ const companies: {
   url: string;
 }[] = [
   {
-    src: mgmresorts.src,
     alt: "MGM Resorts logo",
+    src: mgmresorts.src,
     title: "MGM Resorts",
     url: "https://www.mgmresorts.com/",
   },
   {
-    src: fullstacklabs.src,
     alt: "Fullstack Labs logo",
+    src: fullstacklabs.src,
     title: "Fullstack Labs",
     url: "https://www.fullstacklabs.co/",
   },
   {
-    src: supremegolf.src,
     alt: "Supreme Golf logo",
+    src: supremegolf.src,
     title: "Supreme Golf",
     url: "https://supremegolf.com/",
   },
   {
-    src: uruit.src,
     alt: "UruIT logo",
+    src: uruit.src,
     title: "UruIT",
     url: "https://uruit.com/",
   },
   {
-    src: cityparking.src,
     alt: "City Parking logo",
+    src: cityparking.src,
     title: "City Parking",
     url: "https://city-parking.com/",
   },
   {
-    src: novit.src,
     alt: "Novit logo",
+    src: novit.src,
     title: "Novit",
     url: "https://www.novit.com.ar/",
   },
   {
-    src: contaduria.src,
     alt: "Contaduría General de la Provincia de Buenos Aires logo",
+    src: contaduria.src,
     title: "Contaduría General de la Provincia de Buenos Aires",
     url: "https://gba.gob.ar/",
   },
   {
-    src: facultad.src,
     alt: "Facultad de informática UNLP logo",
+    src: facultad.src,
     title: "Facultad de informática UNLP",
     url: "https://www.info.unlp.edu.ar/",
   },

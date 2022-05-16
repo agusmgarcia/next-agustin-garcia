@@ -38,7 +38,7 @@ export default function useNavigationBar(props: NavigationBarProps) {
         const scrollY = y - navBarRef.current.clientHeight + window.pageYOffset;
 
         setMenuMobileOpen(false);
-        window.scrollTo({ left: scrollX, top: scrollY, behavior: "smooth" });
+        window.scrollTo({ behavior: "smooth", left: scrollX, top: scrollY });
       };
     },
     [navBarRef, setMenuMobileOpen]
@@ -73,5 +73,5 @@ export default function useNavigationBar(props: NavigationBarProps) {
     return () => window.removeEventListener("click", handleClick);
   }, [isMenuMobileOpen, setMenuMobileOpen]);
 
-  return { navBarRef, handleClick, isMenuMobileOpen, toogleMenuMobile };
+  return { handleClick, isMenuMobileOpen, navBarRef, toogleMenuMobile };
 }

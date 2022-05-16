@@ -9,20 +9,20 @@ const socialLinks: {
   url: string;
 }[] = [
   {
-    src: linkedin.src,
     alt: "Linkedin logo",
+    src: linkedin.src,
     title: "Linkedin",
     url: "https://www.linkedin.com/in/agusss19",
   },
   {
-    src: github.src,
     alt: "Github logo",
+    src: github.src,
     title: "Github",
     url: "https://github.com/agusmgarcia",
   },
   {
-    src: gmail.src,
     alt: "Gmail logo",
+    src: gmail.src,
     title: "Gmail",
     url: "mailto:agusss.garcia19@gmail.com",
   },

@@ -28,23 +28,23 @@ function ImageImgix({
 
   const imageProps = useMemo<SharedImigixAndSourceProps>(() => {
     const result = {
-      src: "https://agustin-garcia.web.app/",
-      className,
-      sizes,
-      disableSrcSet,
-      imgixParams: { auto: "compress" },
       attributeConfig: {
+        sizes: "data-sizes",
         src: "data-src",
         srcSet: "data-srcset",
-        sizes: "data-sizes",
       },
+      className,
+      disableSrcSet,
       htmlAttributes: {
-        src: blankImage,
         alt,
         loading,
-        title,
         onClick,
+        src: blankImage,
+        title,
       },
+      imgixParams: { auto: "compress" },
+      sizes,
+      src: "https://agustin-garcia.web.app/",
     };
 
     if (!scriptLoaded) return result;
@@ -92,13 +92,13 @@ function ImageSimple({
     >
   >(() => {
     const result = {
-      src: blankImage,
-      className,
-      sizes,
       alt,
+      className,
       loading,
-      title,
       onClick,
+      sizes,
+      src: blankImage,
+      title,
     };
 
     if (!scriptLoaded) return result;

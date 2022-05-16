@@ -16,10 +16,10 @@ type FormType = {
 
 const initialValues: FormType = {
   companyName: "",
-  name: "",
-  emailAddress: "",
-  phoneNumber: "",
   details: "",
+  emailAddress: "",
+  name: "",
+  phoneNumber: "",
 };
 
 export default function useContactMe() {
@@ -40,12 +40,12 @@ export default function useContactMe() {
       event.preventDefault();
 
       const toastOptions: ToastOptions = {
-        position: "bottom-center",
         autoClose: 2000,
-        hideProgressBar: false,
         closeOnClick: true,
-        pauseOnHover: false,
         draggable: true,
+        hideProgressBar: false,
+        pauseOnHover: false,
+        position: "bottom-center",
         progress: undefined,
       };
 
@@ -54,14 +54,14 @@ export default function useContactMe() {
         const response = await fetch(
           "https://api.emailjs.com/api/v1.0/email/send",
           {
-            method: "POST",
             body: JSON.stringify({
               service_id: "service_vmkbm19",
               template_id: "template_pav1yqi",
-              user_id: "user_XKPaTWupTGOTu5zPzfiiF",
               template_params: values,
+              user_id: "user_XKPaTWupTGOTu5zPzfiiF",
             }),
             headers: { "Content-Type": "application/json" },
+            method: "POST",
           }
         );
 
@@ -91,8 +91,8 @@ export default function useContactMe() {
 
   return {
     form: values,
-    isSubmitting,
     handleChange,
     handleSubmit,
+    isSubmitting,
   };
 }
