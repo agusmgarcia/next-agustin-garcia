@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.0.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.0.2)
+
+> 27 June 2022
+
+- update workflows using the new mode
+- update agustin-garcia-cv.pdf file
+- add eslint rule to sort properties
+- stop using @agusmgarcia/form lib
+
 ## [v1.0.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.0.1)
 
 > 9 May 2022
