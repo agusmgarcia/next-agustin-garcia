@@ -1,0 +1,17 @@
+.b1 {
+  max-width: calc(100% - 4rem);
+  margin: 0 auto;
+
+  @media (min-width: 1264px) {
+    max-width: 1200px;
+  }
+}
+
+.b2 {
+  max-width: calc(100% - 4rem);
+  margin: 0 auto;
+
+  @media (min-width: 864px) {
+    max-width: 800px;
+  }
+}
