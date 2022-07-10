@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.1)
+
+> 10 July 2022
+
+- whitelist font source
+
 ## [v1.1.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.0)
 
 > 10 July 2022
