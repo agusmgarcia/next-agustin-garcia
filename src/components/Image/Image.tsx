@@ -1,11 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
-import { useEffect, useMemo, useState } from "react";
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
+
+import { useMemo } from "react";
 import Imgix, { SharedImigixAndSourceProps } from "react-imgix";
 
 import ImageProps from "./Image.types";
-
-const blankImage =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1' %3E%3C/svg%3E";
 
 export default function Image(props: ImageProps) {
   if (process.env.NODE_ENV === "production") return ImageImgix(props);
@@ -13,108 +12,101 @@ export default function Image(props: ImageProps) {
 }
 
 function ImageImgix({
-  src,
   className,
-  sizes,
-  alt,
-  disableSrcSet,
+  height,
   loading,
-  onClick,
-  title,
+  sizes,
+  src,
+  width,
+  ...props
 }: ImageProps) {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-
-  useEffect(() => setScriptLoaded(true), []);
-
   const imageProps = useMemo<SharedImigixAndSourceProps>(() => {
-    const result = {
+    if (src === undefined || isSVG(src))
+      return {
+        className,
+        disableSrcSet: true,
+        height: height !== undefined ? +height : height,
+        htmlAttributes: { loading },
+        sizes: "auto",
+        src: src
+          ? `${src.replace(
+              "/_next/static/media/",
+              "https://agustin-garcia.imgix.net/"
+            )}`
+          : "",
+        width: width !== undefined ? +width : width,
+      };
+
+    if (loading === "eager")
+      return {
+        className,
+        height: height !== undefined ? +height : height,
+        htmlAttributes: { loading },
+        imgixParams: { auto: "compress" },
+        sizes,
+        src: `${src.replace(
+          "/_next/static/media/",
+          "https://agustin-garcia.imgix.net/"
+        )}`,
+        width: width !== undefined ? +width : width,
+      };
+
+    return {
       attributeConfig: {
         sizes: "data-sizes",
         src: "data-src",
         srcSet: "data-srcset",
       },
-      className,
-      disableSrcSet,
+      className: `lazyload ${className ?? ""}`,
+      height: height !== undefined ? +height : height,
       htmlAttributes: {
-        alt,
         loading,
-        onClick,
-        src: blankImage,
-        title,
+        src: `${src}?auto=compress&px=16&blur=200&fm=webp`,
       },
       imgixParams: { auto: "compress" },
       sizes,
-      src: "https://agustin-garcia.web.app/",
+      src: `${src.replace(
+        "/_next/static/media/",
+        "https://agustin-garcia.imgix.net/"
+      )}`,
+      width: width !== undefined ? +width : width,
     };
+  }, [className, height, loading, sizes, src, width]);
 
-    if (!scriptLoaded) return result;
-
-    result.src = `${src.replace(
-      "/_next/static/media/",
-      "https://agustin-garcia.imgix.net/"
-    )}`;
-    result.className = `lazyload ${className ?? ""}`;
-    result.htmlAttributes.src = `${result.src}?auto=compress&px=16&blur=200&fm=webp`;
-
-    return result;
-  }, [
-    scriptLoaded,
-    src,
-    className,
-    sizes,
-    alt,
-    disableSrcSet,
-    loading,
-    onClick,
-    title,
-  ]);
-
-  return <Imgix {...imageProps} />;
+  return (
+    <Imgix
+      {...imageProps}
+      // @ts-ignore
+      htmlAttributes={{ ...imageProps.htmlAttributes, ...props }}
+    />
+  );
 }
 
 function ImageSimple({
-  src,
   className,
-  sizes,
-  alt,
   loading,
-  onClick,
-  title,
+  sizes,
+  src,
+  srcSet,
+  ...props
 }: ImageProps) {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
+  const imageProps = useMemo(() => {
+    if (loading === "eager" || src === undefined || isSVG(src))
+      return { className, loading, sizes, src, srcSet };
 
-  useEffect(() => setScriptLoaded(true), []);
-
-  const imageProps = useMemo<
-    React.DetailedHTMLProps<
-      React.ImgHTMLAttributes<HTMLImageElement>,
-      HTMLImageElement
-    >
-  >(() => {
-    const result = {
-      alt,
-      className,
-      loading,
-      onClick,
-      sizes,
-      src: blankImage,
-      title,
+    return {
+      className: `lazyload ${className}`,
+      ["data-sizes"]: sizes,
+      ["data-src"]: src,
+      ["data-srcset"]: srcSet,
+      src: `/_next/image?url=${encodeURIComponent(src)}&w=8&q=70`,
     };
+  }, [loading, src, className, sizes, srcSet]);
 
-    if (!scriptLoaded) return result;
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img {...imageProps} {...props} />;
+}
 
-    // Don't use image api for svg files.
-    if (src.split(".").pop() === "svg") {
-      result.src = src;
-      return result;
-    }
-
-    result.src = `_next/image?url=${encodeURIComponent(src)}&w=8&q=70`;
-    result.className = `lazyload ${className ?? ""}`;
-    (result as any)["data-src"] = src;
-
-    return result;
-  }, [scriptLoaded, src, className, sizes, alt, loading, onClick, title]);
-
-  return <img {...imageProps} />;
+function isSVG(src: string): boolean {
+  return src.split(".").pop() === "svg";
 }
