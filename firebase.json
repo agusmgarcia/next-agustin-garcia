@@ -39,7 +39,7 @@
         "headers": [
           {
             "key": "Content-Security-Policy",
-            "value": "default-src 'none'; base-uri 'self'; child-src 'none'; connect-src https://api.emailjs.com/api/v1.0/email/send 'self'; font-src 'none'; form-action 'none'; img-src 'self' data: https://agustin-garcia.imgix.net/; media-src 'none'; object-src 'none'; style-src 'self'; script-src 'self'; block-all-mixed-content; upgrade-insecure-requests; manifest-src 'self';"
+            "value": "default-src 'none'; base-uri 'self'; child-src 'none'; connect-src https://api.emailjs.com/api/v1.0/email/send 'self'; font-src 'self'; form-action 'none'; img-src 'self' data: https://agustin-garcia.imgix.net/; media-src 'none'; object-src 'none'; style-src 'self'; script-src 'self'; block-all-mixed-content; upgrade-insecure-requests; manifest-src 'self';"
           },
           {
             "key": "X-Frame-Options",
