@@ -1,0 +1,23 @@
+.section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  .subtitle {
+    padding-top: calc(6rem + 2rem);
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgb(var(--interface-color));
+  }
+
+  .children {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

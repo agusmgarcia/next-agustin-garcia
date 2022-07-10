@@ -1,0 +1,48 @@
+.contactMe {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: auto auto;
+  }
+
+  .field {
+    background: none;
+    border: 2px solid rgb(var(--white-color));
+    border-radius: 1rem;
+    padding: 1rem;
+    color: rgb(var(--font-color));
+    font-size: 1rem;
+    line-height: 1.25;
+    font-family: Roboto;
+    font-weight: 500;
+    transition: transform var(--transition-duration),
+      box-shadow var(--transition-duration);
+    will-change: transform, box-shadow;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    &:not(:disabled) {
+      &:focus {
+        transform: scale(1.05);
+        box-shadow: 0 0 5px 5px rgb(var(--interface-color));
+      }
+    }
+
+    &.details {
+      @media (min-width: 768px) {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
+
+  .button {
+    @media (min-width: 768px) {
+      grid-column: 1 / span 2;
+    }
+  }
+}

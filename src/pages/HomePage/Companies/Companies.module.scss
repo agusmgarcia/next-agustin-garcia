@@ -1,0 +1,50 @@
+.companies {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  gap: 0.5rem;
+
+  @media (min-width: 768px) {
+    gap: 1rem;
+    grid-template-columns: auto auto;
+  }
+
+  .link {
+    background-color: white;
+    padding: 0.5rem;
+    border: 2px solid rgb(var(--interface-color));
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-duration),
+      box-shadow var(--transition-duration);
+    will-change: transform, box-shadow;
+
+    @media (min-width: 768px) {
+      padding: 1rem;
+    }
+
+    &:hover,
+    &:focus {
+      transform: scale(1.05);
+      box-shadow: 0 0 5px 5px rgb(var(--interface-color));
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    .image {
+      width: 14rem;
+      height: 4rem;
+      object-fit: contain;
+
+      @media (min-width: 768px) {
+        width: 18rem;
+        height: 5rem;
+      }
+    }
+  }
+}
