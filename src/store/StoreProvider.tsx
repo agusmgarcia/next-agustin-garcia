@@ -4,16 +4,21 @@ import {
   useContextSelector,
 } from "use-context-selector";
 
-import type { Store } from "./store.types";
+import { initialState as homeContent } from "./useHomeContent";
+import { initialState as notification } from "./useNotification";
 
-const initialStore: Store = { notification: undefined };
+const initialStore = { homeContent, notification };
 const StoreContext = createContextSelector(initialStore);
 
-export function useStore<TResult>(selector: (_store: Store) => TResult) {
+export function useStore<TResult>(
+  selector: (_store: typeof initialStore) => TResult
+) {
   return useContextSelector(StoreContext, selector);
 }
 
-const initialSetStore: React.Dispatch<React.SetStateAction<Store>> = () => {};
+const initialSetStore: React.Dispatch<
+  React.SetStateAction<typeof initialStore>
+> = () => {};
 const SetStoreContext = createContext(initialSetStore);
 
 export function useSetStore() {

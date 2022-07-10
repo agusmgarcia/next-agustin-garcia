@@ -2,16 +2,20 @@ import { useCallback } from "react";
 
 import { useSetStore, useStore } from "./StoreProvider";
 
-export type Notification = {
-  message: string;
-  resolve: () => void;
-  type: "success" | "error";
-};
+export type Notification =
+  | {
+      message: string;
+      resolve: () => void;
+      type: "success" | "error";
+    }
+  | undefined;
+
+export const initialState: Notification = undefined;
 
 export default function useNotification() {
-  const setStore = useSetStore();
   const notification = useStore((store) => store.notification);
 
+  const setStore = useSetStore();
   const notify = useCallback(
     (type: "success" | "error", message: string) =>
       new Promise<void>((resolve) =>
