@@ -35,7 +35,7 @@
         ]
       },
       {
-        "source": "{/,/404}",
+        "source": "/",
         "headers": [
           {
             "key": "Content-Security-Policy",
