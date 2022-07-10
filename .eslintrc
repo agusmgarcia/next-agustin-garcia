@@ -1,25 +1,26 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next/core-web-vitals", "plugin:sort/recommended"],
   "parserOptions": {
     "sourceType": "module"
   },
   "env": {
     "es6": true
   },
-  "plugins": [
-    "simple-import-sort",
-    "unused-imports",
-    "import",
-    "sort-keys-fix"
-  ],
+  "plugins": ["import", "simple-import-sort", "sort", "unused-imports"],
   "rules": {
     "jsx-a11y/alt-text": "off",
-    "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "sort-keys-fix/sort-keys-fix": "error",
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "off",
+    "sort/destructuring-properties": "error",
+    "sort/exports": "error",
+    "sort/export-members": "error",
+    "sort/imports": "off",
+    "sort/import-members": "error",
+    "sort/object-properties": "error",
+    "sort/type-properties": "error",
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": [
       "error",
