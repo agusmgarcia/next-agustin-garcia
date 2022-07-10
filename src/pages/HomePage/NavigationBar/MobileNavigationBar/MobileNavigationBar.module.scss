@@ -94,7 +94,7 @@
       will-change: transform;
 
       .separator {
-        transform: scaleX(0%);
+        transform: scaleX(0);
         border-top: 1px solid rgb(255, 255, 255);
         transition: transform var(--transition-duration)
           var(--transition-duration);
@@ -106,7 +106,7 @@
         background-color: rgba(var(--interface-color), 0.9);
 
         .separator {
-          transform: scaleX(100%);
+          transform: scaleX(1);
         }
       }
 
