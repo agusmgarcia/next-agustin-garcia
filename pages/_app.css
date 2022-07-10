@@ -1,9 +1,19 @@
 * {
-  padding: 0;
   margin: 0;
-  font-family: system-ui;
+  padding: 0;
 }
 
-body {
-  background-color: rgb(32, 35, 40);
+:root {
+  --background-color: 32, 35, 40;
+  --interface-color: 102, 51, 153;
+  --font-color: 255, 255, 255;
+  --white-color: 255, 255, 255;
+  --transition-duration: 0.16s;
+  --scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(var(--background-color));
+  -webkit-font-smoothing: antialiased;
 }
