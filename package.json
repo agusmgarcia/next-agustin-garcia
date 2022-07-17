@@ -2,7 +2,7 @@
   "name": "@agusmgarcia/agustin-garcia",
   "version": "1.1.2",
   "private": true,
-  "description": "I'm a software engineer who loves creating and architecting new apps using the best design patterns. My favourite languages are C#, Typescript and Golang.",
+  "description": "Personal web site to show the technologies I have worked for and the technologies I use",
   "scripts": {
     "start": "next dev",
     "build": "rimraf .next out && next build && next export && rimraf out/assets",

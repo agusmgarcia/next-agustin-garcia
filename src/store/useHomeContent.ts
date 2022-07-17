@@ -100,20 +100,20 @@ export const initialState = {
       {
         href: "https://gba.gob.ar/",
         image: {
-          alt: "Contaduría General de la Provincia de Buenos Aires logo",
+          alt: "General Accounting Office of the Province of Buenos Aires logo",
           src: contaduria.src,
         },
         target: "_blank",
-        title: "Contaduría General de la Provincia de Buenos Aires",
+        title: "General Accounting Office of the Province of Buenos Aires",
       },
       {
         href: "https://www.info.unlp.edu.ar/",
         image: {
-          alt: "Facultad de informática UNLP logo",
+          alt: "Faculty of computer science UNLP logo",
           src: facultad.src,
         },
         target: "_blank",
-        title: "Facultad de informática UNLP",
+        title: "Faculty of computer science UNLP",
       },
     ],
     subtitle: "Companies",
