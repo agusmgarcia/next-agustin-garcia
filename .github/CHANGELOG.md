@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.3](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.3)
+
+> 17 July 2022
+
+- pick version from the environment variables
+- **README**: update status badge and CI/CD instructions
+- translate some labels to english
+- **NavigationBar**: start targetting CV link from GitHub
+- **NavigationBar**: close menu on image click
+
 ## [v1.1.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.2)
 
 > 10 July 2022
