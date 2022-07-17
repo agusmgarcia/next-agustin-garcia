@@ -1,5 +1,3 @@
-import packageJSON from "package.json";
-
 import { Box, Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 import { useMediaQuery, Viewports } from "#src/utils";
@@ -65,7 +63,7 @@ export default function Footer(props: FooterProps) {
           </div>
 
           <Typography className={styles.version}>
-            v{packageJSON.version}
+            v{process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.0"}
           </Typography>
         </div>
       </Box>

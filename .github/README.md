@@ -29,40 +29,22 @@ npm start
 
 ## CI/CD
 
-Every time a new tag is created with the pattern **v**_x.x.x_, the code will be built and deployed to the firebase app service automatically. Let's assume the new version is _v1.0.2_.
+Every time a new tag is created with the pattern **v**_x.x.x_, the code will be built and deployed to the firebase app service automatically.
 
-Update the version in the [package.json](../package.json). Do not prepend the **v** in this case. Just set the numbers:
-
-```jsonc
-{
-  ...
-  // Example:
-  "version": "1.0.2",
-  ...
-}
-```
-
-and run the install method to regenerate the [package-lock.json](../package-lock.json) file:
+Create and deploy a new tag using the following commands:
 
 ```bash
-npm i
+git tag vx.x.x
+git push origin vx.x.x
 ```
 
-Then, create a new tag using this command.
-
-```bash
-# Example
-git tag v1.0.2
-git push --tags
-```
-
-> The last command will trigger a GitHub action to automatically build and deploy the application.
+> Replace x.x.x by the current version number.
 
 ## Technologies
 
 Some of the technologies used to build this project were:
 
-- NextJS
-- React
-- Firebase
-- Imgix
+- [NextJS](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Firebase](https://firebase.google.com/)
+- [Imgix](https://imgix.com/)

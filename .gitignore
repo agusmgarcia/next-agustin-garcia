@@ -1,5 +1,6 @@
 .DS_Store
 .next
+.env.local
 node_modules
 out
 public/sw.js
