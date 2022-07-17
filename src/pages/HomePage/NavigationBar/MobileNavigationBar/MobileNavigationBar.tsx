@@ -45,6 +45,7 @@ function Bar({
           <Link
             href={`#${homeContent.aboutMe.id}`}
             className={`${styles.link} ${styles.aboutMe}`}
+            onClick={() => setOpen(false)}
           >
             <Image
               src={homeContent.navigationBar.aboutMe.image.src}
@@ -63,7 +64,6 @@ function Bar({
 
           {/* TOOGLER */}
           <button
-            type="button"
             className={styles.toogler}
             title={homeContent.navigationBar.toogler.title}
             onClick={() => setOpen((prev) => !prev)}
