@@ -48,7 +48,7 @@
         ]
       },
       {
-        "source": "{/sitemap.xml,/robots.txt,/image.png,/agustin-garcia-cv.pdf}",
+        "source": "{/sitemap.xml,/robots.txt,/image.png,/**/*.pdf}",
         "headers": [
           {
             "key": "Cache-Control",

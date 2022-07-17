@@ -191,7 +191,7 @@ export const initialState = {
     contactMe: { text: "Contact Me" },
     downloadCV: {
       download: "agustin-garcia-cv.pdf",
-      href: "/agustin-garcia-cv.pdf",
+      href: "https://github.com/agusmgarcia/tex-cv/raw/master/main.english.pdf",
       text: "Download CV",
     },
     name: "Agustin Garcia",
