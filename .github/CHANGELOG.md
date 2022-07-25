@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.5)
+
+> 25 July 2022
+
+- **MobileNavigationBar**: adjust transition timing delay
+
 ## [v1.1.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.4)
 
 > 25 July 2022
