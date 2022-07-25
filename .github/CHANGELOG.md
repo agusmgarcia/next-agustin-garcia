@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.1.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.4)
+
+> 25 July 2022
+
+- adjust transition timing function
+
 ## [v1.1.3](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.3)
 
 > 17 July 2022
