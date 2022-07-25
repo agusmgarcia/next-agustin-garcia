@@ -18,7 +18,8 @@
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    transition: transform var(--transition-duration);
+    transition: transform var(--transition-duration)
+      var(--transition-timing-function);
     will-change: transform;
 
     &:hover,

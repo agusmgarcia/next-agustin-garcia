@@ -12,7 +12,8 @@
     gap: 1rem;
 
     .link {
-      transition: transform var(--transition-duration);
+      transition: transform var(--transition-duration)
+        var(--transition-timing-function);
       will-change: transform;
 
       &:hover,

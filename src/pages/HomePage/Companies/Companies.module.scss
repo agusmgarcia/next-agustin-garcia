@@ -18,8 +18,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform var(--transition-duration),
-      box-shadow var(--transition-duration);
+    transition: transform var(--transition-duration)
+        var(--transition-timing-function),
+      box-shadow var(--transition-duration) var(--transition-timing-function);
     will-change: transform, box-shadow;
 
     @media (min-width: 768px) {

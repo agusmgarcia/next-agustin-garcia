@@ -18,8 +18,9 @@
     line-height: 1.25;
     font-family: Roboto;
     font-weight: 500;
-    transition: transform var(--transition-duration),
-      box-shadow var(--transition-duration);
+    transition: transform var(--transition-duration)
+        var(--transition-timing-function),
+      box-shadow var(--transition-duration) var(--transition-timing-function);
     will-change: transform, box-shadow;
 
     &:disabled {

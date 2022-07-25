@@ -56,7 +56,8 @@
 
         .link {
           filter: grayscale(1);
-          transition: transform var(--transition-duration);
+          transition: transform var(--transition-duration)
+            var(--transition-timing-function);
           will-change: transform;
 
           &:hover,

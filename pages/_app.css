@@ -9,6 +9,7 @@
   --font-color: 255, 255, 255;
   --white-color: 255, 255, 255;
   --transition-duration: 0.16s;
+  --transition-timing-function: ease-out;
   --scroll-behavior: smooth;
 }
 

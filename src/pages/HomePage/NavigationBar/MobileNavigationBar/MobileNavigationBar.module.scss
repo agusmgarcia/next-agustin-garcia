@@ -2,7 +2,8 @@
   width: 100%;
 
   .link {
-    transition: transform var(--transition-duration);
+    transition: transform var(--transition-duration)
+      var(--transition-timing-function);
     will-change: transform;
 
     &:hover,
@@ -22,7 +23,8 @@
       position: relative;
       z-index: 3;
       background-color: rgba(var(--interface-color), 0.5);
-      transition: background-color var(--transition-duration);
+      transition: background-color var(--transition-duration)
+        var(--transition-timing-function);
       will-change: background-color;
 
       &.open {
@@ -61,7 +63,8 @@
           background: none;
           border: 0;
           padding: 0 0.5rem;
-          transition: transform var(--transition-duration);
+          transition: transform var(--transition-duration)
+            var(--transition-timing-function);
           will-change: transform;
 
           &:hover,
@@ -86,8 +89,10 @@
       right: 0;
       z-index: 2;
       background-color: rgba(var(--interface-color), 0.5);
-      transition: transform var(--transition-duration),
-        background-color var(--transition-duration);
+      transition: transform var(--transition-duration)
+          var(--transition-timing-function),
+        background-color var(--transition-duration)
+          var(--transition-timing-function);
       transform: translateY(-150%);
       border-bottom-left-radius: 2rem;
       border-bottom-right-radius: 2rem;
@@ -97,7 +102,7 @@
         transform: scaleX(0);
         border-top: 1px solid rgb(255, 255, 255);
         transition: transform var(--transition-duration)
-          var(--transition-duration);
+          var(--transition-timing-function);
         will-change: transform;
       }
 
@@ -146,13 +151,17 @@
       left: 0;
       right: 0;
       bottom: 0;
-      transition: transform var(--transition-duration);
+      transition: transform var(--transition-duration)
+          var(--transition-timing-function),
+        opacity var(--transition-duration) var(--transition-timing-function);
       transform: translateY(-100%);
-      will-change: transform;
-      background-color: rgba(0, 0, 0, 0.75);
+      will-change: transform, opacity;
+      background-color: rgb(0, 0, 0);
+      opacity: 0;
 
       &.open {
         transform: translateY(0);
+        opacity: 0.75;
       }
     }
   }
