@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.2.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.0)
+
+> 13 August 2022
+
+- **store**: start using zustand
+- **Footer**: remove text-align property
+
 ## [v1.1.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.5)
 
 > 25 July 2022
