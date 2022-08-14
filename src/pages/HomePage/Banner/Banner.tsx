@@ -13,7 +13,7 @@ export default function Banner(props: BannerProps) {
         src={homeContent.banner.src}
         className={styles.image}
         alt={homeContent.banner.alt}
-        loading="lazy"
+        loading="eager"
         sizes="auto"
       />
     </div>

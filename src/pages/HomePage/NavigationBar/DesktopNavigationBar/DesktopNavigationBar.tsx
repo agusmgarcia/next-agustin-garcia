@@ -19,7 +19,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
             src={homeContent.navigationBar.aboutMe.image.src}
             className={styles.image}
             alt={homeContent.navigationBar.aboutMe.image.alt}
-            loading="lazy"
+            loading="eager"
             width={48}
             height={48}
           />

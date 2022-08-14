@@ -51,7 +51,7 @@ function Bar({
               src={homeContent.navigationBar.aboutMe.image.src}
               className={styles.image}
               alt={homeContent.navigationBar.aboutMe.image.alt}
-              loading="lazy"
+              loading="eager"
               width={40}
               height={40}
             />

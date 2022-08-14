@@ -17,7 +17,7 @@ export default function AboutMe(props: AboutMeProps) {
           src={homeContent.aboutMe.image.src}
           className={styles.image}
           alt={homeContent.aboutMe.image.alt}
-          loading="lazy"
+          loading="eager"
           width={desktop ? 292 : 224}
           height={desktop ? 292 : 224}
         />
