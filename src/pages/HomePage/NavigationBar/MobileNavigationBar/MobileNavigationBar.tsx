@@ -38,7 +38,7 @@ function Bar({
   const { homeContent } = useHomeContent();
 
   return (
-    <div className={`${styles.bar} ${isOpen ? styles.open : ""}`}>
+    <div className={`${styles.bar} ${isOpen ? styles.open : undefined}`}>
       <Box variant="1200px">
         <div className={styles.links}>
           {/* ABOUT ME */}
@@ -90,7 +90,7 @@ function Body({
   const { homeContent } = useHomeContent();
 
   return (
-    <div className={`${styles.body} ${isOpen ? styles.open : ""}`}>
+    <div className={`${styles.body} ${isOpen ? styles.open : undefined}`}>
       <Box variant="1200px">
         <div className={styles.separator} />
         <div className={styles.links}>
@@ -147,7 +147,7 @@ const Screen = React.forwardRef<HTMLDivElement, { isOpen: boolean }>(
     return (
       <div
         ref={ref}
-        className={`${styles.screen} ${isOpen ? styles.open : ""}`}
+        className={`${styles.screen} ${isOpen ? styles.open : undefined}`}
       />
     );
   }

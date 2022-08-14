@@ -57,7 +57,7 @@ function ImageImgix({
         src: "data-src",
         srcSet: "data-srcset",
       },
-      className: `lazyload ${className ?? ""}`,
+      className: `lazyload ${className}`,
       height: height !== undefined ? +height : height,
       htmlAttributes: {
         loading,
