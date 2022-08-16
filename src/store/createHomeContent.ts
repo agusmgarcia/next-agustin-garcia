@@ -202,7 +202,10 @@ const createHomeContent: StateCreator<
       },
       name: "Agustin Garcia",
       technologies: { text: "Technologies" },
-      toogler: { title: "Open the menu to access all the links" },
+      toogler: {
+        closed: { title: "Open the menu to access all the links" },
+        open: { title: "Close the menu" },
+      },
     },
     technologies: {
       id: "technologies",

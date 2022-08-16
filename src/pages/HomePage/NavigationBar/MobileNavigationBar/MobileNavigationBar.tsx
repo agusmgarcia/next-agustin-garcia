@@ -65,7 +65,11 @@ function Bar({
           {/* TOOGLER */}
           <button
             className={styles.toogler}
-            title={homeContent.navigationBar.toogler.title}
+            title={
+              isOpen
+                ? homeContent.navigationBar.toogler.open.title
+                : homeContent.navigationBar.toogler.closed.title
+            }
             onClick={() => setOpen((prev) => !prev)}
           >
             {isOpen ? (

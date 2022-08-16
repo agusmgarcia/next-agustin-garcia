@@ -53,7 +53,7 @@ type HomeContent = {
     downloadCV: { download: string; href: string; text: string };
     name: string;
     technologies: { text: string };
-    toogler: { title: string };
+    toogler: { closed: { title: string }; open: { title: string } };
   };
   technologies: {
     id: string;
