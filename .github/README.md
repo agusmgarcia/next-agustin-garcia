@@ -4,7 +4,7 @@ The app is deployed here: [https://agustin-garcia.web.app/](https://agustin-garc
 
 [![Continuous Integration & Deployment](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/continuous-integration-and-deployment.yml/badge.svg)](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/continuous-integration-and-deployment.yml)
 
-This is a simple web application to register money transactions grouped by categories.
+This is the personal page in which the author includes technologies he uses and companies he has worked for.
 
 ## Development environment
 
