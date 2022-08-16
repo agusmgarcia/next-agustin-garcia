@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.2.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.0)
+
+> 16 August 2022
+
+- **Image**: load blurred image on eager loading
+- **MobileNavigationBar**: alter button title
+- start eager loading above-the-fold images
+
 ## [v1.2.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.0)
 
 > 13 August 2022
