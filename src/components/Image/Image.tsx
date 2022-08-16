@@ -25,30 +25,11 @@ function ImageImgix({
       return {
         className,
         disableSrcSet: true,
-        height: height !== undefined ? +height : height,
+        height: toNumber(height),
         htmlAttributes: { loading },
         sizes: "auto",
-        src: src
-          ? `${src.replace(
-              "/_next/static/media/",
-              "https://agustin-garcia.imgix.net/"
-            )}`
-          : "",
-        width: width !== undefined ? +width : width,
-      };
-
-    if (loading === "eager")
-      return {
-        className,
-        height: height !== undefined ? +height : height,
-        htmlAttributes: { loading },
-        imgixParams: { auto: "compress" },
-        sizes,
-        src: `${src.replace(
-          "/_next/static/media/",
-          "https://agustin-garcia.imgix.net/"
-        )}`,
-        width: width !== undefined ? +width : width,
+        src: toImgixURL(src),
+        width: toNumber(width),
       };
 
     return {
@@ -58,18 +39,15 @@ function ImageImgix({
         srcSet: "data-srcset",
       },
       className: `lazyload ${className}`,
-      height: height !== undefined ? +height : height,
+      height: toNumber(height),
       htmlAttributes: {
         loading,
-        src: `${src}?auto=compress&px=16&blur=200&fm=webp`,
+        src: `${toImgixURL(src)}?auto=compress&px=16&blur=200&fm=webp`,
       },
       imgixParams: { auto: "compress" },
       sizes,
-      src: `${src.replace(
-        "/_next/static/media/",
-        "https://agustin-garcia.imgix.net/"
-      )}`,
-      width: width !== undefined ? +width : width,
+      src: toImgixURL(src),
+      width: toNumber(width),
     };
   }, [className, height, loading, sizes, src, width]);
 
@@ -91,7 +69,7 @@ function ImageSimple({
   ...props
 }: ImageProps) {
   const imageProps = useMemo(() => {
-    if (loading === "eager" || src === undefined || isSVG(src))
+    if (src === undefined || isSVG(src))
       return { className, loading, sizes, src, srcSet };
 
     return {
@@ -99,6 +77,7 @@ function ImageSimple({
       ["data-sizes"]: sizes,
       ["data-src"]: src,
       ["data-srcset"]: srcSet,
+      loading,
       src: `/_next/image?url=${encodeURIComponent(src)}&w=8&q=70`,
     };
   }, [loading, src, className, sizes, srcSet]);
@@ -109,4 +88,20 @@ function ImageSimple({
 
 function isSVG(src: string): boolean {
   return src.split(".").pop() === "svg";
+}
+
+function toNumber(value: string | number | undefined): number | undefined {
+  if (value === undefined) return undefined;
+  if (typeof value === "number") return value;
+  if (isNaN(+value)) return undefined;
+  return +value;
+}
+
+function toImgixURL(src: string | undefined): string {
+  return src !== undefined
+    ? `${src.replace(
+        "/_next/static/media/",
+        "https://agustin-garcia.imgix.net/"
+      )}`
+    : "";
 }
