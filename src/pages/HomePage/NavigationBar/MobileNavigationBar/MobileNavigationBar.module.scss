@@ -22,13 +22,13 @@
     .bar {
       position: relative;
       z-index: 3;
-      background-color: rgba(var(--interface-color), 0.5);
+      background-color: rgba(var(--primary-color), 0.5);
       transition: background-color var(--transition-duration)
         var(--transition-timing-function);
       will-change: background-color;
 
       &.open {
-        background-color: rgba(var(--interface-color), 0.9);
+        background-color: rgba(var(--primary-color), 0.9);
       }
 
       .links {
@@ -77,7 +77,7 @@
           }
 
           .icon {
-            color: white;
+            color: rgb(var(--white-color));
           }
         }
       }
@@ -88,7 +88,7 @@
       left: 0;
       right: 0;
       z-index: 2;
-      background-color: rgba(var(--interface-color), 0.5);
+      background-color: rgba(var(--primary-color), 0.5);
       transition: transform var(--transition-duration)
           var(--transition-timing-function),
         background-color var(--transition-duration)
@@ -100,7 +100,7 @@
 
       .separator {
         transform: scaleX(0);
-        border-top: 1px solid rgb(255, 255, 255);
+        border-top: 1px solid rgb(var(--white-color));
         transition: transform var(--transition-duration)
           var(--transition-timing-function) var(--transition-duration);
         will-change: transform;
@@ -108,7 +108,7 @@
 
       &.open {
         transform: translate(0);
-        background-color: rgba(var(--interface-color), 0.9);
+        background-color: rgba(var(--primary-color), 0.9);
 
         .separator {
           transform: scaleX(1);
@@ -131,7 +131,7 @@
           &.downloadCV {
             &:hover,
             &:focus {
-              background-color: rgb(var(--interface-color));
+              background-color: rgb(var(--primary-color));
               border-radius: 1rem;
             }
           }
@@ -156,7 +156,7 @@
         opacity var(--transition-duration) var(--transition-timing-function);
       transform: translateY(-100%);
       will-change: transform, opacity;
-      background-color: rgb(0, 0, 0);
+      background-color: rgb(var(--black-color));
       opacity: 0;
 
       &.open {

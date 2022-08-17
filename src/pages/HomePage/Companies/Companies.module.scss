@@ -11,9 +11,9 @@
   }
 
   .link {
-    background-color: white;
+    background-color: rgb(var(--white-color));
     padding: 0.5rem;
-    border: 2px solid rgb(var(--interface-color));
+    border: 2px solid rgb(var(--primary-color));
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@
     &:hover,
     &:focus {
       transform: scale(1.05);
-      box-shadow: 0 0 5px 5px rgb(var(--interface-color));
+      box-shadow: 0 0 5px 5px rgb(var(--primary-color));
     }
 
     &:active {

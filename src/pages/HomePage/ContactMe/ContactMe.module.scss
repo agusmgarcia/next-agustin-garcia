@@ -13,7 +13,7 @@
     border: 2px solid rgb(var(--white-color));
     border-radius: 1rem;
     padding: 1rem;
-    color: rgb(var(--font-color));
+    color: rgb(var(--white-color));
     font-size: 1rem;
     line-height: 1.25;
     font-family: Roboto;
@@ -30,7 +30,7 @@
     &:not(:disabled) {
       &:focus {
         transform: scale(1.05);
-        box-shadow: 0 0 5px 5px rgb(var(--interface-color));
+        box-shadow: 0 0 5px 5px rgb(var(--primary-color));
       }
     }
 
