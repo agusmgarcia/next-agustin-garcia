@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v1.2.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.0)
+## [v1.2.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.2)
+
+> 16 August 2022
+
+- **Image**: start delivering webp images
+- **createHomeContent**: adjust label
+
+## [v1.2.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.1)
 
 > 16 August 2022
 
