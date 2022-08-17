@@ -44,7 +44,7 @@ function ImageImgix({
         loading,
         src: `${toImgixURL(src)}?auto=compress&px=16&blur=200&fm=webp`,
       },
-      imgixParams: { auto: "compress" },
+      imgixParams: { auto: "compress", fm: "webp" },
       sizes,
       src: toImgixURL(src),
       width: toNumber(width),
@@ -55,7 +55,7 @@ function ImageImgix({
     <Imgix
       {...imageProps}
       // @ts-ignore
-      htmlAttributes={{ ...imageProps.htmlAttributes, ...props }}
+      htmlAttributes={{ ...props, ...imageProps.htmlAttributes }}
     />
   );
 }
@@ -83,7 +83,7 @@ function ImageSimple({
   }, [loading, src, className, sizes, srcSet]);
 
   // eslint-disable-next-line @next/next/no-img-element
-  return <img {...imageProps} {...props} />;
+  return <img {...props} {...imageProps} />;
 }
 
 function isSVG(src: string): boolean {
