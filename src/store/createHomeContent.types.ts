@@ -68,7 +68,7 @@ type HomeContent = {
   title: string;
 };
 
-export type HomeContentSlice = {
+type HomeContentSlice = {
   homeContent: HomeContent;
 };
 
