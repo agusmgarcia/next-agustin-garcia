@@ -155,7 +155,7 @@ const createHomeContent: StateCreator<
       },
       personal: {
         content:
-          "This website was developed by myself using NextJS, Typescript, Imgix and Firebase. This application has no commercial purposes. All the assets belongs to the corresponding owners.",
+          "This website was developed by myself using NextJS, Typescript, Imgix and Firebase. This application has no commercial purposes. All the assets belong to the corresponding owners.",
         title: "Agustin Garcia",
       },
       socialLinks: {
