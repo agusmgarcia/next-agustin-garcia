@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.2.3](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.3)
+
+> 25 August 2022
+
+- stop using smoothscroll library
+- remove unnecesary dependencies
+
 ## [v1.2.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.2)
 
 > 17 August 2022
