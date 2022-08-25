@@ -11,6 +11,7 @@ import styles from "./HomePage.module.scss";
 import HomePageProps from "./HomePage.types";
 import NavigationBar from "./NavigationBar";
 import Technologies from "./Technologies";
+import Toast from "./Toast";
 
 export default function HomePage(_: HomePageProps) {
   const { homeContent } = useHomeContent();
@@ -23,6 +24,7 @@ export default function HomePage(_: HomePageProps) {
 
       <NavigationBar className={styles.navigationBar} />
       <main>
+        <Toast />
         <Banner className={styles.banner} />
         <AboutMe />
         <Technologies />
