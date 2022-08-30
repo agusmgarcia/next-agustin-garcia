@@ -1,5 +1,5 @@
 import { Image, Link } from "#src/components";
-import { useHomeContent } from "#src/store";
+import { useStore } from "#src/store";
 import { useMediaQuery, Viewports } from "#src/utils";
 
 import Section from "../Section";
@@ -8,7 +8,7 @@ import CompaniesProps from "./Companies.types";
 
 export default function Companies(props: CompaniesProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const { homeContent } = useHomeContent();
+  const homeContent = useStore((store) => store.homeContent);
 
   return (
     <Section

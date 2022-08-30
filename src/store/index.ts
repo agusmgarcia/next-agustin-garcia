@@ -1,2 +1,1 @@
-export { default as useHomeContent } from "./useHomeContent";
-export { default as useNotification } from "./useNotification";
+export { default as useStore } from "./useStore";

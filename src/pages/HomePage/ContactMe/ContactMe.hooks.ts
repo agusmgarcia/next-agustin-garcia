@@ -5,7 +5,7 @@ import {
   useState,
 } from "react";
 
-import { useNotification } from "#src/store";
+import { useStore } from "#src/store";
 
 const initialValues = {
   company: "",
@@ -29,7 +29,7 @@ export default function useContactMe() {
     }));
   }, []);
 
-  const { notify } = useNotification();
+  const notify = useStore((store) => store.notify);
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = useCallback(
     async (event) => {

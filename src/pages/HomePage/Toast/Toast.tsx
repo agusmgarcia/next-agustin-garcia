@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 import { Typography } from "#src/components";
-import { useNotification } from "#src/store";
+import { useStore } from "#src/store";
 
 import ToastProps from "./Toast.types";
 
 export default function Toast(_: ToastProps) {
-  const { notification } = useNotification();
+  const notification = useStore((store) => store.notification);
 
   useEffect(() => {
     if (notification === undefined) return;

@@ -1,5 +1,5 @@
 import { Button, Spinner, Typography } from "#src/components";
-import { useHomeContent } from "#src/store";
+import { useStore } from "#src/store";
 import { useMediaQuery, Viewports } from "#src/utils";
 
 import Section from "../Section";
@@ -9,7 +9,7 @@ import ContactMeProps from "./ContactMe.types";
 
 export default function ContactMe(props: ContactMeProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const { homeContent } = useHomeContent();
+  const homeContent = useStore((store) => store.homeContent);
   const { form, handleChange, handleSubmit, isSubmitting } = useContactMe();
 
   return (

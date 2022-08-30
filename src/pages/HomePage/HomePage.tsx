@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { useHomeContent } from "#src/store";
+import { useStore } from "#src/store";
 
 import AboutMe from "./AboutMe";
 import Banner from "./Banner";
@@ -14,7 +14,7 @@ import Technologies from "./Technologies";
 import Toast from "./Toast";
 
 export default function HomePage(_: HomePageProps) {
-  const { homeContent } = useHomeContent();
+  const homeContent = useStore((store) => store.homeContent);
 
   return (
     <>

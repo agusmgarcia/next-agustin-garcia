@@ -1,11 +1,11 @@
 import { Box, Image, Link, Typography } from "#src/components";
-import { useHomeContent } from "#src/store";
+import { useStore } from "#src/store";
 
 import styles from "./DesktopNavigationBar.module.scss";
 import DesktopNavigationBarProps from "./DesktopNavigationBar.types";
 
 export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
-  const { homeContent } = useHomeContent();
+  const homeContent = useStore((store) => store.homeContent);
 
   return (
     <nav className={`${styles.navigationBar} ${props.className}`}>
