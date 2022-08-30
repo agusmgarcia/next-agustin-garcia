@@ -14,7 +14,7 @@ export default function Toast(_: ToastProps) {
   useEffect(() => {
     if (notification === undefined) return;
     toast[notification.type](<ToastBody message={notification.message} />, {
-      onClose: notification.resolve,
+      onClose: notification.close,
       progress: undefined,
     });
   }, [notification]);

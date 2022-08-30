@@ -1,6 +1,6 @@
 type Notification = {
+  close: () => void;
   message: string;
-  resolve: () => void;
   type: "success" | "error";
 };
 
