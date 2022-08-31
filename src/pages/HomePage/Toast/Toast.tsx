@@ -5,10 +5,12 @@ import { toast, ToastContainer } from "react-toastify";
 
 import { Typography } from "#src/components";
 import { useStore } from "#src/store";
+import { useMediaQuery, Viewports } from "#src/utils";
 
 import ToastProps from "./Toast.types";
 
 export default function Toast(_: ToastProps) {
+  const desktop = useMediaQuery(Viewports.MIN_MD);
   const notification = useStore((store) => store.notification);
 
   useEffect(() => {
@@ -25,7 +27,8 @@ export default function Toast(_: ToastProps) {
       limit={1}
       autoClose={2000}
       closeOnClick={true}
-      draggable={true}
+      closeButton={desktop}
+      draggable={!desktop}
       hideProgressBar={false}
       pauseOnHover={false}
     />
