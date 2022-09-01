@@ -18,8 +18,8 @@ export default function AboutMe(props: AboutMeProps) {
           className={styles.image}
           alt={homeContent.aboutMe.image.alt}
           loading="eager"
-          width={desktop ? 292 : 224}
-          height={desktop ? 292 : 224}
+          width={desktop ? 256 : 224}
+          height={desktop ? 256 : 224}
         />
 
         <div className={styles.content}>
