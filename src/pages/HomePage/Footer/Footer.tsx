@@ -15,10 +15,12 @@ export default function Footer(props: FooterProps) {
         {/* INFORMATION */}
         <div className={styles.information}>
           <Typography as="h2" variant={desktop ? "1.75rem" : "1.25rem"}>
-            {homeContent.footer.personal.title}
+            {homeContent.footer.information.title}
           </Typography>
 
-          <Typography as="p">{homeContent.footer.personal.content}</Typography>
+          <Typography as="p">
+            {homeContent.footer.information.content}
+          </Typography>
         </div>
 
         {/* SOCIAL LINKS */}

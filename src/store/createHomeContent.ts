@@ -149,14 +149,14 @@ const createHomeContent: StateCreator<
       subtitle: "Let's talk",
     },
     footer: {
-      location: {
-        content: "Montevideo, Uruguay",
-        title: "Location",
-      },
-      personal: {
+      information: {
         content:
           "This website was developed by myself using NextJS, Typescript, Imgix and Firebase. This application has no commercial purposes. All the assets belong to the corresponding owners.",
         title: "Agustin Garcia",
+      },
+      location: {
+        content: "Montevideo, Uruguay",
+        title: "Location",
       },
       socialLinks: {
         content: [

@@ -34,8 +34,8 @@ type HomeContent = {
     subtitle: string;
   };
   footer: {
+    information: { content: string; title: string };
     location: { content: string; title: string };
-    personal: { content: string; title: string };
     socialLinks: {
       content: {
         href: string;
