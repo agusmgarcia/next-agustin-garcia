@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.2.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.4)
+
+> 1 September 2022
+
+- **HomePage**: adjust styles
+- **AboutMe**: reduce image size for desktop
+- **Toast**: allow dragging it on mobile
+
 ## [v1.2.3](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.3)
 
 > 25 August 2022
