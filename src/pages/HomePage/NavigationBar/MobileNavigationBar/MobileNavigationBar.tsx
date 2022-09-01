@@ -58,7 +58,7 @@ function Bar({
           </Link>
 
           {/* NAME */}
-          <Typography className={styles.name}>
+          <Typography as="p" className={styles.name}>
             {homeContent.navigationBar.name}
           </Typography>
 
@@ -105,7 +105,7 @@ function Body({
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}
           >
-            <Typography>
+            <Typography as="span">
               {homeContent.navigationBar.technologies.text}
             </Typography>
           </Link>
@@ -117,7 +117,9 @@ function Body({
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}
           >
-            <Typography>{homeContent.navigationBar.companies.text}</Typography>
+            <Typography as="span">
+              {homeContent.navigationBar.companies.text}
+            </Typography>
           </Link>
 
           {/* CONTACT ME */}
@@ -127,7 +129,9 @@ function Body({
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}
           >
-            <Typography>{homeContent.navigationBar.contactMe.text}</Typography>
+            <Typography as="span">
+              {homeContent.navigationBar.contactMe.text}
+            </Typography>
           </Link>
 
           {/* DOWNLOAD CV */}
@@ -138,7 +142,9 @@ function Body({
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}
           >
-            <Typography>{homeContent.navigationBar.downloadCV.text}</Typography>
+            <Typography as="span">
+              {homeContent.navigationBar.downloadCV.text}
+            </Typography>
           </Link>
         </div>
       </Box>

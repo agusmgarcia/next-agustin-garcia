@@ -85,7 +85,7 @@ export default function ContactMe(props: ContactMeProps) {
         {/* SUBMIT */}
         <Button type="submit" disabled={isSubmitting} className={styles.button}>
           {!isSubmitting ? (
-            <Typography variant={desktop ? "1.25rem" : "1rem"}>
+            <Typography as="span" variant={desktop ? "1.25rem" : "1rem"}>
               {homeContent.contactMe.submit.text}
             </Typography>
           ) : (

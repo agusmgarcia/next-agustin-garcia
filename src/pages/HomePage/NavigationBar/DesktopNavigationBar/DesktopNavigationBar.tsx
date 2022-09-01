@@ -26,7 +26,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         </Link>
 
         {/* NAME */}
-        <Typography className={styles.name}>
+        <Typography as="p" className={styles.name}>
           {homeContent.navigationBar.name}
         </Typography>
 
@@ -35,7 +35,9 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
           href={`#${homeContent.technologies.id}`}
           className={`${styles.link} ${styles.technologies}`}
         >
-          <Typography>{homeContent.navigationBar.technologies.text}</Typography>
+          <Typography as="span">
+            {homeContent.navigationBar.technologies.text}
+          </Typography>
         </Link>
 
         {/* COMPANIES */}
@@ -43,7 +45,9 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
           href={`#${homeContent.companies.id}`}
           className={`${styles.link} ${styles.companies}`}
         >
-          <Typography>{homeContent.navigationBar.companies.text}</Typography>
+          <Typography as="span">
+            {homeContent.navigationBar.companies.text}
+          </Typography>
         </Link>
 
         {/* CONTACT ME */}
@@ -51,7 +55,9 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
           href={`#${homeContent.contactMe.id}`}
           className={`${styles.link} ${styles.contactMe}`}
         >
-          <Typography>{homeContent.navigationBar.contactMe.text}</Typography>
+          <Typography as="span">
+            {homeContent.navigationBar.contactMe.text}
+          </Typography>
         </Link>
 
         {/* DOWNLOAD CV */}
@@ -60,7 +66,9 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
           download={homeContent.navigationBar.downloadCV.download}
           className={`${styles.link} ${styles.downloadCV}`}
         >
-          <Typography>{homeContent.navigationBar.downloadCV.text}</Typography>
+          <Typography as="span">
+            {homeContent.navigationBar.downloadCV.text}
+          </Typography>
         </Link>
       </Box>
     </nav>

@@ -25,7 +25,7 @@ export default function Toast(_: ToastProps) {
     <ToastContainer
       position="bottom-center"
       limit={1}
-      autoClose={2000}
+      autoClose={false}
       closeOnClick={true}
       closeButton={desktop}
       draggable={!desktop}
@@ -36,5 +36,5 @@ export default function Toast(_: ToastProps) {
 }
 
 function ToastBody(props: { message: string }) {
-  return <Typography>{props.message}</Typography>;
+  return <Typography as="span">{props.message}</Typography>;
 }

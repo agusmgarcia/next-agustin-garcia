@@ -18,7 +18,7 @@ export default function Footer(props: FooterProps) {
             {homeContent.footer.personal.title}
           </Typography>
 
-          <Typography>{homeContent.footer.personal.content}</Typography>
+          <Typography as="p">{homeContent.footer.personal.content}</Typography>
         </div>
 
         {/* SOCIAL LINKS */}
@@ -59,10 +59,12 @@ export default function Footer(props: FooterProps) {
               {homeContent.footer.location.title}
             </Typography>
 
-            <Typography>{homeContent.footer.location.content}</Typography>
+            <Typography as="p">
+              {homeContent.footer.location.content}
+            </Typography>
           </div>
 
-          <Typography className={styles.version}>
+          <Typography as="p" className={styles.version}>
             v{process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.0"}
           </Typography>
         </div>
