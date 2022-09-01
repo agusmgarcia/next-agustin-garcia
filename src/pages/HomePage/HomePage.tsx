@@ -23,7 +23,7 @@ export default function HomePage(_: HomePageProps) {
       </Head>
 
       <NavigationBar className={styles.navigationBar} />
-      <main>
+      <main className={styles.main}>
         <Toast />
         <Banner className={styles.banner} />
         <AboutMe />
