@@ -10,9 +10,7 @@ const createNotification: StateCreator<
 > = (set) => ({
   notification: undefined,
   notify: (type, message) =>
-    new Promise((resolve) =>
-      set({ notification: { close: resolve, message, type } })
-    ),
+    new Promise((close) => set({ notification: { close, message, type } })),
 });
 
 export default createNotification;
