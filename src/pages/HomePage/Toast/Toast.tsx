@@ -11,7 +11,7 @@ import ToastProps from "./Toast.types";
 
 export default function Toast(_: ToastProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const notification = useStore((store) => store.notification);
+  const notification = useStore((store) => store.notification.data);
 
   useEffect(() => {
     if (notification === undefined) return;

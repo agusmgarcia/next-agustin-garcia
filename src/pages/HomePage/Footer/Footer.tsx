@@ -7,7 +7,7 @@ import FooterProps from "./Footer.types";
 
 export default function Footer(props: FooterProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const homeContent = useStore((store) => store.homeContent);
+  const homeContent = useStore((store) => store.homeContent.data);
 
   return (
     <footer className={`${styles.footer} ${props.className}`}>

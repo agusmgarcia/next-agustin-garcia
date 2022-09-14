@@ -5,7 +5,7 @@ import styles from "./DesktopNavigationBar.module.scss";
 import DesktopNavigationBarProps from "./DesktopNavigationBar.types";
 
 export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
-  const homeContent = useStore((store) => store.homeContent);
+  const homeContent = useStore((store) => store.homeContent.data);
 
   return (
     <nav className={`${styles.navigationBar} ${props.className}`}>

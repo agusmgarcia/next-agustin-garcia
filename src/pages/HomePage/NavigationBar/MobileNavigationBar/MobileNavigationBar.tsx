@@ -35,7 +35,7 @@ function Bar({
   isOpen: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const homeContent = useStore((store) => store.homeContent);
+  const homeContent = useStore((store) => store.homeContent.data);
 
   return (
     <div className={`${styles.bar} ${isOpen ? styles.open : undefined}`}>
@@ -91,7 +91,7 @@ function Body({
   isOpen: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const homeContent = useStore((store) => store.homeContent);
+  const homeContent = useStore((store) => store.homeContent.data);
 
   return (
     <div className={`${styles.body} ${isOpen ? styles.open : undefined}`}>

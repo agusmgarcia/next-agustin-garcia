@@ -8,7 +8,7 @@ import TechnologiesProps from "./Technologies.types";
 
 export default function Technologies(props: TechnologiesProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const homeContent = useStore((store) => store.homeContent);
+  const homeContent = useStore((store) => store.homeContent.data);
 
   return (
     <Section

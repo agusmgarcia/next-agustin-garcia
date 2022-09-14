@@ -1,15 +1,8 @@
-import create from "zustand";
+import { createStore } from "@agusmgarcia/swr";
 
 import createHomeContent from "./createHomeContent";
-import type HomeContentSlice from "./createHomeContent.types";
 import createNotification from "./createNotification";
-import type NotificationSlice from "./createNotification.types";
 
-const useStore = create<HomeContentSlice & NotificationSlice>()(
-  (...actions) => ({
-    ...createHomeContent(...actions),
-    ...createNotification(...actions),
-  })
-);
+const useStore = createStore(createHomeContent, createNotification);
 
 export default useStore;

@@ -14,7 +14,7 @@ import Technologies from "./Technologies";
 import Toast from "./Toast";
 
 export default function HomePage(_: HomePageProps) {
-  const homeContent = useStore((store) => store.homeContent);
+  const homeContent = useStore((store) => store.homeContent.data);
 
   return (
     <>

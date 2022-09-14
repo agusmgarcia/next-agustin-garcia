@@ -9,7 +9,7 @@ import ContactMeProps from "./ContactMe.types";
 
 export default function ContactMe(props: ContactMeProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const homeContent = useStore((store) => store.homeContent);
+  const homeContent = useStore((store) => store.homeContent.data);
   const { form, handleChange, handleSubmit, isSubmitting } = useContactMe();
 
   return (

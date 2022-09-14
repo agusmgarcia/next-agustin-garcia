@@ -29,7 +29,7 @@ export default function useContactMe() {
     }));
   }, []);
 
-  const notify = useStore((store) => store.notify);
+  const notify = useStore((store) => store.notification.notify);
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = useCallback(
     async (event) => {

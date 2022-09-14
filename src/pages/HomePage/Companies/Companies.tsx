@@ -8,7 +8,7 @@ import CompaniesProps from "./Companies.types";
 
 export default function Companies(props: CompaniesProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const homeContent = useStore((store) => store.homeContent);
+  const homeContent = useStore((store) => store.homeContent.data);
 
   return (
     <Section
