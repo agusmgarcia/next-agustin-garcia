@@ -25,7 +25,7 @@ export default function Toast(_: ToastProps) {
     <ToastContainer
       position="bottom-center"
       limit={1}
-      autoClose={false}
+      autoClose={2000}
       closeOnClick={true}
       closeButton={desktop}
       draggable={!desktop}
