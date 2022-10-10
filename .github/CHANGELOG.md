@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.2.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.5)
+
+> 10 October 2022
+
+- start using @agusmgarcia/swr
+- **Toast**: adjust autoclose property
+- remove font-smoothing prop
+
 ## [v1.2.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.4)
 
 > 1 September 2022
