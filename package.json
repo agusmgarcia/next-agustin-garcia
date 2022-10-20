@@ -32,5 +32,9 @@
     "hooks": {
       "pre-commit": "npm run format"
     }
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=7"
   }
 }
