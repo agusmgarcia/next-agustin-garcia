@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.2.6](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.6)
+
+> 20 October 2022
+
+- **site.webmanifest**: change color
+
 ## [v1.2.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.5)
 
 > 10 October 2022
