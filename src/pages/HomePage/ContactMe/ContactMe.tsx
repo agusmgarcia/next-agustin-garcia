@@ -20,67 +20,82 @@ export default function ContactMe(props: ContactMeProps) {
     >
       <form className={styles.contactMe} onSubmit={handleSubmit}>
         {/* NAME */}
-        <input
-          type="text"
-          name="name"
-          aria-label={homeContent.contactMe.inputs.name["aria-label"]}
-          placeholder={homeContent.contactMe.inputs.name.placeholder}
-          className={`${styles.field} ${styles.name}`}
-          value={form.name}
-          onChange={handleChange}
-          required
-          disabled={isSubmitting}
-        />
+        <Typography as="label">
+          {homeContent.contactMe.inputs.name.label}
+          <Typography
+            as="input"
+            type="text"
+            name="name"
+            placeholder={homeContent.contactMe.inputs.name.placeholder}
+            className={styles.field}
+            value={form.name}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+          />
+        </Typography>
 
         {/* EMAIL ADDRESS */}
-        <input
-          type="email"
-          name="email"
-          aria-label={homeContent.contactMe.inputs.email["aria-label"]}
-          placeholder={homeContent.contactMe.inputs.email.placeholder}
-          className={`${styles.field} ${styles.email}`}
-          required
-          value={form.email}
-          onChange={handleChange}
-          disabled={isSubmitting}
-        />
+        <Typography as="label">
+          {homeContent.contactMe.inputs.email.label}
+          <Typography
+            as="input"
+            type="email"
+            name="email"
+            placeholder={homeContent.contactMe.inputs.email.placeholder}
+            className={styles.field}
+            required
+            value={form.email}
+            onChange={handleChange}
+            disabled={isSubmitting}
+          />
+        </Typography>
 
         {/* COMPANY NAME */}
-        <input
-          type="text"
-          name="company"
-          aria-label={homeContent.contactMe.inputs.company["aria-label"]}
-          placeholder={homeContent.contactMe.inputs.company.placeholder}
-          className={`${styles.field} ${styles.company}`}
-          value={form.company}
-          onChange={handleChange}
-          disabled={isSubmitting}
-        />
+        <Typography as="label">
+          {homeContent.contactMe.inputs.company.label}
+          <Typography
+            as="input"
+            type="text"
+            name="company"
+            placeholder={homeContent.contactMe.inputs.company.placeholder}
+            className={styles.field}
+            value={form.company}
+            onChange={handleChange}
+            disabled={isSubmitting}
+          />
+        </Typography>
 
         {/* PHONE NUMBER */}
-        <input
-          type="tel"
-          name="phone"
-          aria-label={homeContent.contactMe.inputs.phone["aria-label"]}
-          placeholder={homeContent.contactMe.inputs.phone.placeholder}
-          className={`${styles.field} ${styles.phone}`}
-          value={form.phone}
-          onChange={handleChange}
-          disabled={isSubmitting}
-        />
+        <Typography as="label">
+          {homeContent.contactMe.inputs.phone.label}
+          <Typography
+            as="input"
+            type="tel"
+            name="phone"
+            placeholder={homeContent.contactMe.inputs.phone.placeholder}
+            className={styles.field}
+            value={form.phone}
+            onChange={handleChange}
+            disabled={isSubmitting}
+          />
+        </Typography>
 
         {/* PROJECT DETAILS */}
-        <textarea
-          name="details"
-          aria-label={homeContent.contactMe.inputs.details["aria-label"]}
-          placeholder={homeContent.contactMe.inputs.details.placeholder}
-          className={`${styles.field} ${styles.details}`}
-          rows={5}
-          value={form.details}
-          onChange={handleChange}
-          required
-          disabled={isSubmitting}
-        />
+        <Typography as="label" className={styles.details}>
+          {homeContent.contactMe.inputs.details.label}
+          <Typography
+            as="textarea"
+            name="details"
+            placeholder={homeContent.contactMe.inputs.details.placeholder}
+            className={styles.field}
+            rows={5}
+            value={form.details}
+            onChange={handleChange}
+            required
+            disabled={isSubmitting}
+          />
+        </Typography>
 
         {/* SUBMIT */}
         <Button type="submit" disabled={isSubmitting} className={styles.button}>

@@ -13,6 +13,12 @@ type TypographyProps = {
   | ({
       as: "label";
     } & React.LabelHTMLAttributes<HTMLLabelElement>)
+  | ({
+      as: "input";
+    } & React.InputHTMLAttributes<HTMLInputElement>)
+  | ({
+      as: "textarea";
+    } & React.TextareaHTMLAttributes<HTMLTextAreaElement>)
 );
 
 export default TypographyProps;

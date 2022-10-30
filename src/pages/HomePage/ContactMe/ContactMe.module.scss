@@ -8,29 +8,30 @@
     grid-template-columns: auto auto;
   }
 
-  .field {
-    background: none;
-    border: 2px solid rgb(var(--white-color));
-    border-radius: 1rem;
-    padding: 1rem;
-    color: rgb(var(--white-color));
-    font-size: 1rem;
-    line-height: 1.25;
-    font-family: Roboto;
-    font-weight: 500;
-    transition: transform var(--transition-duration)
-        var(--transition-timing-function),
-      box-shadow var(--transition-duration) var(--transition-timing-function);
-    will-change: transform, box-shadow;
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 
-    &:disabled {
-      cursor: not-allowed;
-    }
+    .field {
+      background: none;
+      border: 2px solid rgb(var(--white-color));
+      border-radius: 1rem;
+      padding: 1rem;
+      transition: transform var(--transition-duration)
+          var(--transition-timing-function),
+        box-shadow var(--transition-duration) var(--transition-timing-function);
+      will-change: transform, box-shadow;
 
-    &:not(:disabled) {
-      &:focus {
-        transform: scale(1.05);
-        box-shadow: 0 0 5px 5px rgb(var(--primary-color));
+      &:disabled {
+        cursor: not-allowed;
+      }
+
+      &:not(:disabled) {
+        &:focus {
+          transform: scale(1.05);
+          box-shadow: 0 0 5px 5px rgb(var(--primary-color));
+        }
       }
     }
 
@@ -42,6 +43,8 @@
   }
 
   .button {
+    margin-top: 1rem;
+
     @media (min-width: 768px) {
       grid-column: 1 / span 2;
     }

@@ -124,20 +124,23 @@ const createHomeContent = createMemoryStorageSlice<HomeContentSlice>(
         id: "contactMe",
         inputs: {
           company: {
-            ["aria-label"]: "The person's company name",
+            label: "Company",
             placeholder: "Company Name",
           },
           details: {
-            ["aria-label"]: "The details of the project",
+            label: "Details",
             placeholder: "Project Details *",
           },
           email: {
-            ["aria-label"]: "The person's email",
+            label: "Email",
             placeholder: "Email Address *",
           },
-          name: { ["aria-label"]: "The person's name", placeholder: "Name *" },
+          name: {
+            label: "Name",
+            placeholder: "Name *",
+          },
           phone: {
-            ["aria-label"]: "The person's phone numebr",
+            label: "Phone",
             placeholder: "Phone Number",
           },
         },

@@ -26,11 +26,11 @@ type HomeContent = {
   contactMe: {
     id: string;
     inputs: {
-      company: { ["aria-label"]: string; placeholder: string };
-      details: { ["aria-label"]: string; placeholder: string };
-      email: { ["aria-label"]: string; placeholder: string };
-      name: { ["aria-label"]: string; placeholder: string };
-      phone: { ["aria-label"]: string; placeholder: string };
+      company: { label: string; placeholder: string };
+      details: { label: string; placeholder: string };
+      email: { label: string; placeholder: string };
+      name: { label: string; placeholder: string };
+      phone: { label: string; placeholder: string };
     };
     submit: { text: string };
     subtitle: string;
