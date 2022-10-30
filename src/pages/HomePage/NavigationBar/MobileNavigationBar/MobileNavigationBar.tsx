@@ -94,7 +94,10 @@ function Body({
   const homeContent = useStore((store) => store.homeContent.data);
 
   return (
-    <div className={`${styles.body} ${isOpen ? styles.open : undefined}`}>
+    <div
+      className={`${styles.body} ${isOpen ? styles.open : undefined}`}
+      aria-hidden={isOpen ? undefined : true}
+    >
       <Box variant="1200px">
         <div className={styles.separator} />
         <div className={styles.links}>
