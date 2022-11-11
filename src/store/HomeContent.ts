@@ -1,4 +1,4 @@
-import { createMemoryStorageSlice } from "@agusmgarcia/swr";
+import { MemoryStorageSlice } from "@agusmgarcia/swr";
 
 import banner from "#public/assets/banner.png";
 import cityparking from "#public/assets/company-cityparking.png";
@@ -29,11 +29,11 @@ import sass from "#public/assets/logo-sass.svg";
 import typescript from "#public/assets/logo-typescript.svg";
 import profile from "#public/assets/profile.png";
 
-import type HomeContentSlice from "./createHomeContent.types";
+import type HomeContent from "./HomeContent.types";
 
-const createHomeContent = createMemoryStorageSlice<HomeContentSlice>(
-  (store) => ({
-    initialData: {
+export default class HomeContentSlice extends MemoryStorageSlice<HomeContent> {
+  constructor() {
+    super({
       aboutMe: {
         description:
           "I'm a software engineer who loves creating and architecting new apps using the best design patterns. My favourite languages are C#, Typescript and Golang.",
@@ -352,10 +352,6 @@ const createHomeContent = createMemoryStorageSlice<HomeContentSlice>(
         subtitle: "Technologies",
       },
       title: "Agustin Garcia :: Profile",
-    },
-    name: "homeContent",
-    onInit: () => store.get().homeContent.fetch({}),
-  })
-);
-
-export default createHomeContent;
+    });
+  }
+}

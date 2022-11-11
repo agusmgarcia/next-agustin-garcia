@@ -5,11 +5,11 @@
   "scripts": {
     "start": "next dev",
     "build": "del .next out && next build && next export && del out/assets",
-    "lint": "next lint && prettier --check . && tsc --pretty --noEmit",
-    "format": "next lint -- --fix && prettier --write ."
+    "lint": "agusmgarcia-lint",
+    "format": "agusmgarcia-format"
   },
   "dependencies": {
-    "@agusmgarcia/swr": "2.0.3",
+    "@agusmgarcia/swr": "3.0.1",
     "@fontsource/roboto": "4.5.5",
     "lazysizes": "5.3.2",
     "next": "12.1.0",

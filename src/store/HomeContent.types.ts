@@ -1,5 +1,3 @@
-import { Slice } from "@agusmgarcia/swr";
-
 type Image = {
   alt: string;
   src: string;
@@ -71,6 +69,4 @@ type HomeContent = {
   title: string;
 };
 
-type HomeContentSlice = Slice<"homeContent", {}, HomeContent, {}, void>;
-
-export default HomeContentSlice;
+export default HomeContent;
