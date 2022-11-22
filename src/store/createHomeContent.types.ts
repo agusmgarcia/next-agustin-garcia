@@ -24,6 +24,7 @@ type HomeContent = {
     subtitle: string;
   };
   contactMe: {
+    feedback: { error: string; success: string };
     id: string;
     inputs: {
       company: { label: string; placeholder: string };

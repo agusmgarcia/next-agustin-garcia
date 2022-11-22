@@ -121,6 +121,10 @@ const createHomeContent = createMemoryStorageSlice<HomeContentSlice>(
         subtitle: "Companies",
       },
       contactMe: {
+        feedback: {
+          error: "An error occurred, please retry in a few seconds",
+          success: "Email sent successfully!",
+        },
         id: "contactMe",
         inputs: {
           company: {

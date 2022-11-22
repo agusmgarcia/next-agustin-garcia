@@ -16,6 +16,7 @@ const initialValues = {
 };
 
 export default function useContactMe() {
+  const homeContent = useStore((store) => store.homeContent.data);
   const [values, setValues] = useState(initialValues);
   const [isSubmitting, setSubmitting] = useState(false);
 
@@ -51,21 +52,22 @@ export default function useContactMe() {
           }
         );
 
-        if (response.status !== 200)
-          throw new Error("A status code different from 200 has been received");
+        if (response.status !== 200) throw new Error();
 
         setValues(initialValues);
         setSubmitting(false);
-        await notify("success", "Email sent successfully!");
+        await notify("success", homeContent.contactMe.feedback.success);
       } catch (error) {
         setSubmitting(false);
-        await notify(
-          "error",
-          "An error occurred, please retry in a few seconds"
-        );
+        await notify("error", homeContent.contactMe.feedback.error);
       }
     },
-    [notify, values]
+    [
+      homeContent.contactMe.feedback.error,
+      homeContent.contactMe.feedback.success,
+      notify,
+      values,
+    ]
   );
 
   return {
