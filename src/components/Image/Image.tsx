@@ -99,9 +99,6 @@ function toNumber(value: string | number | undefined): number | undefined {
 
 function toImgixURL(src: string | undefined): string {
   return src !== undefined
-    ? `${src.replace(
-        "/_next/static/media/",
-        "https://agustin-garcia.imgix.net/"
-      )}`
+    ? `${src.replace("/assets/", "https://agustin-garcia.imgix.net/")}`
     : "";
 }

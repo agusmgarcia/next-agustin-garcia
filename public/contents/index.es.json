@@ -1,0 +1,341 @@
+{
+  "aboutMe": {
+    "description": "Ingerio de software que le encanta crear y arquitecturar nuevas apps usando los mejores patrones de diseño. Mis lenguajes favoritos son C#, Tyepscript y Golang.",
+    "id": "aboutMe",
+    "image": {
+      "alt": "Cara del autor",
+      "src": "/assets/profile.png"
+    },
+    "name": "Agustin Garcia"
+  },
+  "banner": {
+    "alt": "Banner",
+    "src": "/assets/banner.png"
+  },
+  "companies": {
+    "id": "companies",
+    "links": [
+      {
+        "href": "https://www.mgmresorts.com/",
+        "image": {
+          "alt": "MGM Resorts",
+          "src": "/assets/company-mgmresorts.png"
+        },
+        "target": "_blank",
+        "title": "MGM Resorts"
+      },
+      {
+        "href": "https://www.fullstacklabs.co/",
+        "image": {
+          "alt": "Fullstack Labs",
+          "src": "/assets/company-fullstacklabs.png"
+        },
+        "target": "_blank",
+        "title": "Fullstack Labs"
+      },
+      {
+        "href": "https://supremegolf.com/",
+        "image": {
+          "alt": "Supreme Golf",
+          "src": "/assets/company-supremegolf.png"
+        },
+        "target": "_blank",
+        "title": "Supreme Golf"
+      },
+      {
+        "href": "https://uruit.com/",
+        "image": {
+          "alt": "UruIT",
+          "src": "/assets/company-uruit.png"
+        },
+        "target": "_blank",
+        "title": "UruIT"
+      },
+      {
+        "href": "https://city-parking.com/",
+        "image": {
+          "alt": "City Parking",
+          "src": "/assets/company-cityparking.png"
+        },
+        "target": "_blank",
+        "title": "City Parking"
+      },
+      {
+        "href": "https://www.novit.com.ar/",
+        "image": {
+          "alt": "Novit",
+          "src": "/assets/company-novit.png"
+        },
+        "target": "_blank",
+        "title": "Novit"
+      },
+      {
+        "href": "https://gba.gob.ar/",
+        "image": {
+          "alt": "Contaduría General de la Provincia de Buenos Aires",
+          "src": "/assets/company-contaduria.png"
+        },
+        "target": "_blank",
+        "title": "Contaduría General de la Provincia de Buenos Aires"
+      },
+      {
+        "href": "https://www.info.unlp.edu.ar/",
+        "image": {
+          "alt": "Facultad de Informática UNLP",
+          "src": "/assets/company-facultad.png"
+        },
+        "target": "_blank",
+        "title": "Facultad de Informática UNLP"
+      }
+    ],
+    "subtitle": "Empresas"
+  },
+  "contactMe": {
+    "feedback": {
+      "error": "Un error ha ocurrido, por favor reintente en unos segundos",
+      "success": "Email enviado!"
+    },
+    "id": "contactMe",
+    "inputs": {
+      "company": {
+        "label": "Empresa",
+        "placeholder": "Nombre de la empresa"
+      },
+      "details": {
+        "label": "Detalles",
+        "placeholder": "Detalles del proyecto *"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "Dirección de email *"
+      },
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Nombre *"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "placeholder": "Número de teléfono"
+      }
+    },
+    "submit": {
+      "text": "Enviar"
+    },
+    "subtitle": "Hablemos"
+  },
+  "footer": {
+    "information": {
+      "content": "Este sitio web ha sido dessarrollado usando NextJS, Typescript, Imgix y Firebase. La app no tiene ningún propósito comercial. Todos los assets les pertenecen a sus correspondientes dueños.",
+      "title": "Agustin Garcia"
+    },
+    "location": {
+      "content": "Montevideo, Uruguay",
+      "title": "Ubicación"
+    },
+    "socialLinks": {
+      "content": [
+        {
+          "href": "https://www.linkedin.com/in/agusss19",
+          "image": {
+            "alt": "Linkedin",
+            "src": "/assets/icon-linkedin.svg"
+          },
+          "target": "_blank",
+          "title": "Linkedin"
+        },
+        {
+          "href": "https://github.com/agusmgarcia",
+          "image": {
+            "alt": "Github",
+            "src": "/assets/icon-github.svg"
+          },
+          "target": "_blank",
+          "title": "Github"
+        },
+        {
+          "href": "mailto:agusss.garcia19@gmail.com",
+          "image": {
+            "alt": "Gmail",
+            "src": "/assets/icon-gmail.svg"
+          },
+          "target": "_blank",
+          "title": "Gmail"
+        }
+      ],
+      "title": "Redes sociales"
+    }
+  },
+  "navigationBar": {
+    "aboutMe": {
+      "image": {
+        "alt": "Acerca de mi",
+        "src": "/assets/profile.png"
+      }
+    },
+    "companies": {
+      "text": "Empresas"
+    },
+    "contactMe": {
+      "text": "Hablemos"
+    },
+    "downloadCV": {
+      "download": "agustin-garcia-cv.pdf",
+      "href": "https://github.com/agusmgarcia/tex-cv/raw/master/main.english.pdf",
+      "text": "Descargar CV"
+    },
+    "name": "Agustin Garcia",
+    "technologies": {
+      "text": "Tecnologías"
+    },
+    "toogler": {
+      "closed": {
+        "title": "Abrir el menu para acceder a los links"
+      },
+      "open": {
+        "title": "Cerrar el menu"
+      }
+    }
+  },
+  "technologies": {
+    "id": "technologies",
+    "links": [
+      {
+        "href": "https://nextjs.org/",
+        "image": {
+          "alt": "NextJS",
+          "src": "/assets/logo-nextjs.svg"
+        },
+        "target": "_blank",
+        "title": "NextJS"
+      },
+      {
+        "href": "https://reactjs.org/",
+        "image": {
+          "alt": "React",
+          "src": "/assets/logo-react.svg"
+        },
+        "target": "_blank",
+        "title": "React"
+      },
+      {
+        "href": "https://redux.js.org/",
+        "image": {
+          "alt": "Redux",
+          "src": "/assets/logo-redux.svg"
+        },
+        "target": "_blank",
+        "title": "Redux"
+      },
+      {
+        "href": "https://www.typescriptlang.org/",
+        "image": {
+          "alt": "Typescript",
+          "src": "/assets/logo-typescript.svg"
+        },
+        "target": "_blank",
+        "title": "Typescript"
+      },
+      {
+        "href": "https://www.javascript.com/",
+        "image": {
+          "alt": "Javascript",
+          "src": "/assets/logo-javascript.svg"
+        },
+        "target": "_blank",
+        "title": "Javascript"
+      },
+      {
+        "href": "https://nodejs.org/",
+        "image": {
+          "alt": "NodeJS",
+          "src": "/assets/logo-nodejs.svg"
+        },
+        "target": "_blank",
+        "title": "NodeJS"
+      },
+      {
+        "href": "https://graphql.org/",
+        "image": {
+          "alt": "GraphQL",
+          "src": "/assets/logo-graphql.svg"
+        },
+        "target": "_blank",
+        "title": "GraphQL"
+      },
+      {
+        "href": "https://dotnet.microsoft.com/",
+        "image": {
+          "alt": ".Net Core",
+          "src": "/assets/logo-net.svg"
+        },
+        "target": "_blank",
+        "title": ".Net Core"
+      },
+      {
+        "href": "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        "image": {
+          "alt": "CSS",
+          "src": "/assets/logo-css.svg"
+        },
+        "target": "_blank",
+        "title": "CSS"
+      },
+      {
+        "href": "https://golang.org/",
+        "image": {
+          "alt": "Golang",
+          "src": "/assets/logo-golang.svg"
+        },
+        "target": "_blank",
+        "title": "Golang"
+      },
+      {
+        "href": "https://azure.microsoft.com/",
+        "image": {
+          "alt": "Azure",
+          "src": "/assets/logo-azure.svg"
+        },
+        "target": "_blank",
+        "title": "Azure"
+      },
+      {
+        "href": "https://git-scm.com/",
+        "image": {
+          "alt": "Git",
+          "src": "/assets/logo-git.svg"
+        },
+        "target": "_blank",
+        "title": "Git"
+      },
+      {
+        "href": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        "image": {
+          "alt": "HTML",
+          "src": "/assets/logo-html.svg"
+        },
+        "target": "_blank",
+        "title": "HTML"
+      },
+      {
+        "href": "https://sass-lang.com/",
+        "image": {
+          "alt": "SASS",
+          "src": "/assets/logo-sass.svg"
+        },
+        "target": "_blank",
+        "title": "SASS"
+      },
+      {
+        "href": "https://firebase.google.com/",
+        "image": {
+          "alt": "Firebase",
+          "src": "/assets/logo-firebase.svg"
+        },
+        "target": "_blank",
+        "title": "Firebase"
+      }
+    ],
+    "subtitle": "Tecnologías"
+  },
+  "title": "Agustin Garcia :: Perfil"
+}
