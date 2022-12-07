@@ -9,7 +9,7 @@
     "format": "next lint -- --fix && prettier --write ."
   },
   "dependencies": {
-    "@agusmgarcia/swr": "2.0.1",
+    "@agusmgarcia/swr": "2.0.3",
     "@fontsource/roboto": "4.5.5",
     "lazysizes": "5.3.2",
     "next": "12.1.0",
