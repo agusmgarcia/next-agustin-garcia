@@ -4,7 +4,7 @@ import packageJSON from "package.json";
 export default class AppDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang={this.getLanguage()}>
         <Head>
           <link
             rel="apple-touch-icon"
@@ -37,5 +37,14 @@ export default class AppDocument extends Document {
         </body>
       </Html>
     );
+  }
+
+  private getLanguage(): string | undefined {
+    const lang = this.props.__NEXT_DATA__.query.lang;
+
+    if (Array.isArray(lang))
+      throw new Error("'props.__NEXT_DATA__.query.lang' shouldn't be an array");
+
+    return lang;
   }
 }
