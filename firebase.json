@@ -66,6 +66,9 @@
         ]
       }
     ],
+    "i18n": {
+      "root": "/localized"
+    },
     "rewrites": [
       {
         "source": "**",
