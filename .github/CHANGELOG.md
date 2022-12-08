@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.3](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.3)
+
+> 8 November 2022
+
+- start routing not found traffic to 404
+
 ## [v1.3.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.2)
 
 > 8 November 2022
