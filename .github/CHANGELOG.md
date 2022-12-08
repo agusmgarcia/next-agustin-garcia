@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.2)
+
+> 8 November 2022
+
+- adjust firebase configuration
+
 ## [v1.3.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.1)
 
 > 8 November 2022
