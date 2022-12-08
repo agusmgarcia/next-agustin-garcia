@@ -35,7 +35,7 @@
         ]
       },
       {
-        "source": "{/en,/es}",
+        "source": "/",
         "headers": [
           {
             "key": "Content-Security-Policy",
@@ -72,7 +72,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "/"
+        "destination": "/index.html"
       }
     ],
     "cleanUrls": true
