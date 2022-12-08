@@ -4,7 +4,7 @@
   "description": "Personal web site to show the technologies I have worked for and the technologies I use",
   "scripts": {
     "start": "next dev",
-    "build": "del .next out && next build && next export && del out/contents && node bin/createLocalizedFiles.js",
+    "build": "del .next out && next build && next export && del out/contents && cpy ./index.html .. --cwd=out/404 --rename=404.html && del out/404",
     "lint": "agusmgarcia-lint",
     "format": "agusmgarcia-format"
   },
@@ -23,6 +23,7 @@
     "@types/node": "17.0.23",
     "@types/react": "17.0.39",
     "@types/react-imgix": "9.0.5",
+    "cpy-cli": "4.1.0",
     "del-cli": "5.0.0",
     "husky": "4.0.0",
     "sass": "1.37.5",
