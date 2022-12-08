@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.1)
+
+> 8 November 2022
+
+- add i18n localized files
+
 ## [v1.3.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.0)
 
 > 7 November 2022
