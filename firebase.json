@@ -69,12 +69,6 @@
     "i18n": {
       "root": "/localized"
     },
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
     "cleanUrls": true
   }
 }

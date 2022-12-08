@@ -14,7 +14,7 @@ if (!fs.existsSync(outFolder)) {
 
 const pages = fs
   .readdirSync(outFolder)
-  .filter((f) => f.endsWith(".html") && f !== "index.html");
+  .filter((f) => f.endsWith(".html") && f !== "index.html" && f !== "404.html");
 
 process.stdout.write(
   `> ${pages.length} localized ${
