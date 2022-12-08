@@ -66,11 +66,10 @@
         ]
       }
     ],
-    "redirects": [
+    "rewrites": [
       {
-        "source": "/",
-        "destination": "/en",
-        "type": 301
+        "source": "**",
+        "destination": "/"
       }
     ],
     "cleanUrls": true

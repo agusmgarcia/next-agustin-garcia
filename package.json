@@ -4,7 +4,7 @@
   "description": "Personal web site to show the technologies I have worked for and the technologies I use",
   "scripts": {
     "start": "next dev",
-    "build": "del .next out && next build && next export && del out/contents",
+    "build": "del .next out && next build && next export && del out/contents && del out/404.html",
     "lint": "agusmgarcia-lint",
     "format": "agusmgarcia-format"
   },
