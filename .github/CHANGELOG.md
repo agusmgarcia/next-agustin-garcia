@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.5)
+
+> 9 November 2022
+
+- react to lang changes
+- add devtools support for dev environment
+- **Notification**: dismiss old messages
+
 ## [v1.3.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.4)
 
 > 8 November 2022
