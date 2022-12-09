@@ -4,7 +4,7 @@ import packageJSON from "package.json";
 export default class AppDocument extends Document {
   render() {
     return (
-      <Html lang={this.props.__NEXT_DATA__.props.pageProps?._document?.lang}>
+      <Html lang={this.props.__NEXT_DATA__.props.pageProps._app?.lang}>
         <Head>
           <link
             rel="apple-touch-icon"

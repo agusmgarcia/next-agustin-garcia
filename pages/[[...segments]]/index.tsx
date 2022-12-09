@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 
 import { HomePage } from "#src/pages";
-import { HomeContent, StoreProvider } from "#src/store";
+import { HomeContent } from "#src/store";
 
 export const getStaticPaths: GetStaticPaths<{
   segments: ["localized", string] | undefined;
@@ -18,7 +18,7 @@ export const getStaticPaths: GetStaticPaths<{
 };
 
 export const getStaticProps: GetStaticProps<
-  { _document: { lang: string }; homeContent: HomeContent },
+  { _app: { initialData: { homeContent: HomeContent }; lang: string } },
   { segments: ["localized", string] | undefined }
 > = async (context) => {
   const lang = context.params?.segments?.[1] ?? "en";
@@ -27,16 +27,11 @@ export const getStaticProps: GetStaticProps<
 
   return {
     props: {
-      _document: { lang },
-      homeContent,
+      _app: { initialData: { homeContent }, lang },
     },
   };
 };
 
-export default function Home({ homeContent }: { homeContent: HomeContent }) {
-  return (
-    <StoreProvider initialData={{ homeContent }}>
-      <HomePage />
-    </StoreProvider>
-  );
+export default function Home() {
+  return <HomePage />;
 }
