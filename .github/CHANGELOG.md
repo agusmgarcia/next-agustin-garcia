@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.6](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.6)
+
+> 12 November 2022
+
+- add minor improvements
+
 ## [v1.3.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.5)
 
 > 9 November 2022
