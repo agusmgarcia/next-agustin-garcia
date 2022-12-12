@@ -10,6 +10,10 @@ export default class NotificationSlice extends MemoryStorageSlice<
     super(undefined);
   }
 
+  protected onInit(): void {
+    this.setKey({});
+  }
+
   notify(type: "success" | "error", message: string) {
     const id = uuid();
     return new Promise((resolve) =>

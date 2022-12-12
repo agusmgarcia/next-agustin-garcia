@@ -6,4 +6,8 @@ export default class HomeContentSlice extends MemoryStorageSlice<HomeContent> {
   constructor(_: any, initialData: HomeContent) {
     super(initialData);
   }
+
+  protected onInit(): void {
+    this.setKey({});
+  }
 }
