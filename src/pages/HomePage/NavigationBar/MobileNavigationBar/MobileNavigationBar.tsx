@@ -15,14 +15,14 @@ import styles from "./MobileNavigationBar.module.scss";
 import MobileNavigationBarProps from "./MobileNavigationBar.types";
 
 export default function MobileNavigationBar(props: MobileNavigationBarProps) {
-  const { isOpen, screenRef, setOpen } = useMobileNavigationBar();
+  const { screenRef, setOpen, state } = useMobileNavigationBar();
 
   return (
     <nav className={`${styles.navigationBar} ${props.className}`}>
       <div className={styles.container}>
-        <Bar isOpen={isOpen} setOpen={setOpen} />
-        <Body isOpen={isOpen} setOpen={setOpen} />
-        <Screen ref={screenRef} isOpen={isOpen} />
+        <Bar isOpen={state === "open"} setOpen={setOpen} />
+        <Body isOpen={state === "open"} setOpen={setOpen} />
+        <Screen ref={screenRef} state={state} />
       </div>
     </nav>
   );
@@ -155,13 +155,9 @@ function Body({
   );
 }
 
-const Screen = React.forwardRef<HTMLDivElement, { isOpen: boolean }>(
-  function Screen({ isOpen }, ref) {
-    return (
-      <div
-        ref={ref}
-        className={`${styles.screen} ${isOpen ? styles.open : undefined}`}
-      />
-    );
-  }
-);
+const Screen = React.forwardRef<
+  HTMLDivElement,
+  { state: "open" | "closing" | "closed" }
+>(function Screen({ state }, ref) {
+  return <div ref={ref} className={`${styles.screen} ${styles[state]}`} />;
+});
