@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 
 import { useStore } from "#src/store";
@@ -11,7 +12,8 @@ import styles from "./HomePage.module.scss";
 import HomePageProps from "./HomePage.types";
 import NavigationBar from "./NavigationBar";
 import Technologies from "./Technologies";
-import Toast from "./Toast";
+
+const Toast = dynamic(() => import("./Toast"), { ssr: false });
 
 export default function HomePage(_: HomePageProps) {
   const homeContent = useStore((store) => store.homeContent.data);
