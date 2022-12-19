@@ -3,8 +3,8 @@ import { createReactStore } from "@agusmgarcia/swr";
 import HomeContentSlice from "./HomeContent";
 import NotificationSlice from "./Notification";
 
-export type { default as HomeContent } from "./HomeContent.types";
-export type { default as Notification } from "./Notification.types";
+export type { HomeContent } from "./HomeContent";
+export type { Notification } from "./Notification";
 
 export const { StoreProvider, useStore } = createReactStore(
   {

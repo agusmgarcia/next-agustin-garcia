@@ -1,6 +1,11 @@
 import { MemoryStorageSlice } from "@agusmgarcia/swr";
 
-import type Notification from "./Notification.types";
+export type Notification = {
+  close: () => void;
+  id: string;
+  message: string;
+  type: "success" | "error";
+};
 
 export default class NotificationSlice extends MemoryStorageSlice<
   Notification | undefined
