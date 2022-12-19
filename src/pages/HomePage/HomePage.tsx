@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 
-import { useStore } from "#src/store";
+import { useHomeContent } from "#src/store";
 
 import AboutMe from "./AboutMe";
 import Banner from "./Banner";
@@ -16,7 +16,7 @@ import Technologies from "./Technologies";
 const Toast = dynamic(() => import("./Toast"), { ssr: false });
 
 export default function HomePage(_: HomePageProps) {
-  const homeContent = useStore((store) => store.homeContent.data);
+  const { homeContent } = useHomeContent();
 
   return (
     <>

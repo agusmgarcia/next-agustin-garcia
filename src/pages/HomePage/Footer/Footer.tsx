@@ -1,5 +1,5 @@
 import { Box, Image, Link, Typography } from "#src/components";
-import { useStore } from "#src/store";
+import { useHomeContent } from "#src/store";
 import { useMediaQuery, Viewports } from "#src/utils";
 
 import styles from "./Footer.module.scss";
@@ -7,7 +7,7 @@ import FooterProps from "./Footer.types";
 
 export default function Footer(props: FooterProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const homeContent = useStore((store) => store.homeContent.data);
+  const { homeContent } = useHomeContent();
 
   return (
     <footer className={`${styles.footer} ${props.className}`}>

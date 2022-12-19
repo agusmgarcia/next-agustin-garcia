@@ -4,14 +4,14 @@ import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 import { Typography } from "#src/components";
-import { useStore } from "#src/store";
+import { useNotification } from "#src/store";
 import { useMediaQuery, Viewports } from "#src/utils";
 
 import ToastProps from "./Toast.types";
 
 export default function Toast(_: ToastProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const notification = useStore((store) => store.notification.data);
+  const { notification } = useNotification();
 
   useEffect(() => {
     if (notification === undefined) return;

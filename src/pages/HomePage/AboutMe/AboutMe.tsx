@@ -1,5 +1,5 @@
 import { Image, Typography } from "#src/components";
-import { useStore } from "#src/store";
+import { useHomeContent } from "#src/store";
 import { useMediaQuery, Viewports } from "#src/utils";
 
 import Section from "../Section";
@@ -8,7 +8,7 @@ import AboutMeProps from "./AboutMe.types";
 
 export default function AboutMe(props: AboutMeProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
-  const homeContent = useStore((store) => store.homeContent.data);
+  const { homeContent } = useHomeContent();
 
   return (
     <Section id={homeContent.aboutMe.id} className={props.className}>

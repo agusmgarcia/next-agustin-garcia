@@ -18,7 +18,7 @@ export default class NotificationSlice extends MemoryStorageSlice<
     this.setKey({});
   }
 
-  async notify(type: "success" | "error", message: string): Promise<void> {
+  async set(type: "success" | "error", message: string): Promise<void> {
     const uuid = await import("uuid").then((module) => module.v4);
     const id = uuid();
     await new Promise((resolve) =>

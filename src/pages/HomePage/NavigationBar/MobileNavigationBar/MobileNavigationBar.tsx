@@ -8,7 +8,7 @@ import {
   Link,
   Typography,
 } from "#src/components";
-import { useStore } from "#src/store";
+import { useHomeContent } from "#src/store";
 
 import useMobileNavigationBar from "./MobileNavigationBar.hooks";
 import styles from "./MobileNavigationBar.module.scss";
@@ -35,7 +35,7 @@ function Bar({
   isOpen: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const homeContent = useStore((store) => store.homeContent.data);
+  const { homeContent } = useHomeContent();
 
   return (
     <div className={`${styles.bar} ${isOpen ? styles.open : undefined}`}>
@@ -91,7 +91,7 @@ function Body({
   isOpen: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const homeContent = useStore((store) => store.homeContent.data);
+  const { homeContent } = useHomeContent();
 
   return (
     <div

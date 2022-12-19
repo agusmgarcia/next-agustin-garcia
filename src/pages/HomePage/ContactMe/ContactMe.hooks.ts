@@ -5,7 +5,7 @@ import {
   useState,
 } from "react";
 
-import { useStore } from "#src/store";
+import { useHomeContent, useNotification } from "#src/store";
 
 const initialValues = {
   company: "",
@@ -16,7 +16,7 @@ const initialValues = {
 };
 
 export default function useContactMe() {
-  const homeContent = useStore((store) => store.homeContent.data);
+  const { homeContent } = useHomeContent();
   const [values, setValues] = useState(initialValues);
   const [isSubmitting, setSubmitting] = useState(false);
 
@@ -30,7 +30,7 @@ export default function useContactMe() {
     }));
   }, []);
 
-  const notify = useStore((store) => store.notification.notify);
+  const { setNotification } = useNotification();
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = useCallback(
     async (event) => {
@@ -56,16 +56,19 @@ export default function useContactMe() {
 
         setValues(initialValues);
         setSubmitting(false);
-        await notify("success", homeContent.contactMe.feedback.success);
+        await setNotification(
+          "success",
+          homeContent.contactMe.feedback.success
+        );
       } catch (error) {
         setSubmitting(false);
-        await notify("error", homeContent.contactMe.feedback.error);
+        await setNotification("error", homeContent.contactMe.feedback.error);
       }
     },
     [
       homeContent.contactMe.feedback.error,
       homeContent.contactMe.feedback.success,
-      notify,
+      setNotification,
       values,
     ]
   );
