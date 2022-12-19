@@ -2,15 +2,24 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.7](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.7)
+
+> 19 December 2022
+
+- delivery `ms` separately from the main bundle
+- delivery `react-toastify` separately from the main bundle
+- delivery `uuid` separately from the main bundle
+- **MobileNavigationBar**: improve animation
+
 ## [v1.3.6](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.6)
 
-> 12 November 2022
+> 12 December 2022
 
 - add minor improvements
 
 ## [v1.3.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.5)
 
-> 9 November 2022
+> 9 December 2022
 
 - react to lang changes
 - add devtools support for dev environment
@@ -18,7 +27,7 @@ All notable changes to this project will be documented in this file.
 
 ## [v1.3.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.4)
 
-> 8 November 2022
+> 8 December 2022
 
 - add minor improvements
 
