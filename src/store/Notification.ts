@@ -1,5 +1,4 @@
 import { MemoryStorageSlice } from "@agusmgarcia/swr";
-import { v4 as uuid } from "uuid";
 
 import type Notification from "./Notification.types";
 
@@ -14,9 +13,10 @@ export default class NotificationSlice extends MemoryStorageSlice<
     this.setKey({});
   }
 
-  notify(type: "success" | "error", message: string) {
+  async notify(type: "success" | "error", message: string): Promise<void> {
+    const uuid = await import("uuid").then((module) => module.v4);
     const id = uuid();
-    return new Promise((resolve) =>
+    await new Promise((resolve) =>
       this.setData({
         close: () =>
           this.setData((prev) => (prev?.id === id ? undefined : prev)).then(
