@@ -10,6 +10,8 @@ export default function Companies(props: CompaniesProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
   const { homeContent } = useHomeContent();
 
+  if (homeContent === undefined) return <></>;
+
   return (
     <Section
       id={homeContent.companies.id}

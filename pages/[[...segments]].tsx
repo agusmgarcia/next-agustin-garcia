@@ -5,33 +5,88 @@ import { HomePage } from "#src/pages";
 import { HomeContent } from "#src/store";
 
 export const getStaticPaths: GetStaticPaths<{
-  segments: ["localized", string] | undefined;
+  segments: string[] | undefined;
 }> = () => {
   return {
     fallback: false,
-    paths: [
-      { params: { segments: undefined } },
-      { params: { segments: ["localized", "en"] } },
-      { params: { segments: ["localized", "es"] } },
-    ],
+    paths: languages
+      .flatMap((l) =>
+        pages.map((p) => ({
+          params: { segments: ["localized", l, p] as string[] | undefined },
+        }))
+      )
+      .concat(
+        languages.map((l) => ({ params: { segments: ["localized", l] } }))
+      )
+      .concat(pages.map((p) => ({ params: { segments: [p] } })))
+      .concat({ params: { segments: undefined } }),
   };
 };
 
 export const getStaticProps: GetStaticProps<
-  { _app: { initialData: { homeContent: HomeContent }; lang: string } },
-  { segments: ["localized", string] | undefined }
+  {
+    _app: {
+      fallbacksData: Partial<SpecificContent>;
+      lang: string;
+    };
+    _component: {
+      page: typeof pages[number] | "home";
+    };
+  },
+  {
+    segments:
+      | ["localized", typeof languages[number], typeof pages[number]]
+      | ["localized", typeof languages[number]]
+      | [typeof pages[number]]
+      | undefined;
+  }
 > = async (context) => {
-  const lang = context.params?.segments?.[1] ?? "en";
-  const homeContent = (await import(`#public/contents/index.${lang}.json`))
-    .default as HomeContent;
+  const lang: typeof languages[number] =
+    context.params?.segments === undefined
+      ? "en"
+      : context.params.segments.length === 1
+      ? "en"
+      : context.params.segments[1];
+
+  const page: typeof pages[number] | "home" =
+    context.params?.segments === undefined
+      ? "home"
+      : context.params.segments.length === 1
+      ? context.params.segments[0]
+      : context.params.segments.length === 2
+      ? "home"
+      : context.params.segments[2];
+
+  const content = (await import(`#public/contents/${page}.${lang}.json`))
+    .default as SpecificContent[keyof SpecificContent];
 
   return {
     props: {
-      _app: { initialData: { homeContent }, lang },
+      _app: {
+        fallbacksData: {
+          [`${page}Content`]: content,
+        },
+        lang,
+      },
+      _component: { page },
     },
   };
 };
 
-export default function Home() {
-  return <HomePage />;
+export default function Page({
+  page,
+}: {
+  page: typeof pages[number] | "home";
+}) {
+  switch (page) {
+    case "home":
+      return <HomePage />;
+  }
 }
+
+const languages = ["en", "es"] as const;
+const pages = [] as const;
+
+type SpecificContent = {
+  homeContent: HomeContent;
+};

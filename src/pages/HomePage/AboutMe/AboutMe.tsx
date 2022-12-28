@@ -10,6 +10,8 @@ export default function AboutMe(props: AboutMeProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
   const { homeContent } = useHomeContent();
 
+  if (homeContent === undefined) return <></>;
+
   return (
     <Section id={homeContent.aboutMe.id} className={props.className}>
       <div className={styles.aboutMe}>

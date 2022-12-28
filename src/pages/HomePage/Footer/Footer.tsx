@@ -9,6 +9,8 @@ export default function Footer(props: FooterProps) {
   const desktop = useMediaQuery(Viewports.MIN_MD);
   const { homeContent } = useHomeContent();
 
+  if (homeContent === undefined) return <></>;
+
   return (
     <footer className={`${styles.footer} ${props.className}`}>
       <Box variant="1200px" className={styles.content}>

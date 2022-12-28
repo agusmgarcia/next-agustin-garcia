@@ -48,12 +48,10 @@ export type HomeContent = {
 
 type Image = { alt: string; src: string };
 
-export default class HomeContentSlice extends MemoryStorageSlice<HomeContent> {
-  constructor(_: any, initialData: HomeContent) {
-    super(initialData);
-  }
-
-  protected onInit(): void {
-    this.setKey({});
+export default class HomeContentSlice extends MemoryStorageSlice<
+  HomeContent | undefined
+> {
+  constructor(_: any, fallbackData: HomeContent | undefined) {
+    super(fallbackData, { initialKey: {} });
   }
 }

@@ -6,6 +6,7 @@ import DesktopNavigationBarProps from "./DesktopNavigationBar.types";
 
 export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
   const { homeContent } = useHomeContent();
+  if (homeContent === undefined) return <></>;
 
   return (
     <nav className={`${styles.navigationBar} ${props.className}`}>

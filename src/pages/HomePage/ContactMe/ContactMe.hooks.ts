@@ -36,6 +36,9 @@ export default function useContactMe() {
     async (event) => {
       event.preventDefault();
 
+      if (homeContent?.contactMe.feedback.error === undefined) return;
+      if (homeContent?.contactMe.feedback.success === undefined) return;
+
       setSubmitting(true);
       try {
         const response = await fetch(
@@ -56,18 +59,15 @@ export default function useContactMe() {
 
         setValues(initialValues);
         setSubmitting(false);
-        await setNotification(
-          "success",
-          homeContent.contactMe.feedback.success
-        );
+        setNotification("success", homeContent.contactMe.feedback.success);
       } catch (error) {
         setSubmitting(false);
-        await setNotification("error", homeContent.contactMe.feedback.error);
+        setNotification("error", homeContent.contactMe.feedback.error);
       }
     },
     [
-      homeContent.contactMe.feedback.error,
-      homeContent.contactMe.feedback.success,
+      homeContent?.contactMe.feedback.error,
+      homeContent?.contactMe.feedback.success,
       setNotification,
       values,
     ]

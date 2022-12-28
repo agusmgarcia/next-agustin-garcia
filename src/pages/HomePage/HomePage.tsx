@@ -17,6 +17,7 @@ const Toast = dynamic(() => import("./Toast"), { ssr: false });
 
 export default function HomePage(_: HomePageProps) {
   const { homeContent } = useHomeContent();
+  if (homeContent === undefined) return <></>;
 
   return (
     <>

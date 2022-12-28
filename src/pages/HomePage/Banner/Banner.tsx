@@ -6,6 +6,7 @@ import BannerProps from "./Banner.types";
 
 export default function Banner(props: BannerProps) {
   const { homeContent } = useHomeContent();
+  if (homeContent === undefined) return <></>;
 
   return (
     <div className={`${styles.banner} ${props.className}`}>

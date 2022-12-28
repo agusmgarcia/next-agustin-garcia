@@ -36,6 +36,7 @@ function Bar({
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const { homeContent } = useHomeContent();
+  if (homeContent === undefined) return <></>;
 
   return (
     <div className={`${styles.bar} ${isOpen ? styles.open : undefined}`}>
@@ -92,6 +93,7 @@ function Body({
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const { homeContent } = useHomeContent();
+  if (homeContent === undefined) return <></>;
 
   return (
     <div
