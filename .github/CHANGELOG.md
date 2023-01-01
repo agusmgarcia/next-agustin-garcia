@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.8](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.8)
+
+> 1 January 2023
+
+- improve `segments` page
+- stop using `uuid`
+- remove `useIsomorphicLayout` usage
+- **home.json**: update file
+- encapsulate `useStore` within hooks
+
 ## [v1.3.7](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.7)
 
 > 19 December 2022
