@@ -11,11 +11,11 @@ export default class NotificationSlice extends MemoryStorageSlice<
   Notification | undefined
 > {
   constructor() {
-    super(undefined, { initialKey: {} });
+    super(undefined);
   }
 
   set(type: "success" | "error", message: string): void {
-    const id = crypto.randomUUID?.() ?? Math.random().toString();
+    const id = Math.random().toString();
     this.setData({
       close: () => this.setData((prev) => (prev?.id === id ? undefined : prev)),
       id,

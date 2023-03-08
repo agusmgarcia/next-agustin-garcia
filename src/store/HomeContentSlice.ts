@@ -1,4 +1,4 @@
-import { MemoryStorageSlice } from "@agusmgarcia/swr";
+import { MemoryStorageSlice, Store } from "@agusmgarcia/swr";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };
@@ -51,7 +51,7 @@ type Image = { alt: string; src: string };
 export default class HomeContentSlice extends MemoryStorageSlice<
   HomeContent | undefined
 > {
-  constructor(_: any, fallbackData: HomeContent | undefined) {
-    super(fallbackData, { initialKey: {} });
+  constructor(_: Store<{}>, fallbackData: HomeContent | undefined) {
+    super(fallbackData);
   }
 }
