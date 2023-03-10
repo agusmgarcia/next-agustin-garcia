@@ -2,7 +2,7 @@ import Document, { Head, Html, Main, NextScript } from "next/document";
 import packageJSON from "package.json";
 
 export default class AppDocument extends Document {
-  render() {
+  override render() {
     return (
       <Html lang={this.props.__NEXT_DATA__.props.pageProps._app?.lang}>
         <Head>
