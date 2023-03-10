@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.12](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.12)
+
+> 9 March 2023
+
+- enable `noImplicitOverride` option
+
 ## [v1.3.11](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.11)
 
 > 8 March 2023
