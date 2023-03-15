@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.13](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.13)
+
+> 15 March 2023
+
+- bump @agusmgarcia/swr to 3.4.1
+- bump @agusmgarcia/eslint-config to 1.0.5
+
 ## [v1.3.12](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.12)
 
 > 9 March 2023
