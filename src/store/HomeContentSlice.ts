@@ -51,7 +51,7 @@ type Image = { alt: string; src: string };
 export default class HomeContentSlice extends MemoryStorageSlice<
   HomeContent | undefined
 > {
-  constructor(_: Store<{}>, fallbackData: HomeContent | undefined) {
-    super(fallbackData);
+  constructor(_: Store<{}>, initialData: HomeContent | undefined) {
+    super(initialData, { reloadOnInit: initialData === undefined });
   }
 }

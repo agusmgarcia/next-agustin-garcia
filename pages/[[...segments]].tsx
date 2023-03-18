@@ -26,7 +26,7 @@ export const getStaticPaths: GetStaticPaths<{
 export const getStaticProps: GetStaticProps<
   {
     _app: {
-      fallbacksData: Partial<SpecificContent>;
+      initialsData: Partial<SpecificContent>;
       lang: string;
     };
     _component: {
@@ -63,7 +63,7 @@ export const getStaticProps: GetStaticProps<
   return {
     props: {
       _app: {
-        fallbacksData: {
+        initialsData: {
           [`${page}Content`]: content,
         },
         lang,

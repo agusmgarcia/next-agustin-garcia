@@ -11,7 +11,7 @@ export default class NotificationSlice extends MemoryStorageSlice<
   Notification | undefined
 > {
   constructor() {
-    super(undefined);
+    super(undefined, { reloadOnInit: false });
   }
 
   set(type: "success" | "error", message: string): void {

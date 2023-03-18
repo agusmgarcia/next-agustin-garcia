@@ -9,7 +9,7 @@
     "format": "agusmgarcia-format"
   },
   "dependencies": {
-    "@agusmgarcia/swr": "3.4.1",
+    "@agusmgarcia/swr": "3.5.1",
     "@fontsource/roboto": "4.5.5",
     "lazysizes": "5.3.2",
     "ms": "2.1.3",

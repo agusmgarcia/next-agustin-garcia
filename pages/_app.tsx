@@ -6,7 +6,7 @@ import { StoreProvider } from "#src/store";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <StoreProvider fallbacksData={pageProps._app?.fallbacksData}>
+    <StoreProvider initialsData={pageProps._app?.initialsData}>
       <Component {...pageProps._component} />
     </StoreProvider>
   );
