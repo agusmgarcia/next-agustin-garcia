@@ -52,6 +52,6 @@ export default class HomeContentSlice extends MemoryStorageSlice<
   HomeContent | undefined
 > {
   constructor(_: Store<{}>, initialData: HomeContent | undefined) {
-    super(initialData, { reloadOnInit: initialData === undefined });
+    super(initialData);
   }
 }
