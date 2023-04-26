@@ -44,17 +44,17 @@ function Bar({
         <div className={styles.links}>
           {/* ABOUT ME */}
           <Link
-            href={`#${homeContent.aboutMe.id}`}
             className={`${styles.link} ${styles.aboutMe}`}
+            href={`#${homeContent.aboutMe.id}`}
             onClick={() => setOpen(false)}
           >
             <Image
-              src={homeContent.navigationBar.aboutMe.image.src}
-              className={styles.image}
               alt={homeContent.navigationBar.aboutMe.image.alt}
-              loading="eager"
-              width={40}
+              className={styles.image}
               height={40}
+              loading="eager"
+              src={homeContent.navigationBar.aboutMe.image.src}
+              width={40}
             />
           </Link>
 
@@ -66,17 +66,17 @@ function Bar({
           {/* TOOGLER */}
           <button
             className={styles.toogler}
+            onClick={() => setOpen((prev) => !prev)}
             title={
               isOpen
                 ? homeContent.navigationBar.toogler.open.title
                 : homeContent.navigationBar.toogler.closed.title
             }
-            onClick={() => setOpen((prev) => !prev)}
           >
             {isOpen ? (
-              <CloseIcon className={styles.icon} width={20} height={20} />
+              <CloseIcon className={styles.icon} height={20} width={20} />
             ) : (
-              <BarsIcon className={styles.icon} width={20} height={20} />
+              <BarsIcon className={styles.icon} height={20} width={20} />
             )}
           </button>
         </div>
@@ -97,16 +97,16 @@ function Body({
 
   return (
     <div
-      className={`${styles.body} ${isOpen ? styles.open : undefined}`}
       aria-hidden={isOpen ? undefined : true}
+      className={`${styles.body} ${isOpen ? styles.open : undefined}`}
     >
       <Box variant="1200px">
         <div className={styles.separator} />
         <div className={styles.links}>
           {/* TECHNOLOGIES */}
           <Link
-            href={`#${homeContent.technologies.id}`}
             className={`${styles.link} ${styles.technologies}`}
+            href={`#${homeContent.technologies.id}`}
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}
           >
@@ -117,8 +117,8 @@ function Body({
 
           {/* COMPANIES */}
           <Link
-            href={`#${homeContent.companies.id}`}
             className={`${styles.link} ${styles.companies}`}
+            href={`#${homeContent.companies.id}`}
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}
           >
@@ -129,8 +129,8 @@ function Body({
 
           {/* CONTACT ME */}
           <Link
-            href={`#${homeContent.contactMe.id}`}
             className={`${styles.link} ${styles.contactMe}`}
+            href={`#${homeContent.contactMe.id}`}
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}
           >
@@ -141,9 +141,9 @@ function Body({
 
           {/* DOWNLOAD CV */}
           <Link
-            href={homeContent.navigationBar.downloadCV.href}
-            download={homeContent.navigationBar.downloadCV.download}
             className={`${styles.link} ${styles.downloadCV}`}
+            download={homeContent.navigationBar.downloadCV.download}
+            href={homeContent.navigationBar.downloadCV.href}
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}
           >
@@ -159,7 +159,7 @@ function Body({
 
 const Screen = React.forwardRef<
   HTMLDivElement,
-  { state: "open" | "closing" | "closed" }
+  { state: "closed" | "closing" | "open" }
 >(function Screen({ state }, ref) {
   return <div ref={ref} className={`${styles.screen} ${styles[state]}`} />;
 });

@@ -16,9 +16,9 @@ export default function ContactMe(props: ContactMeProps) {
 
   return (
     <Section
+      className={props.className}
       id={homeContent.contactMe.id}
       subtitle={homeContent.contactMe.subtitle}
-      className={props.className}
     >
       <form className={styles.contactMe} onSubmit={handleSubmit}>
         {/* NAME */}
@@ -26,14 +26,14 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.name.label}
           <Typography
             as="input"
-            type="text"
-            name="name"
-            placeholder={homeContent.contactMe.inputs.name.placeholder}
             className={styles.field}
-            value={form.name}
-            onChange={handleChange}
-            required
             disabled={isSubmitting}
+            name="name"
+            onChange={handleChange}
+            placeholder={homeContent.contactMe.inputs.name.placeholder}
+            required={true}
+            type="text"
+            value={form.name}
           />
         </Typography>
 
@@ -42,14 +42,14 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.email.label}
           <Typography
             as="input"
-            type="email"
-            name="email"
-            placeholder={homeContent.contactMe.inputs.email.placeholder}
             className={styles.field}
-            required
-            value={form.email}
-            onChange={handleChange}
             disabled={isSubmitting}
+            name="email"
+            onChange={handleChange}
+            placeholder={homeContent.contactMe.inputs.email.placeholder}
+            required={true}
+            type="email"
+            value={form.email}
           />
         </Typography>
 
@@ -58,13 +58,13 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.company.label}
           <Typography
             as="input"
-            type="text"
-            name="company"
-            placeholder={homeContent.contactMe.inputs.company.placeholder}
             className={styles.field}
-            value={form.company}
-            onChange={handleChange}
             disabled={isSubmitting}
+            name="company"
+            onChange={handleChange}
+            placeholder={homeContent.contactMe.inputs.company.placeholder}
+            type="text"
+            value={form.company}
           />
         </Typography>
 
@@ -73,13 +73,13 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.phone.label}
           <Typography
             as="input"
-            type="tel"
-            name="phone"
-            placeholder={homeContent.contactMe.inputs.phone.placeholder}
             className={styles.field}
-            value={form.phone}
-            onChange={handleChange}
             disabled={isSubmitting}
+            name="phone"
+            onChange={handleChange}
+            placeholder={homeContent.contactMe.inputs.phone.placeholder}
+            type="tel"
+            value={form.phone}
           />
         </Typography>
 
@@ -88,19 +88,19 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.details.label}
           <Typography
             as="textarea"
-            name="details"
-            placeholder={homeContent.contactMe.inputs.details.placeholder}
             className={styles.field}
+            disabled={isSubmitting}
+            name="details"
+            onChange={handleChange}
+            placeholder={homeContent.contactMe.inputs.details.placeholder}
+            required={true}
             rows={5}
             value={form.details}
-            onChange={handleChange}
-            required
-            disabled={isSubmitting}
           />
         </Typography>
 
         {/* SUBMIT */}
-        <Button type="submit" disabled={isSubmitting} className={styles.button}>
+        <Button className={styles.button} disabled={isSubmitting} type="submit">
           {!isSubmitting ? (
             <Typography as="span" variant={desktop ? "1.25rem" : "1rem"}>
               {homeContent.contactMe.submit.text}
@@ -108,9 +108,9 @@ export default function ContactMe(props: ContactMeProps) {
           ) : (
             <Spinner
               color="white"
-              width={desktop ? "1.25rem" : "1rem"}
               height={desktop ? "1.25rem" : "1rem"}
               strokeWidth="2"
+              width={desktop ? "1.25rem" : "1rem"}
             />
           )}
         </Button>

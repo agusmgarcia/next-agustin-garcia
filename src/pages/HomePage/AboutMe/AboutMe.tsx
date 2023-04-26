@@ -13,15 +13,15 @@ export default function AboutMe(props: AboutMeProps) {
   if (homeContent === undefined) return <></>;
 
   return (
-    <Section id={homeContent.aboutMe.id} className={props.className}>
+    <Section className={props.className} id={homeContent.aboutMe.id}>
       <div className={styles.aboutMe}>
         <Image
-          src={homeContent.aboutMe.image.src}
-          className={styles.image}
           alt={homeContent.aboutMe.image.alt}
-          loading="eager"
-          width={desktop ? 256 : 224}
+          className={styles.image}
           height={desktop ? 256 : 224}
+          loading="eager"
+          src={homeContent.aboutMe.image.src}
+          width={desktop ? 256 : 224}
         />
 
         <div className={styles.content}>
@@ -29,7 +29,7 @@ export default function AboutMe(props: AboutMeProps) {
             {homeContent.aboutMe.name}
           </Typography>
 
-          <Typography as="p" variant="1.25rem" className={styles.description}>
+          <Typography as="p" className={styles.description} variant="1.25rem">
             {homeContent.aboutMe.description}
           </Typography>
         </div>

@@ -7,13 +7,13 @@ export default function Section(props: SectionProps) {
   return (
     <Box
       as="section"
-      variant="800px"
-      id={props.id}
       className={`${styles.section} ${props.className}`}
+      id={props.id}
+      variant="800px"
     >
       {/* SUBTITLE */}
       {props.subtitle && (
-        <Typography as="h2" variant="2rem" className={styles.subtitle}>
+        <Typography as="h2" className={styles.subtitle} variant="2rem">
           {props.subtitle}
         </Typography>
       )}

@@ -4,7 +4,7 @@ export type Notification = {
   close: () => void;
   id: string;
   message: string;
-  type: "success" | "error";
+  type: "error" | "success";
 };
 
 export default class NotificationSlice extends MemoryStorageSlice<
@@ -14,7 +14,7 @@ export default class NotificationSlice extends MemoryStorageSlice<
     super(undefined, { reloadOnInit: false });
   }
 
-  set(type: "success" | "error", message: string): void {
+  set(type: "error" | "success", message: string): void {
     const id = Math.random().toString();
     this.setData({
       close: () => this.setData((prev) => (prev?.id === id ? undefined : prev)),

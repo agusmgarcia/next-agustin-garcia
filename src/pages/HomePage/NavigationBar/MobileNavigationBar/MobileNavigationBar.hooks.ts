@@ -58,4 +58,4 @@ export default function useMobileNavigationBar() {
   return { screenRef, setOpen, state };
 }
 
-type ModalState = "open" | "closing" | "closed";
+type ModalState = "closed" | "closing" | "open";

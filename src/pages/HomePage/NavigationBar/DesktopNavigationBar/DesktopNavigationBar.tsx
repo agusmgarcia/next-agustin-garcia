@@ -10,19 +10,19 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
   return (
     <nav className={`${styles.navigationBar} ${props.className}`}>
-      <Box variant="1200px" className={styles.content}>
+      <Box className={styles.content} variant="1200px">
         {/* ABOUT ME */}
         <Link
-          href={`#${homeContent.aboutMe.id}`}
           className={`${styles.link} ${styles.aboutMe}`}
+          href={`#${homeContent.aboutMe.id}`}
         >
           <Image
-            src={homeContent.navigationBar.aboutMe.image.src}
-            className={styles.image}
             alt={homeContent.navigationBar.aboutMe.image.alt}
-            loading="eager"
-            width={48}
+            className={styles.image}
             height={48}
+            loading="eager"
+            src={homeContent.navigationBar.aboutMe.image.src}
+            width={48}
           />
         </Link>
 
@@ -33,8 +33,8 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* TECHNOLOGIES */}
         <Link
-          href={`#${homeContent.technologies.id}`}
           className={`${styles.link} ${styles.technologies}`}
+          href={`#${homeContent.technologies.id}`}
         >
           <Typography as="span">
             {homeContent.navigationBar.technologies.text}
@@ -43,8 +43,8 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* COMPANIES */}
         <Link
-          href={`#${homeContent.companies.id}`}
           className={`${styles.link} ${styles.companies}`}
+          href={`#${homeContent.companies.id}`}
         >
           <Typography as="span">
             {homeContent.navigationBar.companies.text}
@@ -53,8 +53,8 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* CONTACT ME */}
         <Link
-          href={`#${homeContent.contactMe.id}`}
           className={`${styles.link} ${styles.contactMe}`}
+          href={`#${homeContent.contactMe.id}`}
         >
           <Typography as="span">
             {homeContent.navigationBar.contactMe.text}
@@ -63,9 +63,9 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* DOWNLOAD CV */}
         <Link
-          href={homeContent.navigationBar.downloadCV.href}
-          download={homeContent.navigationBar.downloadCV.download}
           className={`${styles.link} ${styles.downloadCV}`}
+          download={homeContent.navigationBar.downloadCV.download}
+          href={homeContent.navigationBar.downloadCV.href}
         >
           <Typography as="span">
             {homeContent.navigationBar.downloadCV.text}

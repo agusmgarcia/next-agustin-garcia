@@ -29,14 +29,14 @@ export default function Toast(_: ToastProps) {
 
   return (
     <ToastContainer
-      position="bottom-center"
-      limit={1}
       autoClose={2000}
-      closeOnClick={true}
       closeButton={desktop}
+      closeOnClick={true}
       draggable={!desktop}
       hideProgressBar={false}
+      limit={1}
       pauseOnHover={false}
+      position="bottom-center"
     />
   );
 }

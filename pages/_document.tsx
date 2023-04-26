@@ -7,29 +7,29 @@ export default class AppDocument extends Document {
       <Html lang={this.props.__NEXT_DATA__.props.pageProps._app?.lang}>
         <Head>
           <link
+            href="/apple-touch-icon.png"
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/apple-touch-icon.png"
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
             href="/favicon-32x32.png"
+            rel="icon"
+            sizes="32x32"
+            type="image/png"
           />
           <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
             href="/favicon-16x16.png"
+            rel="icon"
+            sizes="16x16"
+            type="image/png"
           />
-          <link rel="manifest" href="/site.webmanifest" />
-          <meta name="description" content={packageJSON.description} />
-          <meta property="og:title" content="Agustin Garcia's profile" />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://agustin-garcia.web.app/" />
-          <meta property="og:image" content="/image.png" />
-          <link rel="icon" href="/favicon.ico" />
+          <link href="/site.webmanifest" rel="manifest" />
+          <meta content={packageJSON.description} name="description" />
+          <meta content="Agustin Garcia's profile" property="og:title" />
+          <meta content="website" property="og:type" />
+          <meta content="https://agustin-garcia.web.app/" property="og:url" />
+          <meta content="/image.png" property="og:image" />
+          <link href="/favicon.ico" rel="icon" />
         </Head>
         <body>
           <Main />

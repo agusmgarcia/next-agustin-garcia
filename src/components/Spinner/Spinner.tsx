@@ -3,25 +3,25 @@ import SpinnerProps from "./Spinner.types";
 export default function Spinner(props: SpinnerProps) {
   return (
     <svg
-      width={props.width}
-      height={props.height}
-      viewBox="0 0 38 38"
-      xmlns="http://www.w3.org/2000/svg"
-      stroke={props.color}
       aria-label="audio-loading"
       className={props.className}
+      height={props.height}
+      stroke={props.color}
+      viewBox="0 0 38 38"
+      width={props.width}
+      xmlns="http://www.w3.org/2000/svg"
     >
       <g fill="none" fillRule="evenodd">
-        <g transform="translate(1 1)" strokeWidth={props.strokeWidth}>
-          <circle strokeOpacity=".5" cx="18" cy="18" r="18" />
+        <g strokeWidth={props.strokeWidth} transform="translate(1 1)">
+          <circle cx="18" cy="18" r="18" strokeOpacity=".5" />
           <path d="M36 18c0-9.94-8.06-18-18-18">
             <animateTransform
               attributeName="transform"
-              type="rotate"
-              from="0 18 18"
-              to="360 18 18"
               dur="1s"
+              from="0 18 18"
               repeatCount="indefinite"
+              to="360 18 18"
+              type="rotate"
             ></animateTransform>
           </path>
         </g>

@@ -14,25 +14,25 @@ export default function Technologies(props: TechnologiesProps) {
 
   return (
     <Section
+      className={props.className}
       id={homeContent.technologies.id}
       subtitle={homeContent.technologies.subtitle}
-      className={props.className}
     >
       <div className={styles.technologies}>
         {homeContent.technologies.links.map((t) => (
           <Link
             key={t.href}
+            className={styles.link}
             href={t.href}
             target={t.target}
-            className={styles.link}
             title={t.title}
           >
             <Image
-              src={t.image.src}
-              className={styles.image}
               alt={t.image.alt}
-              width={desktop ? 96 : 64}
+              className={styles.image}
               height={desktop ? 96 : 64}
+              src={t.image.src}
+              width={desktop ? 96 : 64}
             />
           </Link>
         ))}

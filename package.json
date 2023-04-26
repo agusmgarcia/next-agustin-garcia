@@ -19,7 +19,7 @@
     "react-toastify": "7.0.4"
   },
   "devDependencies": {
-    "@agusmgarcia/eslint-config": "1.0.5",
+    "@agusmgarcia/eslint-config": "1.0.7",
     "@types/ms": "0.7.31",
     "@types/node": "17.0.23",
     "@types/react": "17.0.39",

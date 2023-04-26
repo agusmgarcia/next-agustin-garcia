@@ -13,7 +13,7 @@ export default function Footer(props: FooterProps) {
 
   return (
     <footer className={`${styles.footer} ${props.className}`}>
-      <Box variant="1200px" className={styles.content}>
+      <Box className={styles.content} variant="1200px">
         {/* INFORMATION */}
         <div className={styles.information}>
           <Typography as="h2" variant={desktop ? "1.75rem" : "1.25rem"}>
@@ -29,8 +29,8 @@ export default function Footer(props: FooterProps) {
         <div className={styles.socialLinks}>
           <Typography
             as="h2"
-            variant={desktop ? "1.75rem" : "1.25rem"}
             className={styles.title}
+            variant={desktop ? "1.75rem" : "1.25rem"}
           >
             {homeContent.footer.socialLinks.title}
           </Typography>
@@ -39,17 +39,17 @@ export default function Footer(props: FooterProps) {
             {homeContent.footer.socialLinks.content.map((sl) => (
               <Link
                 key={sl.href}
-                href={sl.href}
                 className={styles.link}
+                href={sl.href}
                 target={sl.target}
                 title={sl.title}
               >
                 <Image
-                  src={sl.image.src}
-                  className={styles.image}
                   alt={sl.image.alt}
-                  width={desktop ? 40 : 32}
+                  className={styles.image}
                   height={desktop ? 40 : 32}
+                  src={sl.image.src}
+                  width={desktop ? 40 : 32}
                 />
               </Link>
             ))}

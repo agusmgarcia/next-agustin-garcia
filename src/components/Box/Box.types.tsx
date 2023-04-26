@@ -1,5 +1,5 @@
 type BoxProps = {
-  variant?: "1200px" | "800px";
+  variant?: "800px" | "1200px";
 } & (
   | ({ as?: "div" } & React.HTMLAttributes<HTMLDivElement>)
   | ({ as: "section" } & React.HTMLAttributes<HTMLElement>)

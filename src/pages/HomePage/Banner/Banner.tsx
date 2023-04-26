@@ -11,11 +11,11 @@ export default function Banner(props: BannerProps) {
   return (
     <div className={`${styles.banner} ${props.className}`}>
       <Image
-        src={homeContent.banner.src}
-        className={styles.image}
         alt={homeContent.banner.alt}
+        className={styles.image}
         loading="eager"
         sizes="auto"
+        src={homeContent.banner.src}
       />
     </div>
   );
