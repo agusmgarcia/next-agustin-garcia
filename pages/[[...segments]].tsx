@@ -30,25 +30,25 @@ export const getStaticProps: GetStaticProps<
       lang: string;
     };
     _component: {
-      page: typeof pages[number] | "home";
+      page: (typeof pages)[number] | "home";
     };
   },
   {
     segments:
-      | ["localized", typeof languages[number], typeof pages[number]]
-      | ["localized", typeof languages[number]]
-      | [typeof pages[number]]
+      | ["localized", (typeof languages)[number], (typeof pages)[number]]
+      | ["localized", (typeof languages)[number]]
+      | [(typeof pages)[number]]
       | undefined;
   }
 > = async (context) => {
-  const lang: typeof languages[number] =
+  const lang: (typeof languages)[number] =
     context.params?.segments === undefined
       ? "en"
       : context.params.segments.length === 1
       ? "en"
       : context.params.segments[1];
 
-  const page: typeof pages[number] | "home" =
+  const page: (typeof pages)[number] | "home" =
     context.params?.segments === undefined
       ? "home"
       : context.params.segments.length === 1
@@ -76,7 +76,7 @@ export const getStaticProps: GetStaticProps<
 export default function Page({
   page,
 }: {
-  page: typeof pages[number] | "home";
+  page: (typeof pages)[number] | "home";
 }) {
   switch (page) {
     case "home":
