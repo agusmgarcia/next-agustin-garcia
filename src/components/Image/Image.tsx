@@ -2,7 +2,7 @@ import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
 import { useMemo } from "react";
-import Imgix, { SharedImigixAndSourceProps } from "react-imgix";
+import Imgix, { SharedImgixAndSourceProps } from "react-imgix";
 
 import ImageProps from "./Image.types";
 
@@ -20,7 +20,7 @@ function ImageImgix({
   width,
   ...props
 }: ImageProps) {
-  const imageProps = useMemo<SharedImigixAndSourceProps>(() => {
+  const imageProps = useMemo<SharedImgixAndSourceProps>(() => {
     if (src === undefined || isSVG(src))
       return {
         className,
