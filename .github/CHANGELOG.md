@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.16](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.16)
+
+> 18 May 2023
+
+- bump react to 18
+- bump @agusmgarcia/eslint-config to 1.0.9
+- bump @agusmgarcia/swr to 3.8.3
+
 ## [v1.3.15](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.15)
 
 > 15 May 2023
