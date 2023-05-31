@@ -18,13 +18,18 @@ export default function Toast(_: ToastProps) {
 
     const toastId = toast[notification.type](
       <ToastBody message={notification.message} />,
-      {
-        onClose: () => notification.close(),
-        progress: undefined,
-      }
+      { progress: undefined }
     );
 
-    return () => toast.dismiss(toastId);
+    const unsubscribe = toast.onChange((t) => {
+      if (t.status !== "removed") return;
+      notification.close();
+    });
+
+    return () => {
+      unsubscribe();
+      toast.dismiss(toastId);
+    };
   }, [notification]);
 
   return (
@@ -37,6 +42,7 @@ export default function Toast(_: ToastProps) {
       limit={1}
       pauseOnHover={false}
       position="bottom-center"
+      theme="colored"
     />
   );
 }
