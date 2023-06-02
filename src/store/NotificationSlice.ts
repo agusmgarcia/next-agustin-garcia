@@ -1,4 +1,4 @@
-import { MemoryStorageSlice } from "@agusmgarcia/swr";
+import { Slice } from "@agusmgarcia/swr";
 
 export type Notification = {
   close: () => void;
@@ -7,13 +7,7 @@ export type Notification = {
   type: "error" | "success";
 };
 
-export default class NotificationSlice extends MemoryStorageSlice<
-  Notification | undefined
-> {
-  constructor() {
-    super(undefined);
-  }
-
+export default class NotificationSlice extends Slice<Notification> {
   set(type: "error" | "success", message: string): void {
     const id = Math.random().toString();
     this.setData({
