@@ -26,6 +26,7 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.name.label}
           <Typography
             as="input"
+            autoComplete="name"
             className={styles.field}
             disabled={isSubmitting}
             name="name"
@@ -42,6 +43,7 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.email.label}
           <Typography
             as="input"
+            autoComplete="email"
             className={styles.field}
             disabled={isSubmitting}
             name="email"
@@ -58,6 +60,7 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.company.label}
           <Typography
             as="input"
+            autoComplete="false"
             className={styles.field}
             disabled={isSubmitting}
             name="company"
@@ -73,6 +76,7 @@ export default function ContactMe(props: ContactMeProps) {
           {homeContent.contactMe.inputs.phone.label}
           <Typography
             as="input"
+            autoComplete="tel-national"
             className={styles.field}
             disabled={isSubmitting}
             name="phone"
