@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.18](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.18)
+
+> 14 June 2023
+
+- bump @agusmgarcia/swr to 4.2.1
+- **ContactMe**: add autocomplete attribute
+- bump to @agusmgarcia/eslint-config to 1.0.10
+
 ## [v1.3.17](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.17)
 
 > 2 June 2023
