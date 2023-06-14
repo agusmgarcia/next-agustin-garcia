@@ -3,6 +3,7 @@ import React from "react";
 
 import { HomePage } from "#src/pages";
 import { HomeContent } from "#src/store";
+import { deepEqual } from "#src/utils";
 
 export const getStaticPaths: GetStaticPaths<{
   segments: string[] | undefined;
@@ -10,16 +11,14 @@ export const getStaticPaths: GetStaticPaths<{
   return {
     fallback: false,
     paths: languages
-      .flatMap((l) =>
-        pages.map((p) => ({
-          params: { segments: ["localized", l, p] as string[] | undefined },
+      .flatMap<{ params: { segments: string[] | undefined } }>((l) =>
+        Object.values(pages).map((p) => ({
+          params: { segments: ["localized", l, ...p.paths] },
         }))
       )
       .concat(
-        languages.map((l) => ({ params: { segments: ["localized", l] } }))
-      )
-      .concat(pages.map((p) => ({ params: { segments: [p] } })))
-      .concat({ params: { segments: undefined } }),
+        Object.values(pages).map((p) => ({ params: { segments: p.paths } }))
+      ),
   };
 };
 
@@ -27,57 +26,62 @@ export const getStaticProps: GetStaticProps<
   {
     _app: {
       initialsData: Partial<SpecificContent>;
-      lang: string;
+      pageLanguage: string;
+      pageTitle: string;
     };
     _component: {
-      page: (typeof pages)[number] | "home";
+      page: keyof typeof pages;
     };
   },
   {
     segments:
-      | ["localized", (typeof languages)[number], (typeof pages)[number]]
-      | ["localized", (typeof languages)[number]]
-      | [(typeof pages)[number]]
-      | undefined;
+      | ["localized", string, ...(typeof pages)[keyof typeof pages]["paths"]]
+      | [...(typeof pages)[keyof typeof pages]["paths"]];
   }
 > = async (context) => {
-  const lang: (typeof languages)[number] =
+  const language: string =
     context.params?.segments === undefined
       ? "en"
-      : context.params.segments.length === 1
+      : context.params.segments.length <= 1
+      ? "en"
+      : context.params.segments[0] !== "localized"
       ? "en"
       : context.params.segments[1];
 
-  const page: (typeof pages)[number] | "home" =
+  const segments: string[] =
     context.params?.segments === undefined
-      ? "home"
+      ? []
+      : context.params.segments.length === 0
+      ? []
       : context.params.segments.length === 1
-      ? context.params.segments[0]
-      : context.params.segments.length === 2
-      ? "home"
-      : context.params.segments[2];
+      ? context.params.segments
+      : context.params.segments[0] === "localized"
+      ? context.params.segments.slice(2)
+      : context.params.segments;
 
-  const content = (await import(`#public/contents/${page}.${lang}.json`))
+  const matches = Object.keys(pages).filter((k) =>
+    deepEqual(pages[k as keyof typeof pages].paths, segments)
+  ) as (keyof typeof pages)[];
+
+  if (matches.length !== 1) throw new Error("Unexpected error");
+  const page = matches[0];
+
+  const content = (await import(`#public/contents/${page}.${language}.json`))
     .default as SpecificContent[keyof SpecificContent];
 
   return {
     props: {
       _app: {
-        initialsData: {
-          [`${page}Content`]: content,
-        },
-        lang,
+        initialsData: { [`${page}Content`]: content },
+        pageLanguage: language,
+        pageTitle: content.title,
       },
       _component: { page },
     },
   };
 };
 
-export default function Page({
-  page,
-}: {
-  page: (typeof pages)[number] | "home";
-}) {
+export default function Page({ page }: { page: keyof typeof pages }) {
   switch (page) {
     case "home":
       return <HomePage />;
@@ -85,7 +89,7 @@ export default function Page({
 }
 
 const languages = ["en", "es"] as const;
-const pages = [] as const;
+const pages = { home: { paths: [] } };
 
 type SpecificContent = {
   homeContent: HomeContent;
