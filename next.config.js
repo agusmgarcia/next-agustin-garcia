@@ -4,5 +4,4 @@ const { PHASE_PRODUCTION_BUILD } = require("next/constants");
 module.exports = (phase) => ({
   output: phase === PHASE_PRODUCTION_BUILD ? "export" : undefined,
   reactStrictMode: true,
-  trailingSlash: phase !== PHASE_PRODUCTION_BUILD,
 });
