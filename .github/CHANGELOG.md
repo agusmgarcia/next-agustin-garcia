@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.19](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.19)
+
+> 3 July 2023
+
+- bump @agusmgarcia/swr to 4.4.0
+- bump package dependencies
+- remove trailing slash
+
 ## [v1.3.18](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.18)
 
 > 14 June 2023
