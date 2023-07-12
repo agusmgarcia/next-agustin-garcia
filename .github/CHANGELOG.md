@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.20](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.20)
+
+> 3 July 2023
+
+- bump @agusmgarcia/swr to 4.5.0
+- bump package dependencies
+- bump to @agusmgarcia/eslint-config to 1.0.12
+- bump vulnerable dependencies
+
 ## [v1.3.19](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.19)
 
 > 3 July 2023
