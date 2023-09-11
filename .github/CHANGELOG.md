@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.27](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.27)
+
+> 11 September 2023
+
+- update workflow
+- bump package dependencies
+
 ## [v1.3.26](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.26)
 
 > 8 September 2023
