@@ -1,7 +1,4 @@
 .env.local
 .next
-bin
-dist
 node_modules
 out
-*.tgz
