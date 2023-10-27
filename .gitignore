@@ -1,5 +1,7 @@
 .env.local
 .next
+bin
+dist
 node_modules
 out
-tsconfig.tsbuildinfo
+*.tgz

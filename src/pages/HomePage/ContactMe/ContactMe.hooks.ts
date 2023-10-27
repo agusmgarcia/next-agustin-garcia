@@ -52,7 +52,7 @@ export default function useContactMe() {
             }),
             headers: { "Content-Type": "application/json" },
             method: "POST",
-          }
+          },
         );
 
         if (response.status !== 200) throw new Error();
@@ -70,7 +70,7 @@ export default function useContactMe() {
       homeContent?.contactMe.feedback.success,
       setNotification,
       values,
-    ]
+    ],
   );
 
   return {

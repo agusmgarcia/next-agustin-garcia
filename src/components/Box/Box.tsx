@@ -16,7 +16,7 @@ export default function Box({
       ...props,
       className: `${getVariant(variant)} ${className}`,
     },
-    children
+    children,
   );
 }
 

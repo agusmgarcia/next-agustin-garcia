@@ -1,4 +1,4 @@
-import { MemoryStorageSlice } from "@agusmgarcia/swr";
+import { MemoryStorageSlice } from "@agusmgarcia/react-swr";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };

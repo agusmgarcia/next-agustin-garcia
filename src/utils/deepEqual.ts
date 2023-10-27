@@ -23,7 +23,7 @@ export default function deepEqual(a: unknown, b: unknown): boolean {
       if (
         !deepEqual(
           a[keysOfA[i] as keyof typeof a],
-          b[keysOfA[i] as keyof typeof b]
+          b[keysOfA[i] as keyof typeof b],
         )
       )
         return false;

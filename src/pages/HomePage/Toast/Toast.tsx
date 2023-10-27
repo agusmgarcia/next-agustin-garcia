@@ -18,7 +18,7 @@ export default function Toast(_: ToastProps) {
 
     const toastId = toast[notification.type](
       <ToastBody message={notification.message} />,
-      { progress: undefined }
+      { progress: undefined },
     );
 
     const unsubscribe = toast.onChange((t) => {

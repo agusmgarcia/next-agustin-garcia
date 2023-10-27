@@ -14,10 +14,10 @@ export const getStaticPaths: GetStaticPaths<{
       .flatMap<{ params: { segments: string[] | undefined } }>((l) =>
         Object.values(pages).map((p) => ({
           params: { segments: ["localized", l, ...p.paths] },
-        }))
+        })),
       )
       .concat(
-        Object.values(pages).map((p) => ({ params: { segments: p.paths } }))
+        Object.values(pages).map((p) => ({ params: { segments: p.paths } })),
       ),
   };
 };
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps<
       : context.params.segments;
 
   const matches = Object.keys(pages).filter((k) =>
-    deepEqual(pages[k as keyof typeof pages].paths, segments)
+    deepEqual(pages[k as keyof typeof pages].paths, segments),
   ) as (keyof typeof pages)[];
 
   if (matches.length !== 1) throw new Error("Unexpected error");

@@ -22,7 +22,7 @@ export default function useMobileNavigationBar() {
             return prevState;
         }
       }),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export default function useMobileNavigationBar() {
     const transition = ms(
       getComputedStyle(screen)
         .getPropertyValue("--transition-duration")
-        .replace(/\s/g, "")
+        .replace(/\s/g, ""),
     );
 
     const handler = setTimeout(() => setState("closed"), transition);

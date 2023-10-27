@@ -19,7 +19,7 @@ export default function Typography({
       ...props,
       className: `${styles.typography} ${getVariant(variant)} ${className}`,
     },
-    children
+    children,
   );
 }
 

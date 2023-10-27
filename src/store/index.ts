@@ -1,4 +1,4 @@
-import { createReactStore } from "@agusmgarcia/swr";
+import { createReactStore } from "@agusmgarcia/react-swr";
 
 import HomeContentSlice from "./HomeContentSlice";
 import NotificationSlice from "./NotificationSlice";
@@ -13,7 +13,7 @@ const { useStore, ...reactStore } = createReactStore(
   },
   {
     devtools: process.env.NODE_ENV === "development",
-  }
+  },
 );
 
 export const StoreProvider = reactStore.StoreProvider;

@@ -4,8 +4,8 @@
   background-color: transparent;
   border: 2px solid rgb(var(--white-color));
   border-radius: 1rem;
-  transition: transform var(--transition-duration)
-      var(--transition-timing-function),
+  transition:
+    transform var(--transition-duration) var(--transition-timing-function),
     background-color var(--transition-duration)
       var(--transition-timing-function);
   will-change: transform, background-color;

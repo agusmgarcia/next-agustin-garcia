@@ -19,8 +19,9 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5"
+    "target": "es5",
+    "tsBuildInfoFile": "node_modules/.typescriptcache"
   },
-  "exclude": ["node_modules"],
+  "exclude": [".next", "node_modules", "out"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
