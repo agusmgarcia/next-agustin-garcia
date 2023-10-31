@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.33](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.33)
+
+> 31 October 2023
+
+- bump `@agusmgarcia/react-swr` to 5.0.2
+- bump `@agusmgarcia/react-core` to 1.1.0
+
 ## [v1.3.32](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.32)
 
 > 27 October 2023
