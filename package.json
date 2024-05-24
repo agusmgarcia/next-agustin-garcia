@@ -23,7 +23,6 @@
     "@types/react-imgix": "9.5.3"
   },
   "engines": {
-    "node": ">=16",
-    "npm": ">=7"
+    "node": ">=20"
   }
 }
