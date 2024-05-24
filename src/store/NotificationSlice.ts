@@ -1,4 +1,5 @@
-import { MemoryStorageSlice } from "@agusmgarcia/react-swr";
+import { createSlice } from "@agusmgarcia/react-swr";
+import { useCallback, useState } from "react";
 
 export type Notification = {
   close: () => void;
@@ -7,16 +8,18 @@ export type Notification = {
   type: "error" | "success";
 };
 
-export default class NotificationSlice extends MemoryStorageSlice<
-  Notification | undefined
-> {
-  set(type: "error" | "success", message: string): void {
+export default createSlice(() => {
+  const [data, setData] = useState<Notification>();
+
+  const set = useCallback((type: "error" | "success", message: string) => {
     const id = Math.random().toString();
-    this.setData({
-      close: () => this.setData((prev) => (prev?.id === id ? undefined : prev)),
+    setData({
+      close: () => setData((prev) => (prev?.id === id ? undefined : prev)),
       id,
       message,
       type,
     });
-  }
-}
+  }, []);
+
+  return { data, set };
+});

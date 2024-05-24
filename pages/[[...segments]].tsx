@@ -43,21 +43,21 @@ export const getStaticProps: GetStaticProps<
     context.params?.segments === undefined
       ? "en"
       : context.params.segments.length <= 1
-      ? "en"
-      : context.params.segments[0] !== "localized"
-      ? "en"
-      : context.params.segments[1];
+        ? "en"
+        : context.params.segments[0] !== "localized"
+          ? "en"
+          : context.params.segments[1];
 
   const segments: string[] =
     context.params?.segments === undefined
       ? []
       : context.params.segments.length === 0
-      ? []
-      : context.params.segments.length === 1
-      ? context.params.segments
-      : context.params.segments[0] === "localized"
-      ? context.params.segments.slice(2)
-      : context.params.segments;
+        ? []
+        : context.params.segments.length === 1
+          ? context.params.segments
+          : context.params.segments[0] === "localized"
+            ? context.params.segments.slice(2)
+            : context.params.segments;
 
   const matches = Object.keys(pages).filter((k) =>
     deepEqual(pages[k as keyof typeof pages].paths, segments),

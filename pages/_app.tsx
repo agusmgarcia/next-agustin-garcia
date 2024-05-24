@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps<any>) {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
 
-      <StoreProvider initialsData={appProps.initialsData}>
+      <StoreProvider initials={appProps.initialsData}>
         <Component {...componentProps} />
       </StoreProvider>
     </>

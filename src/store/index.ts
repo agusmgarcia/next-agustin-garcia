@@ -1,4 +1,4 @@
-import { createReactStore } from "@agusmgarcia/react-swr";
+import { createStore } from "@agusmgarcia/react-swr";
 
 import HomeContentSlice from "./HomeContentSlice";
 import NotificationSlice from "./NotificationSlice";
@@ -6,7 +6,7 @@ import NotificationSlice from "./NotificationSlice";
 export type { HomeContent } from "./HomeContentSlice";
 export type { Notification } from "./NotificationSlice";
 
-const { useStore, ...reactStore } = createReactStore(
+const { useSelector, ...reactStore } = createStore(
   {
     homeContent: HomeContentSlice,
     notification: NotificationSlice,
@@ -20,13 +20,13 @@ export const StoreProvider = reactStore.StoreProvider;
 
 export function useHomeContent() {
   return {
-    homeContent: useStore((store) => store.homeContent.data),
+    homeContent: useSelector((state) => state.homeContent.data),
   };
 }
 
 export function useNotification() {
   return {
-    notification: useStore((store) => store.notification.data),
-    setNotification: useStore((store) => store.notification.set),
+    notification: useSelector((state) => state.notification.data),
+    setNotification: useSelector((state) => state.notification.set),
   };
 }

@@ -1,4 +1,5 @@
-import { MemoryStorageSlice } from "@agusmgarcia/react-swr";
+import { createSlice } from "@agusmgarcia/react-swr";
+import { useState } from "react";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };
@@ -48,6 +49,8 @@ export type HomeContent = {
 
 type Image = { alt: string; src: string };
 
-export default class HomeContentSlice extends MemoryStorageSlice<
-  HomeContent | undefined
-> {}
+export default createSlice((homeContent: HomeContent | undefined) => {
+  const [data] = useState(homeContent);
+
+  return { data };
+});
