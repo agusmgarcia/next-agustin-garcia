@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.35](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.35)
+
+> 1 June 2024
+
+- bump package dependencies
+- bump `node` to 20
+
 ## [v1.3.34](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.34)
 
 > 25 December 2023
