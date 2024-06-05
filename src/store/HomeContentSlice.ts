@@ -1,5 +1,4 @@
-import { createSlice } from "@agusmgarcia/react-swr";
-import { useState } from "react";
+import { createSlice, useSWR } from "@agusmgarcia/react-swr";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };
@@ -49,8 +48,14 @@ export type HomeContent = {
 
 type Image = { alt: string; src: string };
 
-export default createSlice((homeContent: HomeContent | undefined) => {
-  const [data] = useState(homeContent);
+export type HomeContentSlice = {
+  data: HomeContent | undefined;
+};
 
-  return { data };
-});
+export default createSlice<HomeContentSlice>(
+  (initialHomeContent: HomeContent | undefined) => {
+    const { data } = useSWR(initialHomeContent);
+
+    return { data };
+  },
+);

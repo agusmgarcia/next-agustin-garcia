@@ -9,6 +9,7 @@ export default function deepEqual(a: unknown, b: unknown): boolean {
   }
 
   if (typeof a === "object" && a !== null) {
+    if (Array.isArray(b)) return false;
     if (typeof b !== "object" || b === null) return false;
 
     const keysOfA = Object.keys(a);

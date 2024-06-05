@@ -3,8 +3,8 @@ import { createStore } from "@agusmgarcia/react-swr";
 import HomeContentSlice from "./HomeContentSlice";
 import NotificationSlice from "./NotificationSlice";
 
-export type { HomeContent } from "./HomeContentSlice";
-export type { Notification } from "./NotificationSlice";
+export { type HomeContent, type HomeContentSlice } from "./HomeContentSlice";
+export { type Notification, type NotificationSlice } from "./NotificationSlice";
 
 const { useSelector, ...reactStore } = createStore(
   {

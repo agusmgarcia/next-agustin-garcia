@@ -1,5 +1,7 @@
-import { createSlice } from "@agusmgarcia/react-swr";
-import { useCallback, useState } from "react";
+import { createSlice, useSWR } from "@agusmgarcia/react-swr";
+import { useCallback } from "react";
+
+import { type Func } from "#src/utils";
 
 export type Notification = {
   close: () => void;
@@ -8,18 +10,26 @@ export type Notification = {
   type: "error" | "success";
 };
 
-export default createSlice(() => {
-  const [data, setData] = useState<Notification>();
+export type NotificationSlice = {
+  data: Notification | undefined;
+  set: Func<[type: "error" | "success", message: string]>;
+};
 
-  const set = useCallback((type: "error" | "success", message: string) => {
-    const id = Math.random().toString();
-    setData({
-      close: () => setData((prev) => (prev?.id === id ? undefined : prev)),
-      id,
-      message,
-      type,
-    });
-  }, []);
+export default createSlice<NotificationSlice>(() => {
+  const { data, setData } = useSWR<Notification>();
+
+  const set = useCallback(
+    (type: "error" | "success", message: string) => {
+      const id = Math.random().toString();
+      setData({
+        close: () => setData((prev) => (prev?.id === id ? undefined : prev)),
+        id,
+        message,
+        type,
+      });
+    },
+    [setData],
+  );
 
   return { data, set };
 });
