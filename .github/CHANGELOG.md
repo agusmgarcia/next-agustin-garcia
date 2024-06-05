@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.3.36](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.36)
+
+> 5 June 2024
+
+- bump `@agusmgarcia/react-swr` to 6.1.0
+
 ## [v1.3.35](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.35)
 
 > 1 June 2024
