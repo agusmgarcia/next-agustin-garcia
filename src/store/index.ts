@@ -1,4 +1,4 @@
-import { createStore } from "@agusmgarcia/react-swr";
+import { createStore } from "@agusmgarcia/react-core";
 
 import HomeContentSlice from "./HomeContentSlice";
 import NotificationSlice from "./NotificationSlice";

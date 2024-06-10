@@ -1,4 +1,4 @@
-import { createSlice, useSWR } from "@agusmgarcia/react-swr";
+import { createSlice, useSWR } from "@agusmgarcia/react-core";
 import { useCallback } from "react";
 
 import { type Func } from "#src/utils";

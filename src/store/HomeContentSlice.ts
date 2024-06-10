@@ -1,4 +1,4 @@
-import { createSlice, useSWR } from "@agusmgarcia/react-swr";
+import { createSlice, useSWR } from "@agusmgarcia/react-core";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };
