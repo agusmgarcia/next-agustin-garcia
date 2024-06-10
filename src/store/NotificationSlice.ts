@@ -1,7 +1,5 @@
-import { createSlice, useSWR } from "@agusmgarcia/react-core";
+import { createSlice, type Func, useSWR } from "@agusmgarcia/react-core";
 import { useCallback } from "react";
-
-import { type Func } from "#src/utils";
 
 export type Notification = {
   close: () => void;
@@ -12,7 +10,7 @@ export type Notification = {
 
 export type NotificationSlice = {
   data: Notification | undefined;
-  set: Func<[type: "error" | "success", message: string]>;
+  set: Func<[type: "error" | "success", message: string, void]>;
 };
 
 export default createSlice<NotificationSlice>(() => {

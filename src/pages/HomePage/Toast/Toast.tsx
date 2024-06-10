@@ -1,16 +1,16 @@
 import "react-toastify/dist/ReactToastify.css";
 
+import { useMediaQuery } from "@agusmgarcia/react-core";
 import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 import { Typography } from "#src/components";
 import { useNotification } from "#src/store";
-import { useMediaQuery, Viewports } from "#src/utils";
 
 import ToastProps from "./Toast.types";
 
 export default function Toast(_: ToastProps) {
-  const desktop = useMediaQuery(Viewports.MIN_MD);
+  const desktop = useMediaQuery("(min-width: 768px)");
   const { notification } = useNotification();
 
   useEffect(() => {

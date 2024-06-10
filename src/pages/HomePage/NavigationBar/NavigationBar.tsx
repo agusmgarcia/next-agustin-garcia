@@ -1,11 +1,11 @@
-import { useMediaQuery, Viewports } from "#src/utils";
+import { useMediaQuery } from "@agusmgarcia/react-core";
 
 import DesktopNavigationBar from "./DesktopNavigationBar";
 import MobileNavigationBar from "./MobileNavigationBar";
 import NavigationBarProps from "./NavigationBar.types";
 
 export default function NavigationBar(props: NavigationBarProps) {
-  const desktop = useMediaQuery(Viewports.MIN_MD);
+  const desktop = useMediaQuery("(min-width: 768px)");
 
   return (
     <>

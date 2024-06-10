@@ -1,13 +1,14 @@
+import { useMediaQuery } from "@agusmgarcia/react-core";
+
 import { Image, Link } from "#src/components";
 import { useHomeContent } from "#src/store";
-import { useMediaQuery, Viewports } from "#src/utils";
 
 import Section from "../Section";
 import styles from "./Technologies.module.scss";
 import TechnologiesProps from "./Technologies.types";
 
 export default function Technologies(props: TechnologiesProps) {
-  const desktop = useMediaQuery(Viewports.MIN_MD);
+  const desktop = useMediaQuery("(min-width: 768px)");
   const { homeContent } = useHomeContent();
 
   if (homeContent === undefined) return <></>;

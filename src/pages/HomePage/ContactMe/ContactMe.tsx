@@ -1,6 +1,7 @@
+import { useMediaQuery } from "@agusmgarcia/react-core";
+
 import { Button, Spinner, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
-import { useMediaQuery, Viewports } from "#src/utils";
 
 import Section from "../Section";
 import useContactMe from "./ContactMe.hooks";
@@ -8,7 +9,7 @@ import styles from "./ContactMe.module.scss";
 import ContactMeProps from "./ContactMe.types";
 
 export default function ContactMe(props: ContactMeProps) {
-  const desktop = useMediaQuery(Viewports.MIN_MD);
+  const desktop = useMediaQuery("(min-width: 768px)");
   const { homeContent } = useHomeContent();
   const { form, handleChange, handleSubmit, isSubmitting } = useContactMe();
 

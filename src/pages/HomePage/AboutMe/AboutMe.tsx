@@ -1,13 +1,14 @@
+import { useMediaQuery } from "@agusmgarcia/react-core";
+
 import { Image, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
-import { useMediaQuery, Viewports } from "#src/utils";
 
 import Section from "../Section";
 import styles from "./AboutMe.module.scss";
 import AboutMeProps from "./AboutMe.types";
 
 export default function AboutMe(props: AboutMeProps) {
-  const desktop = useMediaQuery(Viewports.MIN_MD);
+  const desktop = useMediaQuery("(min-width: 768px)");
   const { homeContent } = useHomeContent();
 
   if (homeContent === undefined) return <></>;

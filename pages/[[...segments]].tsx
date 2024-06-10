@@ -1,9 +1,9 @@
+import { equals } from "@agusmgarcia/react-core";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import React from "react";
 
 import { HomePage } from "#src/pages";
 import { HomeContent } from "#src/store";
-import { deepEqual } from "#src/utils";
 
 export const getStaticPaths: GetStaticPaths<{
   segments: string[] | undefined;
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps<
             : context.params.segments;
 
   const matches = Object.keys(pages).filter((k) =>
-    deepEqual(pages[k as keyof typeof pages].paths, segments),
+    equals.deep(pages[k as keyof typeof pages].paths, segments),
   ) as (keyof typeof pages)[];
 
   if (matches.length !== 1) throw new Error("Unexpected error");

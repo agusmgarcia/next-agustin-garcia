@@ -1,12 +1,13 @@
+import { useMediaQuery } from "@agusmgarcia/react-core";
+
 import { Box, Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
-import { useMediaQuery, Viewports } from "#src/utils";
 
 import styles from "./Footer.module.scss";
 import FooterProps from "./Footer.types";
 
 export default function Footer(props: FooterProps) {
-  const desktop = useMediaQuery(Viewports.MIN_MD);
+  const desktop = useMediaQuery("(min-width: 768px)");
   const { homeContent } = useHomeContent();
 
   if (homeContent === undefined) return <></>;
