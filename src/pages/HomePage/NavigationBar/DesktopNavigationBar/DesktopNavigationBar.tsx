@@ -1,4 +1,4 @@
-import { Box, Image, Link, Typography } from "#src/components";
+import { Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
 import styles from "./DesktopNavigationBar.module.scss";
@@ -10,7 +10,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
   return (
     <nav className={`${styles.navigationBar} ${props.className}`}>
-      <Box className={styles.content} variant="1200px">
+      <div className={styles.content}>
         {/* ABOUT ME */}
         <Link
           className={`${styles.link} ${styles.aboutMe}`}
@@ -71,7 +71,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
             {homeContent.navigationBar.downloadCV.text}
           </Typography>
         </Link>
-      </Box>
+      </div>
     </nav>
   );
 }
