@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  BarsIcon,
-  Box,
-  CloseIcon,
-  Image,
-  Link,
-  Typography,
-} from "#src/components";
+import { BarsIcon, CloseIcon, Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
 import useMobileNavigationBar from "./MobileNavigationBar.hooks";
@@ -40,7 +33,7 @@ function Bar({
 
   return (
     <div className={`${styles.bar} ${isOpen ? styles.open : undefined}`}>
-      <Box variant="1200px">
+      <div>
         <div className={styles.links}>
           {/* ABOUT ME */}
           <Link
@@ -80,7 +73,7 @@ function Bar({
             )}
           </button>
         </div>
-      </Box>
+      </div>
     </div>
   );
 }
@@ -100,7 +93,7 @@ function Body({
       aria-hidden={isOpen ? undefined : true}
       className={`${styles.body} ${isOpen ? styles.open : undefined}`}
     >
-      <Box variant="1200px">
+      <div>
         <div className={styles.separator} />
         <div className={styles.links}>
           {/* TECHNOLOGIES */}
@@ -152,7 +145,7 @@ function Body({
             </Typography>
           </Link>
         </div>
-      </Box>
+      </div>
     </div>
   );
 }

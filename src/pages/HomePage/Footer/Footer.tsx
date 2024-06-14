@@ -1,6 +1,6 @@
 import { useMediaQuery } from "@agusmgarcia/react-core";
 
-import { Box, Image, Link, Typography } from "#src/components";
+import { Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
 import styles from "./Footer.module.scss";
@@ -14,7 +14,7 @@ export default function Footer(props: FooterProps) {
 
   return (
     <footer className={`${styles.footer} ${props.className}`}>
-      <Box className={styles.content} variant="1200px">
+      <div className={styles.content}>
         {/* INFORMATION */}
         <div className={styles.information}>
           <Typography as="h2" variant={desktop ? "1.875rem" : "1.25rem"}>
@@ -73,7 +73,7 @@ export default function Footer(props: FooterProps) {
             v{process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.0"}
           </Typography>
         </div>
-      </Box>
+      </div>
     </footer>
   );
 }
