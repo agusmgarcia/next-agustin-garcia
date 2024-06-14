@@ -17,7 +17,7 @@ export default function Companies(props: CompaniesProps) {
     <Section
       className={props.className}
       id={homeContent.companies.id}
-      subtitle={homeContent.companies.subtitle}
+      title={homeContent.companies.subtitle}
     >
       <div className={styles.companies}>
         {homeContent.companies.links.map((c) => (

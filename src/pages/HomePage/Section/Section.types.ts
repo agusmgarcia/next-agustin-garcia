@@ -1,8 +1,5 @@
 type SectionProps = {
-  children?: React.ReactNode;
-  className?: string;
-  id?: string;
-  subtitle?: string;
-};
+  title?: string;
+} & React.HTMLAttributes<HTMLElement>;
 
 export default SectionProps;

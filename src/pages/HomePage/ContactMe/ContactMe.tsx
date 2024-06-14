@@ -19,7 +19,7 @@ export default function ContactMe(props: ContactMeProps) {
     <Section
       className={props.className}
       id={homeContent.contactMe.id}
-      subtitle={homeContent.contactMe.subtitle}
+      title={homeContent.contactMe.subtitle}
     >
       <form className={styles.contactMe} onSubmit={handleSubmit}>
         {/* NAME */}
