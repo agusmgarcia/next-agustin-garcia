@@ -17,7 +17,7 @@ export default function Technologies(props: TechnologiesProps) {
     <Section
       className={props.className}
       id={homeContent.technologies.id}
-      subtitle={homeContent.technologies.subtitle}
+      title={homeContent.technologies.subtitle}
     >
       <div className={styles.technologies}>
         {homeContent.technologies.links.map((t) => (
