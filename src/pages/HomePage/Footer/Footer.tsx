@@ -17,7 +17,7 @@ export default function Footer(props: FooterProps) {
       <Box className={styles.content} variant="1200px">
         {/* INFORMATION */}
         <div className={styles.information}>
-          <Typography as="h2" variant={desktop ? "1.75rem" : "1.25rem"}>
+          <Typography as="h2" variant={desktop ? "1.875rem" : "1.25rem"}>
             {homeContent.footer.information.title}
           </Typography>
 
@@ -31,7 +31,7 @@ export default function Footer(props: FooterProps) {
           <Typography
             as="h2"
             className={styles.title}
-            variant={desktop ? "1.75rem" : "1.25rem"}
+            variant={desktop ? "1.875rem" : "1.25rem"}
           >
             {homeContent.footer.socialLinks.title}
           </Typography>
@@ -60,7 +60,7 @@ export default function Footer(props: FooterProps) {
         {/* LOCATION */}
         <div className={styles.location}>
           <div className={styles.section}>
-            <Typography as="h2" variant={desktop ? "1.75rem" : "1.25rem"}>
+            <Typography as="h2" variant={desktop ? "1.875rem" : "1.25rem"}>
               {homeContent.footer.location.title}
             </Typography>
 

@@ -26,7 +26,7 @@ export default function AboutMe(props: AboutMeProps) {
         />
 
         <div className={styles.content}>
-          <Typography as="h1" variant="2.75rem">
+          <Typography as="h1" variant="3rem">
             {homeContent.aboutMe.name}
           </Typography>
 

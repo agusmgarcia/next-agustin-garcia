@@ -1,5 +1,5 @@
 type TypographyProps = {
-  variant?: "0.75rem" | "1.25rem" | "1.75rem" | "1rem" | "2.75rem" | "2rem";
+  variant?: "0.75rem" | "1.25rem" | "1.875rem" | "1rem" | "2.25rem" | "3rem";
 } & (
   | ({
       as: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";

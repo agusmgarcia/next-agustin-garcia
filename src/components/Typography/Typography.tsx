@@ -1,9 +1,6 @@
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-
+import clsx from "clsx";
 import React from "react";
 
-import styles from "./Typography.module.scss";
 import TypographyProps from "./Typography.types";
 
 export default function Typography({
@@ -17,31 +14,15 @@ export default function Typography({
     as ?? "p",
     {
       ...props,
-      className: `${styles.typography} ${getVariant(variant)} ${className}`,
+      className: clsx(className, "text-white font-medium", {
+        "text-3xl": variant === "1.875rem",
+        "text-4xl": variant === "2.25rem",
+        "text-5xl": variant === "3rem",
+        "text-base": variant === "1rem",
+        "text-xl": variant === "1.25rem",
+        "text-xs": variant === "0.75rem",
+      }),
     },
     children,
   );
-}
-
-function getVariant(variant: TypographyProps["variant"]): string {
-  switch (variant) {
-    case "2.75rem":
-      return styles.t1;
-
-    case "2rem":
-      return styles.t2;
-
-    case "1.75rem":
-      return styles.t3;
-
-    case "1.25rem":
-      return styles.t4;
-
-    case "1rem":
-    default:
-      return styles.t5;
-
-    case "0.75rem":
-      return styles.t6;
-  }
 }

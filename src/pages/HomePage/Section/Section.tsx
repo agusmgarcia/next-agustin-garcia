@@ -13,7 +13,7 @@ export default function Section(props: SectionProps) {
     >
       {/* SUBTITLE */}
       {props.subtitle && (
-        <Typography as="h2" className={styles.subtitle} variant="2rem">
+        <Typography as="h2" className={styles.subtitle} variant="2.25rem">
           {props.subtitle}
         </Typography>
       )}
