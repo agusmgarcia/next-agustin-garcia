@@ -13,8 +13,8 @@
     "regenerate": "agusmgarcia-react-core-regenerate"
   },
   "dependencies": {
-    "@agusmgarcia/react-core": "2.0.1",
-    "@fontsource/roboto": "5.0.13",
+    "@agusmgarcia/react-core": "2.2.0",
+    "clsx": "2.1.1",
     "lazysizes": "5.3.2",
     "ms": "2.1.3",
     "react": "18.3.1",
