@@ -1,7 +1,8 @@
+import clsx from "clsx";
+
 import { Image } from "#src/components";
 import { useHomeContent } from "#src/store";
 
-import styles from "./Banner.module.scss";
 import BannerProps from "./Banner.types";
 
 export default function Banner(props: BannerProps) {
@@ -9,10 +10,10 @@ export default function Banner(props: BannerProps) {
   if (homeContent === undefined) return <></>;
 
   return (
-    <div className={`${styles.banner} ${props.className}`}>
+    <div className={clsx(props.className, "h-screen w-full")}>
       <Image
         alt={homeContent.banner.alt}
-        className={styles.image}
+        className="h-full w-full object-cover"
         loading="eager"
         sizes="auto"
         src={homeContent.banner.src}
