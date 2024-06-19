@@ -1,11 +1,11 @@
 import { useMediaQuery } from "@agusmgarcia/react-core";
+import clsx from "clsx";
 
-import { Button, Spinner, Typography } from "#src/components";
+import { Button, Input, Spinner, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
 import Section from "../Section";
 import useContactMe from "./ContactMe.hooks";
-import styles from "./ContactMe.module.scss";
 import ContactMeProps from "./ContactMe.types";
 
 export default function ContactMe(props: ContactMeProps) {
@@ -21,91 +21,85 @@ export default function ContactMe(props: ContactMeProps) {
       id={homeContent.contactMe.id}
       title={homeContent.contactMe.subtitle}
     >
-      <form className={styles.contactMe} onSubmit={handleSubmit}>
+      <form
+        className={clsx("grid w-full grid-cols-1 gap-4", "md:grid-cols-2")}
+        onSubmit={handleSubmit}
+      >
         {/* NAME */}
-        <Typography as="label">
-          {homeContent.contactMe.inputs.name.label}
-          <Typography
-            as="input"
-            autoComplete="name"
-            className={styles.field}
-            disabled={isSubmitting}
-            name="name"
-            onChange={handleChange}
-            placeholder={homeContent.contactMe.inputs.name.placeholder}
-            required={true}
-            type="text"
-            value={form.name}
-          />
-        </Typography>
+        <Input
+          as="input"
+          autoComplete="name"
+          disabled={isSubmitting}
+          label={homeContent.contactMe.inputs.name.label}
+          name="name"
+          onChange={handleChange}
+          placeholder={homeContent.contactMe.inputs.name.placeholder}
+          required={true}
+          type="text"
+          value={form.name}
+        />
 
         {/* EMAIL ADDRESS */}
-        <Typography as="label">
-          {homeContent.contactMe.inputs.email.label}
-          <Typography
-            as="input"
-            autoComplete="email"
-            className={styles.field}
-            disabled={isSubmitting}
-            name="email"
-            onChange={handleChange}
-            placeholder={homeContent.contactMe.inputs.email.placeholder}
-            required={true}
-            type="email"
-            value={form.email}
-          />
-        </Typography>
+        <Input
+          as="input"
+          autoComplete="email"
+          disabled={isSubmitting}
+          label={homeContent.contactMe.inputs.email.label}
+          name="email"
+          onChange={handleChange}
+          placeholder={homeContent.contactMe.inputs.email.placeholder}
+          required={true}
+          type="email"
+          value={form.email}
+        />
 
         {/* COMPANY NAME */}
-        <Typography as="label">
-          {homeContent.contactMe.inputs.company.label}
-          <Typography
-            as="input"
-            autoComplete="false"
-            className={styles.field}
-            disabled={isSubmitting}
-            name="company"
-            onChange={handleChange}
-            placeholder={homeContent.contactMe.inputs.company.placeholder}
-            type="text"
-            value={form.company}
-          />
-        </Typography>
+        <Input
+          as="input"
+          autoComplete="false"
+          disabled={isSubmitting}
+          label={homeContent.contactMe.inputs.company.label}
+          name="company"
+          onChange={handleChange}
+          placeholder={homeContent.contactMe.inputs.company.placeholder}
+          type="text"
+          value={form.company}
+        />
 
         {/* PHONE NUMBER */}
-        <Typography as="label">
-          {homeContent.contactMe.inputs.phone.label}
-          <Typography
-            as="input"
-            autoComplete="tel-national"
-            className={styles.field}
-            disabled={isSubmitting}
-            name="phone"
-            onChange={handleChange}
-            placeholder={homeContent.contactMe.inputs.phone.placeholder}
-            type="tel"
-            value={form.phone}
-          />
-        </Typography>
+        <Input
+          as="input"
+          autoComplete="tel-national"
+          className={""}
+          disabled={isSubmitting}
+          label={homeContent.contactMe.inputs.phone.label}
+          name="phone"
+          onChange={handleChange}
+          placeholder={homeContent.contactMe.inputs.phone.placeholder}
+          type="tel"
+          value={form.phone}
+        />
 
         {/* PROJECT DETAILS */}
-        <Typography as="label" className={styles.details}>
-          {homeContent.contactMe.inputs.details.label}
-          <Typography
-            as="textarea"
-            className={styles.field}
-            disabled={isSubmitting}
-            name="details"
-            onChange={handleChange}
-            placeholder={homeContent.contactMe.inputs.details.placeholder}
-            required={true}
-            rows={5}
-            value={form.details}
-          />
-        </Typography>
+        <Input
+          as="textarea"
+          disabled={isSubmitting}
+          label={homeContent.contactMe.inputs.details.label}
+          labelClassName="col-span-1 md:col-span-2"
+          name="details"
+          onChange={handleChange}
+          placeholder={homeContent.contactMe.inputs.details.placeholder}
+          required={true}
+          rows={5}
+          value={form.details}
+        />
 
         {/* SUBMIT */}
-        <Button className={styles.button} disabled={isSubmitting} type="submit">
+        <Button
+          className="mt-4 md:col-span-2"
+          disabled={isSubmitting}
+          type="submit"
+        >
           {!isSubmitting ? (
             <Typography as="span" variant={desktop ? "1.25rem" : "1rem"}>
               {homeContent.contactMe.submit.text}
