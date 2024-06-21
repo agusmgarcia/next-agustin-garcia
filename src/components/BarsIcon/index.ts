@@ -1,4 +1,2 @@
-import BarsIcon from "./BarsIcon";
-
+export { default } from "./BarsIcon";
 export type { default as BarsIconProps } from "./BarsIcon.types";
-export default BarsIcon;

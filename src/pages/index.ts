@@ -1,2 +1,1 @@
-export { default as HomePage } from "./HomePage";
-export type { HomePageProps } from "./HomePage";
+export { default as HomePage, type HomePageProps } from "./HomePage";
