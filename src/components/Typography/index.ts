@@ -1,4 +1,2 @@
-import Typography from "./Typography";
-
+export { default } from "./Typography";
 export type { default as TypographyProps } from "./Typography.types";
-export default Typography;
