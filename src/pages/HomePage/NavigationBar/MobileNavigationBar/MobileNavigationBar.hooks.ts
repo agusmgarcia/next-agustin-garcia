@@ -1,61 +1,95 @@
-import ms from "ms";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 export default function useMobileNavigationBar() {
-  const screenRef = React.useRef<HTMLDivElement>(null);
-  const [state, setState] = useState<ModalState>("closed");
+  const modalRef = useRef<HTMLElement>(null);
+
+  const [state, setState] = useState<State>("closed");
+
+  useEffect(() => {
+    const modal = modalRef.current;
+    if (modal === null) return;
+
+    if (state === "just-visible") {
+      const handler = setTimeout(
+        () =>
+          setState((prevState) =>
+            prevState === "just-visible" ? "open" : prevState,
+          ),
+        0,
+      );
+
+      return () => clearTimeout(handler);
+    }
+
+    if (state === "closing") {
+      const handleTransitionEnd = () =>
+        setState((prevState) =>
+          prevState === "closing" ? "closed" : prevState,
+        );
+
+      modal.addEventListener("transitionend", handleTransitionEnd);
+      return () =>
+        modal.removeEventListener("transitionend", handleTransitionEnd);
+    }
+  }, [state]);
+
+  useEffect(() => {
+    const modal = modalRef.current;
+    if (modal === null) return;
+
+    const handleClick = (event: MouseEvent) => {
+      if (state !== "open") return;
+
+      const dimensions = modal.getBoundingClientRect();
+      if (
+        event.clientX >= dimensions.left &&
+        event.clientX <= dimensions.right &&
+        event.clientY >= dimensions.top &&
+        event.clientY <= dimensions.bottom
+      )
+        return;
+
+      setState((prevState) => {
+        switch (prevState) {
+          case "just-visible":
+          case "open":
+            return "closing";
+
+          case "closing":
+          case "closed":
+            return prevState;
+        }
+      });
+    };
+
+    modal.addEventListener("click", handleClick);
+    return () => modal.removeEventListener("click", handleClick);
+  }, [state]);
 
   const setOpen: React.Dispatch<React.SetStateAction<boolean>> = useCallback(
     (value) =>
       setState((prevState) => {
         const open =
-          value instanceof Function ? value(prevState === "open") : value;
+          value instanceof Function
+            ? value(prevState === "open" || prevState === "just-visible")
+            : value;
 
         switch (prevState) {
+          case "just-visible":
           case "open":
-            if (open) return prevState;
-            return "closing";
+            return open ? prevState : "closing";
 
           case "closing":
           case "closed":
-            if (open) return "open";
-            return prevState;
+            return open ? "just-visible" : prevState;
         }
       }),
     [],
   );
 
-  useEffect(() => {
-    const screen = screenRef.current;
-    if (screen === null) return;
+  console.log(state);
 
-    if (state !== "closing") return;
-
-    const transition = ms(
-      getComputedStyle(screen)
-        .getPropertyValue("--transition-duration")
-        .replace(/\s/g, ""),
-    );
-
-    const handler = setTimeout(() => setState("closed"), transition);
-    return () => clearTimeout(handler);
-  }, [state]);
-
-  useEffect(() => {
-    const screen = screenRef.current;
-    if (screen === null) return;
-
-    if (state !== "open") return;
-
-    const handleClick = (e: MouseEvent) => {
-      if (e.target === screen) setOpen(false);
-    };
-
-    window.addEventListener("click", handleClick);
-    return () => window.removeEventListener("click", handleClick);
-  }, [setOpen, state]);
-
-  return { screenRef, setOpen, state };
+  return { modalRef, setOpen, state };
 }
 
-type ModalState = "closed" | "closing" | "open";
+type State = "closed" | "closing" | "just-visible" | "open";
