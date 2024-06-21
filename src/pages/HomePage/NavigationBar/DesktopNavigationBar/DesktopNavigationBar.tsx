@@ -1,7 +1,8 @@
+import clsx from "clsx";
+
 import { Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
-import styles from "./DesktopNavigationBar.module.scss";
 import DesktopNavigationBarProps from "./DesktopNavigationBar.types";
 
 export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
@@ -9,16 +10,32 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
   if (homeContent === undefined) return <></>;
 
   return (
-    <nav className={`${styles.navigationBar} ${props.className}`}>
-      <div className={styles.content}>
+    <nav
+      className={clsx(
+        props.className,
+        "h-24 w-full bg-interface bg-opacity-50",
+      )}
+    >
+      <div
+        className={clsx(
+          "mx-auto my-0 max-w-[calc(100%-4rem)] xl:max-w-[1216px]",
+          "flex h-full flex-row items-center justify-between gap-4",
+        )}
+      >
         {/* ABOUT ME */}
         <Link
-          className={`${styles.link} ${styles.aboutMe}`}
+          className={clsx(
+            "flex flex-row items-center justify-center",
+            "transition-transform will-change-transform",
+            "hover:scale-105",
+            "focus:scale-105",
+            "active:scale-95",
+          )}
           href={`#${homeContent.aboutMe.id}`}
         >
           <Image
             alt={homeContent.navigationBar.aboutMe.image.alt}
-            className={styles.image}
+            className="h-[48px] w-[48px] rounded-full border-2 border-solid border-white bg-white object-cover"
             height={48}
             loading="eager"
             src={homeContent.navigationBar.aboutMe.image.src}
@@ -27,13 +44,19 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         </Link>
 
         {/* NAME */}
-        <Typography as="p" className={styles.name}>
+        <Typography as="p" className="flex-1">
           {homeContent.navigationBar.name}
         </Typography>
 
         {/* TECHNOLOGIES */}
         <Link
-          className={`${styles.link} ${styles.technologies}`}
+          className={clsx(
+            "rounded-2xl px-4 py-2",
+            "transition-[transform,_background-color] will-change-[transform,_background-color]",
+            "hover:scale-105 hover:bg-interface",
+            "focus:scale-105 focus:bg-interface",
+            "active:scale-95",
+          )}
           href={`#${homeContent.technologies.id}`}
         >
           <Typography as="span">
@@ -43,7 +66,13 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* COMPANIES */}
         <Link
-          className={`${styles.link} ${styles.companies}`}
+          className={clsx(
+            "rounded-2xl px-4 py-2",
+            "transition-[transform,_background-color] will-change-[transform,_background-color]",
+            "hover:scale-105 hover:bg-interface",
+            "focus:scale-105 focus:bg-interface",
+            "active:scale-95",
+          )}
           href={`#${homeContent.companies.id}`}
         >
           <Typography as="span">
@@ -53,7 +82,13 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* CONTACT ME */}
         <Link
-          className={`${styles.link} ${styles.contactMe}`}
+          className={clsx(
+            "rounded-2xl px-4 py-2",
+            "transition-[transform,_background-color] will-change-[transform,_background-color]",
+            "hover:scale-105 hover:bg-interface",
+            "focus:scale-105 focus:bg-interface",
+            "active:scale-95",
+          )}
           href={`#${homeContent.contactMe.id}`}
         >
           <Typography as="span">
@@ -63,7 +98,13 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* DOWNLOAD CV */}
         <Link
-          className={`${styles.link} ${styles.downloadCV}`}
+          className={clsx(
+            "rounded-2xl border-2 border-solid border-white px-4 py-2",
+            "transition-[transform,_background-color] will-change-[transform,_background-color]",
+            "hover:scale-105 hover:bg-interface",
+            "focus:scale-105 focus:bg-interface",
+            "active:scale-95",
+          )}
           download={homeContent.navigationBar.downloadCV.download}
           href={homeContent.navigationBar.downloadCV.href}
         >
