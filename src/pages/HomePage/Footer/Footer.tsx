@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
-import FooterProps from "./Footer.types";
+import type FooterProps from "./Footer.types";
 
 export default function Footer(props: FooterProps) {
   const desktop = useMediaQuery("(min-width: 768px)");

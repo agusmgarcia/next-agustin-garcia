@@ -5,7 +5,7 @@ import Banner from "./Banner";
 import Companies from "./Companies";
 import ContactMe from "./ContactMe";
 import Footer from "./Footer";
-import HomePageProps from "./HomePage.types";
+import type HomePageProps from "./HomePage.types";
 import NavigationBar from "./NavigationBar";
 import Technologies from "./Technologies";
 

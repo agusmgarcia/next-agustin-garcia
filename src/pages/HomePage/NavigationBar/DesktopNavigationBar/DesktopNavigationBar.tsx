@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
-import DesktopNavigationBarProps from "./DesktopNavigationBar.types";
+import type DesktopNavigationBarProps from "./DesktopNavigationBar.types";
 
 export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
   const { homeContent } = useHomeContent();

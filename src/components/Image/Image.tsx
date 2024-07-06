@@ -2,9 +2,9 @@ import "lazysizes";
 import "lazysizes/plugins/parent-fit/ls.parent-fit";
 
 import { useMemo } from "react";
-import Imgix, { SharedImgixAndSourceProps } from "react-imgix";
+import Imgix, { type SharedImgixAndSourceProps } from "react-imgix";
 
-import ImageProps from "./Image.types";
+import type ImageProps from "./Image.types";
 
 export default function Image(props: ImageProps) {
   if (process.env.NODE_ENV === "production") return ImageImgix(props);

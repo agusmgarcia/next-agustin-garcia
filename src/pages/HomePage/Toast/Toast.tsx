@@ -7,7 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { Typography } from "#src/components";
 import { useNotification } from "#src/store";
 
-import ToastProps from "./Toast.types";
+import type ToastProps from "./Toast.types";
 
 export default function Toast(_: ToastProps) {
   const desktop = useMediaQuery("(min-width: 768px)");

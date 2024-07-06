@@ -87,8 +87,6 @@ export default function useMobileNavigationBar() {
     [],
   );
 
-  console.log(state);
-
   return { modalRef, setOpen, state };
 }
 

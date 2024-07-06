@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 import { Typography } from "#src/components";
 
-import SectionProps from "./Section.types";
+import type SectionProps from "./Section.types";
 
 export default function Section({ title, ...props }: SectionProps) {
   return (

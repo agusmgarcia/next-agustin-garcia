@@ -1,4 +1,4 @@
-import CloseIconProps from "./CloseIcon.types";
+import type CloseIconProps from "./CloseIcon.types";
 
 export default function CloseIcon(props: CloseIconProps) {
   return (

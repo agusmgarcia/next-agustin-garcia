@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 import Typography from "../Typography";
-import InputProps from "./Input.types";
+import type InputProps from "./Input.types";
 
 export default function Input({
   as,

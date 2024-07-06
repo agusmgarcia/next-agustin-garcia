@@ -1,6 +1,6 @@
 import "./_app.css";
 
-import { AppProps } from "next/app";
+import { type AppProps } from "next/app";
 import Head from "next/head";
 
 import { StoreProvider } from "#src/store";

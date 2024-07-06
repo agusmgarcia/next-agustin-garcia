@@ -6,7 +6,7 @@ import { useHomeContent } from "#src/store";
 
 import Section from "../Section";
 import useContactMe from "./ContactMe.hooks";
-import ContactMeProps from "./ContactMe.types";
+import type ContactMeProps from "./ContactMe.types";
 
 export default function ContactMe(props: ContactMeProps) {
   const desktop = useMediaQuery("(min-width: 768px)");

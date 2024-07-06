@@ -1,2 +1,2 @@
 export { default } from "./Section";
-export type { default as SectionProps } from "./Section.types";
+export { type default as SectionProps } from "./Section.types";

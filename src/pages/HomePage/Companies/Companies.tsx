@@ -5,7 +5,7 @@ import { Image, Link } from "#src/components";
 import { useHomeContent } from "#src/store";
 
 import Section from "../Section";
-import CompaniesProps from "./Companies.types";
+import type CompaniesProps from "./Companies.types";
 
 export default function Companies(props: CompaniesProps) {
   const desktop = useMediaQuery("(min-width: 768px)");

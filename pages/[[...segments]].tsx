@@ -1,9 +1,9 @@
 import { equals } from "@agusmgarcia/react-core";
-import type { GetStaticPaths, GetStaticProps } from "next";
+import { type GetStaticPaths, type GetStaticProps } from "next";
 import React from "react";
 
 import { HomePage } from "#src/pages";
-import { HomeContent } from "#src/store";
+import { type HomeContent } from "#src/store";
 
 export const getStaticPaths: GetStaticPaths<{
   segments: string[] | undefined;

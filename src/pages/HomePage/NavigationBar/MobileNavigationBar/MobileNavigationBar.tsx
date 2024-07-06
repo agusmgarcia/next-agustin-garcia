@@ -5,7 +5,7 @@ import { BarsIcon, CloseIcon, Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
 import useMobileNavigationBar from "./MobileNavigationBar.hooks";
-import MobileNavigationBarProps from "./MobileNavigationBar.types";
+import type MobileNavigationBarProps from "./MobileNavigationBar.types";
 
 export default function MobileNavigationBar(props: MobileNavigationBarProps) {
   const { modalRef, setOpen, state } = useMobileNavigationBar();

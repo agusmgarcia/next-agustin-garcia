@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { Image } from "#src/components";
 import { useHomeContent } from "#src/store";
 
-import BannerProps from "./Banner.types";
+import type BannerProps from "./Banner.types";
 
 export default function Banner(props: BannerProps) {
   const { homeContent } = useHomeContent();

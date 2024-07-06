@@ -5,7 +5,7 @@ import { Image, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
 import Section from "../Section";
-import AboutMeProps from "./AboutMe.types";
+import type AboutMeProps from "./AboutMe.types";
 
 export default function AboutMe(props: AboutMeProps) {
   const desktop = useMediaQuery("(min-width: 768px)");

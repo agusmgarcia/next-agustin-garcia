@@ -1,4 +1,4 @@
-import BarsIconProps from "./BarsIcon.types";
+import type BarsIconProps from "./BarsIcon.types";
 
 export default function BarsIcon(props: BarsIconProps) {
   return (

@@ -1,2 +1,2 @@
 export { default } from "./CloseIcon";
-export type { default as CloseIconProps } from "./CloseIcon.types";
+export { type default as CloseIconProps } from "./CloseIcon.types";

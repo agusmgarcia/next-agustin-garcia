@@ -1,6 +1,6 @@
 import {
-  ChangeEventHandler,
-  FormEventHandler,
+  type ChangeEventHandler,
+  type FormEventHandler,
   useCallback,
   useState,
 } from "react";
