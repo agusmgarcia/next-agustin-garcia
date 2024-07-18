@@ -23,11 +23,19 @@ jobs:
           exit 1
         shell: bash
 
+      - name: Get version from tag
+        id: get-version-from-tag
+        uses: frabert/replace-string-action@v2
+        with:
+          pattern: v(.*)
+          replace-with: $1
+          string: ${{ github.ref_name }}
+
       - name: Checkout
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3.6.0
+        uses: actions/setup-node@v4
         with:
           cache: npm
           node-version: 20
@@ -40,35 +48,38 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint
+      - name: Check
         run: npm run check
         shell: bash
 
-      - name: Get version from tag
-        id: get-version-from-tag
-        uses: frabert/replace-string-action@v2.4
-        with:
-          pattern: v(.*)
-          replace-with: $1
-          string: ${{ github.ref_name }}
+      - name: Test
+        run: npm test
+        shell: bash
 
       - name: Build
         run: npm run build
         shell: bash
         env:
+          BASE_PATH: /${{ github.event.repository.name }}
           NEXT_PUBLIC_APP_VERSION: ${{ steps.get-version-from-tag.outputs.replaced }}
 
       - name: Create release
         if: ${{ github.event_name != 'workflow_dispatch' }}
-        uses: ncipollo/release-action@v1.12.0
+        uses: ncipollo/release-action@v1
         with:
           name: Version ${{ steps.get-version-from-tag.outputs.replaced }}
           tag: ${{ github.ref_name }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Deploy
-        uses: w9jds/firebase-action@v2.2.2
+      - name: Configure pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          args: deploy
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          name: github-pages
+          path: out
+          retention-days: 1
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
