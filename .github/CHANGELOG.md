@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.4.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.4.0)
+
+> 20 July 2024
+
+- **HomeContentSlice**: reload when starting
+- **500**: alter title
+- **404**: alter title
+- bump `@agusmgarcia/react-core` to 2.4.1
+- start using **TailwindCSS**
+
 ## [v1.3.38](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.38)
 
 > 10 June 2024
