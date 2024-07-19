@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps<{
       _app: {
         initialsData: {},
         pageLanguage: "en",
-        pageTitle: "error",
+        pageTitle: "Error",
       },
     },
   };
