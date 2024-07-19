@@ -1,4 +1,5 @@
 import { createSlice, useSWR } from "@agusmgarcia/react-core";
+import { useEffect } from "react";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };
@@ -54,7 +55,13 @@ export type HomeContentSlice = {
 
 export default createSlice<HomeContentSlice>(
   (initialHomeContent: HomeContent | undefined) => {
-    const { data } = useSWR(initialHomeContent);
+    const { data, setData } = useSWR(initialHomeContent);
+
+    useEffect(() => {
+      import("#public/contents/home.en.json")
+        .then((result) => result.default)
+        .then(setData);
+    }, [setData]);
 
     return { data };
   },
