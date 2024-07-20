@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://agustin-garcia.web.app/sitemap.xml
