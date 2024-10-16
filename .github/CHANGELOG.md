@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.4.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.4.1)
+
+> 16 October 2024
+
+- stop using `clsx` in favor of `twMerge`
+- bump dependencies
+
 ## [v1.4.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.4.0)
 
 > 20 July 2024
