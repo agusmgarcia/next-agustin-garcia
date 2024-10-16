@@ -1,5 +1,5 @@
-import clsx from "clsx";
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
 import type TypographyProps from "./Typography.types";
 
@@ -14,14 +14,16 @@ export default function Typography({
     as ?? "p",
     {
       ...props,
-      className: clsx(className, "text-white font-medium", {
-        "text-3xl": variant === "1.875rem",
-        "text-4xl": variant === "2.25rem",
-        "text-5xl": variant === "3rem",
-        "text-base": variant === "1rem",
-        "text-xl": variant === "1.25rem",
-        "text-xs": variant === "0.75rem",
-      }),
+      className: twMerge(
+        "text-white font-medium",
+        variant === "1.875rem" && "text-3xl",
+        variant === "2.25rem" && "text-4xl",
+        variant === "3rem" && "text-5xl",
+        variant === "1rem" && "text-base",
+        variant === "1.25rem" && "text-xl",
+        variant === "0.75rem" && "text-xs",
+        className,
+      ),
     },
     children,
   );

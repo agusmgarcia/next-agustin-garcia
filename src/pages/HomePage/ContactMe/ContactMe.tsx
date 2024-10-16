@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@agusmgarcia/react-core";
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import { Button, Input, Spinner, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
@@ -22,7 +22,7 @@ export default function ContactMe(props: ContactMeProps) {
       title={homeContent.contactMe.subtitle}
     >
       <form
-        className={clsx("grid w-full grid-cols-1 gap-4", "md:grid-cols-2")}
+        className={twMerge("grid w-full grid-cols-1 gap-4", "md:grid-cols-2")}
         onSubmit={handleSubmit}
       >
         {/* NAME */}

@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import { Image } from "#src/components";
 import { useHomeContent } from "#src/store";
@@ -10,7 +10,7 @@ export default function Banner(props: BannerProps) {
   if (homeContent === undefined) return <></>;
 
   return (
-    <div className={clsx(props.className, "h-screen w-full")}>
+    <div className={twMerge(props.className, "h-screen w-full")}>
       <Image
         alt={homeContent.banner.alt}
         className="h-full w-full object-cover"

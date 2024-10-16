@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@agusmgarcia/react-core";
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import { Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
@@ -14,13 +14,13 @@ export default function Footer(props: FooterProps) {
 
   return (
     <footer
-      className={clsx(
-        props.className,
+      className={twMerge(
         "mt-12 w-full border-t-[1px] border-solid border-t-white bg-interface py-12",
+        props.className,
       )}
     >
       <div
-        className={clsx(
+        className={twMerge(
           "mx-auto my-0 max-w-[calc(100%-4rem)] xl:max-w-[1216px]",
           "grid grid-cols-1 gap-4",
           "md:grid-cols-10 md:gap-0",
@@ -28,7 +28,7 @@ export default function Footer(props: FooterProps) {
       >
         {/* INFORMATION */}
         <div
-          className={clsx(
+          className={twMerge(
             "flex flex-col justify-between gap-2",
             "md:col-span-3 md:gap-4",
           )}
@@ -44,7 +44,7 @@ export default function Footer(props: FooterProps) {
 
         {/* SOCIAL LINKS */}
         <div
-          className={clsx(
+          className={twMerge(
             "flex flex-row items-center border-b-[1px] border-t-[1px] border-solid border-b-white border-t-white py-4",
             "md:col-span-4 md:flex-col md:border-none md:p-0 md:text-center",
           )}
@@ -54,7 +54,7 @@ export default function Footer(props: FooterProps) {
           </Typography>
 
           <div
-            className={clsx(
+            className={twMerge(
               "flex flex-1 flex-row items-center justify-end gap-4",
               "md:gap-6",
             )}
@@ -62,7 +62,7 @@ export default function Footer(props: FooterProps) {
             {homeContent.footer.socialLinks.content.map((sl) => (
               <Link
                 key={sl.href}
-                className={clsx(
+                className={twMerge(
                   "grayscale transition-transform will-change-transform",
                   "hover:scale-105 hover:grayscale-0",
                   "focus:scale-105 focus:grayscale-0",
@@ -86,7 +86,7 @@ export default function Footer(props: FooterProps) {
 
         {/* LOCATION */}
         <div
-          className={clsx(
+          className={twMerge(
             "flex flex-row justify-between",
             "md:col-span-3 md:flex-col md:text-right",
           )}

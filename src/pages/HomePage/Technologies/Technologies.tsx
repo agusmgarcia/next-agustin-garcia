@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@agusmgarcia/react-core";
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import { Image, Link } from "#src/components";
 import { useHomeContent } from "#src/store";
@@ -20,7 +20,7 @@ export default function Technologies(props: TechnologiesProps) {
       title={homeContent.technologies.subtitle}
     >
       <div
-        className={clsx(
+        className={twMerge(
           "grid w-full grid-cols-3 gap-2",
           "md:grid-cols-5 md:gap-4",
         )}
@@ -28,7 +28,7 @@ export default function Technologies(props: TechnologiesProps) {
         {homeContent.technologies.links.map((t) => (
           <Link
             key={t.href}
-            className={clsx(
+            className={twMerge(
               "flex items-center justify-center rounded-2xl p-4",
               "transition-[transform,_background-color] will-change-[transform,_background-color]",
               "hover:scale-105 hover:bg-interface",

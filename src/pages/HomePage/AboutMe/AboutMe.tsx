@@ -1,5 +1,5 @@
 import { useMediaQuery } from "@agusmgarcia/react-core";
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import { Image, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
@@ -18,7 +18,7 @@ export default function AboutMe(props: AboutMeProps) {
       <div className="flex flex-col items-center justify-center gap-12">
         <Image
           alt={homeContent.aboutMe.image.alt}
-          className={clsx(
+          className={twMerge(
             "rounded-full border-2 border-solid border-white object-cover",
             "h-[224px] w-[224px] md:h-[256px] md:w-[256px]",
           )}

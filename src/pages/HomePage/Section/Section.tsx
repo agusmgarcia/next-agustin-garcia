@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import { Typography } from "#src/components";
 
@@ -8,11 +8,11 @@ export default function Section({ title, ...props }: SectionProps) {
   return (
     <section
       {...props}
-      className={clsx(
-        props.className,
+      className={twMerge(
         "mx-auto my-0 min-h-screen w-full max-w-[calc(100%-6rem)]",
         "md:max-w-3xl",
         "flex flex-col items-center justify-center gap-8",
+        props.className,
       )}
     >
       {/* TITLE */}

@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import { Image, Link, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
@@ -11,20 +11,20 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
   return (
     <nav
-      className={clsx(
-        props.className,
+      className={twMerge(
         "h-24 w-full bg-interface bg-opacity-50",
+        props.className,
       )}
     >
       <div
-        className={clsx(
+        className={twMerge(
           "mx-auto my-0 max-w-[calc(100%-4rem)] xl:max-w-[1216px]",
           "flex h-full flex-row items-center justify-between gap-4",
         )}
       >
         {/* ABOUT ME */}
         <Link
-          className={clsx(
+          className={twMerge(
             "flex flex-row items-center justify-center",
             "transition-transform will-change-transform",
             "hover:scale-105",
@@ -50,7 +50,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* TECHNOLOGIES */}
         <Link
-          className={clsx(
+          className={twMerge(
             "rounded-2xl px-4 py-2",
             "transition-[transform,_background-color] will-change-[transform,_background-color]",
             "hover:scale-105 hover:bg-interface",
@@ -66,7 +66,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* COMPANIES */}
         <Link
-          className={clsx(
+          className={twMerge(
             "rounded-2xl px-4 py-2",
             "transition-[transform,_background-color] will-change-[transform,_background-color]",
             "hover:scale-105 hover:bg-interface",
@@ -82,7 +82,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* CONTACT ME */}
         <Link
-          className={clsx(
+          className={twMerge(
             "rounded-2xl px-4 py-2",
             "transition-[transform,_background-color] will-change-[transform,_background-color]",
             "hover:scale-105 hover:bg-interface",
@@ -98,7 +98,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
 
         {/* DOWNLOAD CV */}
         <Link
-          className={clsx(
+          className={twMerge(
             "rounded-2xl border-2 border-solid border-white px-4 py-2",
             "transition-[transform,_background-color] will-change-[transform,_background-color]",
             "hover:scale-105 hover:bg-interface",
