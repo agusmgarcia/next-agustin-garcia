@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.0)
+
+> 8 November 2024
+
+- adjust footer content
+- reorganice techs
+- add tailwindcss technology
+
 ## [v1.4.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.4.1)
 
 > 16 October 2024
