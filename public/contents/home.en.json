@@ -317,13 +317,13 @@
         "title": "HTML"
       },
       {
-        "href": "https://sass-lang.com/",
+        "href": "https://tailwindcss.com/",
         "image": {
-          "alt": "SASS",
-          "src": "/assets/logo-sass.svg"
+          "alt": "Tailwind CSS",
+          "src": "/assets/logo-tailwind.svg"
         },
         "target": "_blank",
-        "title": "SASS"
+        "title": "Tailwind CSS"
       },
       {
         "href": "https://firebase.google.com/",
