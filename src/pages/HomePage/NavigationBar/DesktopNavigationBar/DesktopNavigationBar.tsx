@@ -35,7 +35,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         >
           <Image
             alt={homeContent.navigationBar.aboutMe.image.alt}
-            className="h-[48px] w-[48px] rounded-full border-2 border-solid border-white bg-white object-cover"
+            className="size-[48px] rounded-full border-2 border-solid border-white bg-white object-cover"
             height={48}
             loading="eager"
             src={homeContent.navigationBar.aboutMe.image.src}

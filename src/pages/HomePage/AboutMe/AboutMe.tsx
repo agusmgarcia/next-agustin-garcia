@@ -35,7 +35,7 @@ export default function AboutMe(props: AboutMeProps) {
 
           <Typography
             as="p"
-            className="rounded-lg border-2 border-solid border-transparent bg-black bg-opacity-40 p-4 text-center"
+            className="rounded-lg border-2 border-solid border-transparent bg-black/40 p-4 text-center"
             variant="1.25rem"
           >
             {homeContent.aboutMe.description}

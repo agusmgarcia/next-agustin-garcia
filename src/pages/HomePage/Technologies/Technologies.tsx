@@ -41,7 +41,7 @@ export default function Technologies(props: TechnologiesProps) {
           >
             <Image
               alt={t.image.alt}
-              className="h-[64px] w-[64px] md:h-[96px] md:w-[96px]"
+              className="size-[64px] md:size-[96px]"
               height={desktop ? 96 : 64}
               src={t.image.src}
               width={desktop ? 96 : 64}

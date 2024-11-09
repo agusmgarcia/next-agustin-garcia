@@ -19,7 +19,7 @@ export default function Section({ title, ...props }: SectionProps) {
       {title && (
         <Typography
           as="h2"
-          className="border-b-solid border-b-2 border-b-interface pb-4 pt-32"
+          className="border-b-2 border-solid border-b-interface pb-4 pt-32"
           variant="2.25rem"
         >
           {title}

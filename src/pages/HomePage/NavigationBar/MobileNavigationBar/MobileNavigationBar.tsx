@@ -54,7 +54,7 @@ function Bar({
           >
             <Image
               alt={homeContent.navigationBar.aboutMe.image.alt}
-              className="h-[40px] w-[40px] rounded-full border-2 border-solid border-white bg-white object-cover"
+              className="size-[40px] rounded-full border-2 border-solid border-white bg-white object-cover"
               height={40}
               loading="eager"
               src={homeContent.navigationBar.aboutMe.image.src}

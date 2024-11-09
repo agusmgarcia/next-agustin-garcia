@@ -15,7 +15,7 @@ export default function HomePage(_: HomePageProps) {
       <NavigationBar className="fixed top-0 z-[1] flex-initial" />
       <main className="relative flex flex-auto flex-col">
         <Toast />
-        <Banner className="absolute -z-[1]" />
+        <Banner className="absolute z-[-1]" />
         <AboutMe />
         <Technologies />
         <Companies />

@@ -13,7 +13,7 @@ export default function Banner(props: BannerProps) {
     <div className={twMerge(props.className, "h-screen w-full")}>
       <Image
         alt={homeContent.banner.alt}
-        className="h-full w-full object-cover"
+        className="size-full object-cover"
         loading="eager"
         sizes="auto"
         src={homeContent.banner.src}

@@ -74,7 +74,7 @@ export default function Footer(props: FooterProps) {
               >
                 <Image
                   alt={sl.image.alt}
-                  className="h-[32px] w-[32px] object-contain md:h-[40px] md:w-[40px]"
+                  className="size-[32px] object-contain md:size-[40px]"
                   height={desktop ? 40 : 32}
                   src={sl.image.src}
                   width={desktop ? 40 : 32}
