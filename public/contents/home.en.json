@@ -218,13 +218,13 @@
         "title": "React"
       },
       {
-        "href": "https://redux.js.org/",
+        "href": "https://tailwindcss.com/",
         "image": {
-          "alt": "Redux",
-          "src": "/assets/logo-redux.svg"
+          "alt": "Tailwind CSS",
+          "src": "/assets/logo-tailwind.svg"
         },
         "target": "_blank",
-        "title": "Redux"
+        "title": "Tailwind CSS"
       },
       {
         "href": "https://www.typescriptlang.org/",
@@ -245,6 +245,15 @@
         "title": "Javascript"
       },
       {
+        "href": "https://redux.js.org/",
+        "image": {
+          "alt": "Redux",
+          "src": "/assets/logo-redux.svg"
+        },
+        "target": "_blank",
+        "title": "Redux"
+      },
+      {
         "href": "https://nodejs.org/",
         "image": {
           "alt": "NodeJS",
@@ -263,13 +272,13 @@
         "title": "GraphQL"
       },
       {
-        "href": "https://dotnet.microsoft.com/",
+        "href": "https://developer.mozilla.org/en-US/docs/Web/HTML",
         "image": {
-          "alt": ".Net Core",
-          "src": "/assets/logo-net.svg"
+          "alt": "HTML",
+          "src": "/assets/logo-html.svg"
         },
         "target": "_blank",
-        "title": ".Net Core"
+        "title": "HTML"
       },
       {
         "href": "https://developer.mozilla.org/en-US/docs/Web/CSS",
@@ -279,6 +288,15 @@
         },
         "target": "_blank",
         "title": "CSS"
+      },
+      {
+        "href": "https://dotnet.microsoft.com/",
+        "image": {
+          "alt": ".Net Core",
+          "src": "/assets/logo-net.svg"
+        },
+        "target": "_blank",
+        "title": ".Net Core"
       },
       {
         "href": "https://golang.org/",
@@ -299,33 +317,6 @@
         "title": "Azure"
       },
       {
-        "href": "https://git-scm.com/",
-        "image": {
-          "alt": "Git",
-          "src": "/assets/logo-git.svg"
-        },
-        "target": "_blank",
-        "title": "Git"
-      },
-      {
-        "href": "https://developer.mozilla.org/en-US/docs/Web/HTML",
-        "image": {
-          "alt": "HTML",
-          "src": "/assets/logo-html.svg"
-        },
-        "target": "_blank",
-        "title": "HTML"
-      },
-      {
-        "href": "https://tailwindcss.com/",
-        "image": {
-          "alt": "Tailwind CSS",
-          "src": "/assets/logo-tailwind.svg"
-        },
-        "target": "_blank",
-        "title": "Tailwind CSS"
-      },
-      {
         "href": "https://firebase.google.com/",
         "image": {
           "alt": "Firebase",
@@ -333,6 +324,15 @@
         },
         "target": "_blank",
         "title": "Firebase"
+      },
+      {
+        "href": "https://git-scm.com/",
+        "image": {
+          "alt": "Git",
+          "src": "/assets/logo-git.svg"
+        },
+        "target": "_blank",
+        "title": "Git"
       }
     ],
     "subtitle": "Technologies"
