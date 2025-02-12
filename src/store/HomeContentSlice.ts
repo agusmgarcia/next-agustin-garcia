@@ -1,5 +1,7 @@
-import { createSlice, useSWR } from "@agusmgarcia/react-core";
-import { useEffect } from "react";
+import {
+  createServerSlice,
+  type CreateServerSliceTypes,
+} from "@agusmgarcia/react-core";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };
@@ -49,20 +51,11 @@ export type HomeContent = {
 
 type Image = { alt: string; src: string };
 
-export type HomeContentSlice = {
-  data: HomeContent | undefined;
-};
+export type HomeContentSlice = CreateServerSliceTypes.SliceOf<
+  "homeContent",
+  HomeContent
+>;
 
-export default createSlice<HomeContentSlice>(
-  (initialHomeContent: HomeContent | undefined) => {
-    const { data, setData } = useSWR(initialHomeContent);
-
-    useEffect(() => {
-      import("#public/contents/home.en.json")
-        .then((result) => result.default)
-        .then(setData);
-    }, [setData]);
-
-    return { data };
-  },
+export default createServerSlice<HomeContentSlice>("homeContent", () =>
+  import("#public/contents/home.en.json").then((result) => result.default),
 );

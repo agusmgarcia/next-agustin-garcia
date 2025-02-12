@@ -59,10 +59,16 @@ export default function useContactMe() {
 
         setValues(initialValues);
         setSubmitting(false);
-        setNotification("success", homeContent.contactMe.feedback.success);
+        setNotification({
+          message: homeContent.contactMe.feedback.success,
+          type: "success",
+        });
       } catch (error) {
         setSubmitting(false);
-        setNotification("error", homeContent.contactMe.feedback.error);
+        setNotification({
+          message: homeContent.contactMe.feedback.error,
+          type: "error",
+        });
       }
     },
     [

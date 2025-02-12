@@ -1,19 +1,14 @@
 import { createStore } from "@agusmgarcia/react-core";
 
-import HomeContentSlice from "./HomeContentSlice";
-import NotificationSlice from "./NotificationSlice";
+import createHomeContentSlice from "./HomeContentSlice";
+import createNotificationSlice from "./NotificationSlice";
 
 export { type HomeContent, type HomeContentSlice } from "./HomeContentSlice";
 export { type Notification, type NotificationSlice } from "./NotificationSlice";
 
 const { useSelector, ...reactStore } = createStore(
-  {
-    homeContent: HomeContentSlice,
-    notification: NotificationSlice,
-  },
-  {
-    devtools: process.env.NODE_ENV === "development",
-  },
+  createHomeContentSlice,
+  createNotificationSlice,
 );
 
 export const StoreProvider = reactStore.StoreProvider;
@@ -26,6 +21,7 @@ export function useHomeContent() {
 
 export function useNotification() {
   return {
+    closeNotification: useSelector((state) => state.notification.close),
     notification: useSelector((state) => state.notification.data),
     setNotification: useSelector((state) => state.notification.set),
   };

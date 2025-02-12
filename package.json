@@ -1,11 +1,13 @@
 {
-  "name": "@agusmgarcia/agustin-garcia",
+  "name": "@agusmgarcia/next-agustin-garcia",
+  "version": "1.5.0",
   "private": true,
   "author": "Agus Garcia",
   "description": "Personal web site to show the technologies I have worked for and the technologies I use",
   "scripts": {
     "build": "agusmgarcia-react-core-build && del out/contents",
     "check": "agusmgarcia-react-core-check",
+    "deploy": "agusmgarcia-react-core-deploy",
     "format": "agusmgarcia-react-core-format",
     "start": "agusmgarcia-react-core-start",
     "postpack": "agusmgarcia-react-core-postpack",
@@ -14,7 +16,7 @@
     "test": "agusmgarcia-react-core-test"
   },
   "dependencies": {
-    "@agusmgarcia/react-core": "2.10.0",
+    "@agusmgarcia/react-core": "3.5.0",
     "lazysizes": "5.3.2",
     "react": "18.3.1",
     "react-imgix": "9.10.0",
@@ -23,8 +25,5 @@
   },
   "devDependencies": {
     "@types/react-imgix": "9.5.3"
-  },
-  "overrides": {
-    "micromatch": "4.0.8"
   }
 }

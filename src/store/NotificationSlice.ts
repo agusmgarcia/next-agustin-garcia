@@ -1,33 +1,43 @@
-import { createSlice, type Func, useSWR } from "@agusmgarcia/react-core";
-import { useCallback } from "react";
+import {
+  createGlobalSlice,
+  type CreateGlobalSliceTypes,
+  type Func,
+} from "@agusmgarcia/react-core";
 
 export type Notification = {
-  close: () => void;
   id: string;
   message: string;
   type: "error" | "success";
 };
 
-export type NotificationSlice = {
-  data: Notification | undefined;
-  set: Func<[type: "error" | "success", message: string, void]>;
-};
+export type NotificationSlice = CreateGlobalSliceTypes.SliceOf<
+  "notification",
+  {
+    close: Func<void, [notification: Notification]>;
+    data: Notification | undefined;
+    set: Func<void, [notification: Pick<Notification, "message" | "type">]>;
+  }
+>;
 
-export default createSlice<NotificationSlice>(() => {
-  const { data, setData } = useSWR<Notification>();
+export default createGlobalSlice<NotificationSlice>("notification", () => ({
+  close,
+  data: undefined,
+  set,
+}));
 
-  const set = useCallback(
-    (type: "error" | "success", message: string) => {
-      const id = Math.random().toString();
-      setData({
-        close: () => setData((prev) => (prev?.id === id ? undefined : prev)),
-        id,
-        message,
-        type,
-      });
-    },
-    [setData],
-  );
+function close(
+  notification: Notification,
+  context: CreateGlobalSliceTypes.Context<NotificationSlice>,
+) {
+  context.set((prevState) => ({
+    data: prevState.data?.id === notification.id ? undefined : prevState.data,
+  }));
+}
 
-  return { data, set };
-});
+function set(
+  notification: Pick<Notification, "message" | "type">,
+  context: CreateGlobalSliceTypes.Context<NotificationSlice>,
+) {
+  const id = Math.random().toString();
+  context.set({ data: { ...notification, id } });
+}
