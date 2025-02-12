@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.1)
+
+> February 12, 2025
+
+- bump @agusmgarcia\/react-core to 3.5.0
+
 ## [v1.5.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.0)
 
 > November 8, 2024
