@@ -96,7 +96,7 @@ export default function ContactMe(props: ContactMeProps) {
 
         {/* SUBMIT */}
         <Button
-          className="mt-4 md:col-span-2"
+          className="mt-4 flex items-center justify-center md:col-span-2"
           disabled={isSubmitting}
           type="submit"
         >
@@ -108,7 +108,7 @@ export default function ContactMe(props: ContactMeProps) {
             <Spinner
               color="white"
               height={desktop ? "1.25rem" : "1rem"}
-              strokeWidth="2"
+              strokeWidth="4"
               width={desktop ? "1.25rem" : "1rem"}
             />
           )}
