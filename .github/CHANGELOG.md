@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.3](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.3)
+
+> March 2, 2025
+
+- **Spinner**: animate it using tailwind
+- **ContactMe**: center the spinner
+- change undefined, null and empty by exclamations
+
 ## [v1.5.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.2)
 
 > March 2, 2025
