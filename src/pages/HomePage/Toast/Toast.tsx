@@ -14,7 +14,7 @@ export default function Toast(_: ToastProps) {
   const { closeNotification, notification } = useNotification();
 
   useEffect(() => {
-    if (notification === undefined) return;
+    if (!notification) return;
 
     const toastId = toast[notification.type](
       <ToastBody message={notification.message} />,

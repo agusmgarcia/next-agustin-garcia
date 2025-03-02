@@ -7,7 +7,7 @@ import type DesktopNavigationBarProps from "./DesktopNavigationBar.types";
 
 export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
   const { homeContent } = useHomeContent();
-  if (homeContent === undefined) return <></>;
+  if (!homeContent) return <></>;
 
   return (
     <nav

@@ -11,7 +11,7 @@ export default function Technologies(props: TechnologiesProps) {
   const desktop = useMediaQuery("(min-width: 768px)");
   const { homeContent } = useHomeContent();
 
-  if (homeContent === undefined) return <></>;
+  if (!homeContent) return <></>;
 
   return (
     <Section

@@ -36,8 +36,8 @@ export default function useContactMe() {
     async (event) => {
       event.preventDefault();
 
-      if (homeContent?.contactMe.feedback.error === undefined) return;
-      if (homeContent?.contactMe.feedback.success === undefined) return;
+      if (!homeContent?.contactMe.feedback.error) return;
+      if (!homeContent?.contactMe.feedback.success) return;
 
       setSubmitting(true);
       try {

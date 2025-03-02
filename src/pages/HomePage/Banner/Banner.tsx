@@ -7,7 +7,7 @@ import type BannerProps from "./Banner.types";
 
 export default function Banner(props: BannerProps) {
   const { homeContent } = useHomeContent();
-  if (homeContent === undefined) return <></>;
+  if (!homeContent) return <></>;
 
   return (
     <div className={twMerge(props.className, "h-screen w-full")}>

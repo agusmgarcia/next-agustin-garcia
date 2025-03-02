@@ -13,7 +13,7 @@ export default function ContactMe(props: ContactMeProps) {
   const { homeContent } = useHomeContent();
   const { form, handleChange, handleSubmit, isSubmitting } = useContactMe();
 
-  if (homeContent === undefined) return <></>;
+  if (!homeContent) return <></>;
 
   return (
     <Section

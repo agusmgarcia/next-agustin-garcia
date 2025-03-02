@@ -10,7 +10,7 @@ export default function Footer(props: FooterProps) {
   const desktop = useMediaQuery("(min-width: 768px)");
   const { homeContent } = useHomeContent();
 
-  if (homeContent === undefined) return <></>;
+  if (!homeContent) return <></>;
 
   return (
     <footer

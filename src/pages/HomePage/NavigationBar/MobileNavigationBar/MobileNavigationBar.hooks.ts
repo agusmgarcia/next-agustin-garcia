@@ -7,7 +7,7 @@ export default function useMobileNavigationBar() {
 
   useEffect(() => {
     const modal = modalRef.current;
-    if (modal === null) return;
+    if (!modal) return;
 
     if (state === "just-visible") {
       const handler = setTimeout(
@@ -35,7 +35,7 @@ export default function useMobileNavigationBar() {
 
   useEffect(() => {
     const modal = modalRef.current;
-    if (modal === null) return;
+    if (!modal) return;
 
     const handleClick = (event: MouseEvent) => {
       if (state !== "open") return;

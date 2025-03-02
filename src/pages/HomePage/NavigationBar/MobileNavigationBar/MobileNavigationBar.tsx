@@ -29,7 +29,7 @@ function Bar({
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const { homeContent } = useHomeContent();
-  if (homeContent === undefined) return <></>;
+  if (!homeContent) return <></>;
 
   return (
     <div
@@ -102,7 +102,7 @@ function Body({
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const { homeContent } = useHomeContent();
-  if (homeContent === undefined) return <></>;
+  if (!homeContent) return <></>;
 
   return (
     <div

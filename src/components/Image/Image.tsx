@@ -21,7 +21,7 @@ function ImageImgix({
   ...props
 }: ImageProps) {
   const imageProps = useMemo<SharedImgixAndSourceProps>(() => {
-    if (src === undefined || isSVG(src))
+    if (!src || isSVG(src))
       return {
         className,
         disableSrcSet: true,
@@ -69,8 +69,7 @@ function ImageSimple({
   ...props
 }: ImageProps) {
   const imageProps = useMemo(() => {
-    if (src === undefined || isSVG(src))
-      return { className, loading, sizes, src, srcSet };
+    if (!src || isSVG(src)) return { className, loading, sizes, src, srcSet };
 
     return {
       className: `lazyload ${className}`,
@@ -91,14 +90,14 @@ function isSVG(src: string): boolean {
 }
 
 function toNumber(value: string | number | undefined): number | undefined {
-  if (value === undefined) return undefined;
   if (typeof value === "number") return value;
+  if (!value) return undefined;
   if (isNaN(+value)) return undefined;
   return +value;
 }
 
 function toImgixURL(src: string | undefined): string {
-  return src !== undefined
+  return !!src
     ? `${src.replace("/assets/", "https://agustin-garcia.imgix.net/")}`
     : "";
 }
