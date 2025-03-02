@@ -1,12 +1,12 @@
 # Agustin Garcia
 
-The app is deployed here: [https://agustin-garcia.web.app/](https://agustin-garcia.web.app/)
+The app is deployed here: <https://agusmgarcia.github.io/next-agustin-garcia/>
 
-[![Continuous Integration & Deployment](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/continuous-integration-and-deployment.yml/badge.svg)](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/continuous-integration-and-deployment.yml)
+[![Deploy application](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/deploy-app.yml/badge.svg)](https://github.com/agusmgarcia/next-agustin-garcia/actions/deploy-app.yml)
 
-This is the personal page in which the author includes technologies he uses and companies he has worked for.
+This is a personal web site to show the technologies I have worked for and the technologies I use
 
-## Development environment
+## Getting started
 
 Clone the repository in your local machine
 
@@ -21,30 +21,27 @@ cd next-agustin-garcia
 npm i
 ```
 
+> Make sure to have exported an environment variable called `NODE_AUTH_TOKEN`. Its value should be your GitHub PAT.
+
 Start the project
 
 ```bash
 npm start
 ```
 
-## CI/CD
+## Deployments
 
 Every time a new tag is created with the pattern **v**_x.x.x_, the code will be built and deployed to the firebase app service automatically.
 
 Create and deploy a new tag using the following commands:
 
 ```bash
-git tag vx.x.x
-git push origin vx.x.x
+npm run deploy
 ```
-
-> Replace x.x.x by the current version number.
-
-## Technologies
 
 Some of the technologies used to build this project were:
 
+- [Imgix](https://imgix.com/)
 - [NextJS](https://nextjs.org/)
 - [React](https://reactjs.org/)
-- [Firebase](https://firebase.google.com/)
-- [Imgix](https://imgix.com/)
+- [Tailwind](https://tailwindcss.com)
