@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.5)
+
+> March 10, 2025
+
+- bump dependencies
+
 ## [v1.5.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.4)
 
 > March 2, 2025
