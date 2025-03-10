@@ -30,7 +30,7 @@ All notable changes to this project will be documented in this file.
 
 ## [v1.5.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.0)
 
-> November 8, 2024
+> November 9, 2024
 
 - adjust footer content
 - reorganice techs
@@ -254,7 +254,7 @@ All notable changes to this project will be documented in this file.
 
 ## [v1.3.12](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.12)
 
-> March 9, 2023
+> March 10, 2023
 
 - **tsconfig.json**: enable implicitOverride option
 
@@ -266,7 +266,7 @@ All notable changes to this project will be documented in this file.
 
 ## [v1.3.10](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.10)
 
-> February 16, 2023
+> February 17, 2023
 
 - bump @agusmgarcia/swr to 3.3.3
 - bump @agusmgarcia/eslint-config to 1.0.4
@@ -370,7 +370,7 @@ All notable changes to this project will be documented in this file.
 
 ## [v1.2.6](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.6)
 
-> October 20, 2022
+> October 21, 2022
 
 - **site.webmanifest**: change color
 
@@ -435,7 +435,7 @@ All notable changes to this project will be documented in this file.
 
 ## [v1.2.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.0)
 
-> August 13, 2022
+> August 14, 2022
 
 - **store**: start using zustand
 - stop using .npmrc file
