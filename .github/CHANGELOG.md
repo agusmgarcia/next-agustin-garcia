@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.6](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.6)
+
+> March 11, 2025
+
+- **README.md**: update file
+
 ## [v1.5.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.5)
 
 > March 10, 2025
