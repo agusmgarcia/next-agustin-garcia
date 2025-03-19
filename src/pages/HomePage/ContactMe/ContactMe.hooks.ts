@@ -63,7 +63,7 @@ export default function useContactMe() {
           message: homeContent.contactMe.feedback.success,
           type: "success",
         });
-      } catch (error) {
+      } catch {
         setSubmitting(false);
         setNotification({
           message: homeContent.contactMe.feedback.error,
