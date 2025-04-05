@@ -4,7 +4,7 @@ The app is deployed here: <https://agusmgarcia.github.io/next-agustin-garcia/>
 
 [![Deploy application](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/deploy-app.yml/badge.svg)](https://github.com/agusmgarcia/next-agustin-garcia/actions/workflows/deploy-app.yml)
 
-This is a personal web site to show the technologies I have worked for and the technologies I use
+This is a personal web site to show the technologies I have worked for and the technologies I use.
 
 ## Getting started
 
@@ -44,4 +44,4 @@ Some of the technologies used to build this project were:
 - [Imgix](https://imgix.com/)
 - [NextJS](https://nextjs.org/)
 - [React](https://reactjs.org/)
-- [Tailwind](https://tailwindcss.com)
+- [Tailwind](https://tailwindcss.com/)

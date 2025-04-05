@@ -1,5 +1,3 @@
-import "react-toastify/dist/ReactToastify.css";
-
 import { useMediaQuery } from "@agusmgarcia/react-core";
 import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
