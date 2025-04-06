@@ -12,11 +12,12 @@ export default function App({ Component, pageProps }: AppProps<any>) {
   return (
     <>
       <Head>
-        <title>{appProps.pageTitle}</title>
+        <title>{appProps?.pageTitle}</title>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <link href="favicon.ico" rel="icon" type="image/x-icon" />
       </Head>
 
-      <StoreProvider initialState={appProps.initialsData}>
+      <StoreProvider initialState={appProps?.initialsData}>
         <Component {...componentProps} />
       </StoreProvider>
     </>
