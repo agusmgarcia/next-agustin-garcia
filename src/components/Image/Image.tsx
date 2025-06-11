@@ -21,14 +21,14 @@ function ImageImgix({
   ...props
 }: ImageProps) {
   const imageProps = useMemo<SharedImgixAndSourceProps>(() => {
-    if (!src || isSVG(src))
+    if (!src || typeof src !== "string" || isSVG(src))
       return {
         className,
         disableSrcSet: true,
         height: toNumber(height),
         htmlAttributes: { loading },
         sizes: "auto",
-        src: toImgixURL(src),
+        src: typeof src !== "string" ? "" : toImgixURL(src),
         width: toNumber(width),
       };
 
@@ -69,7 +69,8 @@ function ImageSimple({
   ...props
 }: ImageProps) {
   const imageProps = useMemo(() => {
-    if (!src || isSVG(src)) return { className, loading, sizes, src, srcSet };
+    if (!src || typeof src !== "string" || isSVG(src))
+      return { className, loading, sizes, src, srcSet };
 
     return {
       className: `lazyload ${className}`,
