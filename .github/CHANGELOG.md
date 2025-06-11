@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.10](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.10)
+
+> June 11, 2025
+
+### Fixes 🎯
+
+- **NotificationSlice**: move close inside object
+- bump dependencies
+
 ## [v1.5.9](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.9)
 
 > April 29, 2025
