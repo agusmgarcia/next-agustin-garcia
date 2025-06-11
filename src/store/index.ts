@@ -21,7 +21,6 @@ export function useHomeContent() {
 
 export function useNotification() {
   return {
-    closeNotification: useSelector((state) => state.notification.close),
     notification: useSelector((state) => state.notification.data),
     setNotification: useSelector((state) => state.notification.set),
   };
