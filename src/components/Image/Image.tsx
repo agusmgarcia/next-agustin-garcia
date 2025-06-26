@@ -54,7 +54,7 @@ function ImageImgix({
   return (
     <Imgix
       {...imageProps}
-      // @ts-ignore
+      // @ts-expect-error bla
       htmlAttributes={{ ...props, ...imageProps.htmlAttributes }}
     />
   );

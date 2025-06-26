@@ -1,4 +1,4 @@
-import { useMediaQuery } from "@agusmgarcia/react-core";
+import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import { twMerge } from "tailwind-merge";
 
 import { Image, Typography } from "#src/components";

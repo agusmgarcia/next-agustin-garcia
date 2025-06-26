@@ -1,4 +1,4 @@
-import { useMediaQuery } from "@agusmgarcia/react-core";
+import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 
 import DesktopNavigationBar from "./DesktopNavigationBar";
 import MobileNavigationBar from "./MobileNavigationBar";

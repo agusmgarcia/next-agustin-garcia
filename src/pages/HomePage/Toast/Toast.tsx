@@ -1,4 +1,4 @@
-import { useMediaQuery } from "@agusmgarcia/react-core";
+import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 

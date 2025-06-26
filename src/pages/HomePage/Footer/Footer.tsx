@@ -1,4 +1,4 @@
-import { useMediaQuery } from "@agusmgarcia/react-core";
+import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import { twMerge } from "tailwind-merge";
 
 import { Image, Link, Typography } from "#src/components";
@@ -45,7 +45,7 @@ export default function Footer(props: FooterProps) {
         {/* SOCIAL LINKS */}
         <div
           className={twMerge(
-            "flex flex-row items-center border-b-[1px] border-t-[1px] border-solid border-b-white border-t-white py-4",
+            "flex flex-row items-center border-t-[1px] border-b-[1px] border-solid border-t-white border-b-white py-4",
             "md:col-span-4 md:flex-col md:border-none md:p-0 md:text-center",
           )}
         >

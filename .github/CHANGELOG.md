@@ -598,7 +598,6 @@ All notable changes to this project will be documented in this file.
 - **CHANGELOG.md**: update file
 - add engines information
 - setup .nvmrc
-- assign read permissions
 - **Toast**: adjust autoclose property
 - **\_app.css**: remove font-smoothing prop
 

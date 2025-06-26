@@ -10,12 +10,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
   if (!homeContent) return <></>;
 
   return (
-    <nav
-      className={twMerge(
-        "h-24 w-full bg-interface bg-opacity-50",
-        props.className,
-      )}
-    >
+    <nav className={twMerge("h-24 w-full bg-interface/50", props.className)}>
       <div
         className={twMerge(
           "mx-auto my-0 max-w-[calc(100%-4rem)] xl:max-w-[1216px]",

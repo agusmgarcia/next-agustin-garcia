@@ -34,8 +34,8 @@ function Bar({
   return (
     <div
       className={twMerge(
-        "relative z-[3] bg-interface bg-opacity-50 transition-colors",
-        isOpen && "bg-opacity-90",
+        "relative z-[3] bg-interface/50 transition-colors",
+        isOpen && "bg-interface/90",
       )}
     >
       <div className="mx-auto my-0 max-w-[calc(100%-4rem)]">
@@ -108,9 +108,9 @@ function Body({
     <div
       aria-hidden={isOpen ? undefined : true}
       className={twMerge(
-        "absolute left-0 right-0 z-[2] -translate-y-[150%] transition-[transform,_background-color] will-change-[transform,_background-color]",
-        "rounded-bl-[2rem] rounded-br-[2rem] bg-interface bg-opacity-50",
-        isOpen && "translate-y-0 bg-opacity-90",
+        "absolute right-0 left-0 z-[2] -translate-y-[150%] transition-[transform,_background-color] will-change-[transform,_background-color]",
+        "rounded-br-[2rem] rounded-bl-[2rem] bg-interface/50",
+        isOpen && "translate-y-0 bg-interface/90",
       )}
     >
       <div className="mx-auto my-0 max-w-[calc(100%-4rem)]">
@@ -124,7 +124,7 @@ function Body({
         />
 
         {/* LINKS */}
-        <div className="flex flex-col gap-4 pb-8 pt-4">
+        <div className="flex flex-col gap-4 pt-4 pb-8">
           {/* TECHNOLOGIES */}
           <Link
             className={twMerge(
@@ -213,11 +213,11 @@ function Screen({
     <div
       className={twMerge(
         "fixed z-[1] bg-black transition-opacity",
-        state === "closing" && "bottom-0 left-0 right-0 top-0 opacity-0",
-        state === "open" && "bottom-0 left-0 right-0 top-0 opacity-75",
-        state === "closed" && "bottom-1/2 left-1/2 right-1/2 top-1/2 hidden",
+        state === "closing" && "top-0 right-0 bottom-0 left-0 opacity-0",
+        state === "open" && "top-0 right-0 bottom-0 left-0 opacity-75",
+        state === "closed" && "top-1/2 right-1/2 bottom-1/2 left-1/2 hidden",
         state === "just-visible" &&
-          "bottom-1/2 left-1/2 right-1/2 top-1/2 opacity-100",
+          "top-1/2 right-1/2 bottom-1/2 left-1/2 opacity-100",
       )}
     />
   );

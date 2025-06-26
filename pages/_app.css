@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-interface: #663399;
+}
 
 html {
   @apply scroll-smooth bg-gray-800;

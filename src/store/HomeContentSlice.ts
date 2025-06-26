@@ -1,7 +1,7 @@
 import {
   createServerSlice,
   type CreateServerSliceTypes,
-} from "@agusmgarcia/react-core";
+} from "@agusmgarcia/react-essentials-store";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };

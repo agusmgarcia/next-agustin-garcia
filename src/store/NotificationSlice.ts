@@ -1,8 +1,8 @@
 import {
   createGlobalSlice,
   type CreateGlobalSliceTypes,
-  type Func,
-} from "@agusmgarcia/react-core";
+} from "@agusmgarcia/react-essentials-store";
+import { type Func } from "@agusmgarcia/react-essentials-utils";
 
 export type Notification = {
   close: Func;

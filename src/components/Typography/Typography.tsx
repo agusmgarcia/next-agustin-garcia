@@ -15,7 +15,7 @@ export default function Typography({
     {
       ...props,
       className: twMerge(
-        "text-white font-medium",
+        "font-medium text-white",
         variant === "1.875rem" && "text-3xl",
         variant === "2.25rem" && "text-4xl",
         variant === "3rem" && "text-5xl",
