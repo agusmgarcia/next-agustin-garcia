@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.11](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.11)
+
+> June 30, 2025
+
+### Fixes 🎯
+
+- start using react-essentials
+
 ## [v1.5.10](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.10)
 
 > June 11, 2025
