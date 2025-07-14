@@ -30,7 +30,7 @@ export default function Technologies(props: TechnologiesProps) {
             key={t.href}
             className={twMerge(
               "flex items-center justify-center rounded-2xl p-4",
-              "transition-[transform,_background-color] will-change-[transform,_background-color]",
+              "transition-[background-color,_scale]",
               "hover:scale-105 hover:bg-interface",
               "focus:scale-105 focus:bg-interface",
               "active:scale-95",

@@ -63,7 +63,7 @@ export default function Footer(props: FooterProps) {
               <Link
                 key={sl.href}
                 className={twMerge(
-                  "grayscale transition-transform will-change-transform",
+                  "grayscale transition-transform",
                   "hover:scale-105 hover:grayscale-0",
                   "focus:scale-105 focus:grayscale-0",
                   "active:scale-95",

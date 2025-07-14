@@ -32,7 +32,7 @@ export default function Companies(props: CompaniesProps) {
               "rounded-2xl border-2 border-solid border-interface bg-white p-2",
               "md:p-4",
               "flex items-center justify-center",
-              "transition-[transform,_box-shadow] will-change-[transform,_box-shadow]",
+              "transition-[box-shadow,_scale]",
               "hover:scale-105 hover:shadow-md hover:shadow-interface",
               "focus:scale-105 focus:shadow-md focus:shadow-interface",
               "active:scale-95",
