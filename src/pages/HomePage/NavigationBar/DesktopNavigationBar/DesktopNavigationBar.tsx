@@ -21,7 +21,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "flex flex-row items-center justify-center",
-            "transition-transform will-change-transform",
+            "transition-transform",
             "hover:scale-105",
             "focus:scale-105",
             "active:scale-95",
@@ -47,7 +47,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "rounded-2xl px-4 py-2",
-            "transition-[transform,_background-color] will-change-[transform,_background-color]",
+            "transition-[background-color,_scale]",
             "hover:scale-105 hover:bg-interface",
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",
@@ -63,7 +63,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "rounded-2xl px-4 py-2",
-            "transition-[transform,_background-color] will-change-[transform,_background-color]",
+            "transition-[background-color,_scale]",
             "hover:scale-105 hover:bg-interface",
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",
@@ -79,7 +79,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "rounded-2xl px-4 py-2",
-            "transition-[transform,_background-color] will-change-[transform,_background-color]",
+            "transition-[background-color,_scale]",
             "hover:scale-105 hover:bg-interface",
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",
@@ -95,7 +95,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "rounded-2xl border-2 border-solid border-white px-4 py-2",
-            "transition-[transform,_background-color] will-change-[transform,_background-color]",
+            "transition-[background-color,_scale]",
             "hover:scale-105 hover:bg-interface",
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",

@@ -25,7 +25,7 @@ export default function Input({
         {...(props as any)}
         className={twMerge(
           "rounded-2xl border-2 border-solid border-white bg-transparent p-4 outline-none",
-          "transition-[transform,_box-shadow] will-change-[transform,_box-shadow]",
+          "transition-[box-shadow,_scale]",
           "disabled:cursor-not-allowed",
           "enabled:focus:scale-105 enabled:focus:shadow-[0_0_5px_5px] enabled:focus:shadow-interface",
           className,

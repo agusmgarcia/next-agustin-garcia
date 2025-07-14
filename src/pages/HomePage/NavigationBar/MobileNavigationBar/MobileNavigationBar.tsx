@@ -43,7 +43,7 @@ function Bar({
           {/* ABOUT ME */}
           <Link
             className={twMerge(
-              "transition-transform will-change-transform",
+              "transition-transform",
               "hover:scale-105",
               "focus:scale-105",
               "active:scale-95",
@@ -70,7 +70,7 @@ function Bar({
           {/* TOOGLER */}
           <button
             className={twMerge(
-              "cursor-pointer border-none bg-none px-2 transition-transform will-change-transform",
+              "cursor-pointer border-none bg-none px-2 transition-transform",
               "hover:scale-105",
               "focus:scale-105",
               "active:scale-95",
@@ -108,7 +108,7 @@ function Body({
     <div
       aria-hidden={isOpen ? undefined : true}
       className={twMerge(
-        "absolute right-0 left-0 z-[2] -translate-y-[150%] transition-[transform,_background-color] will-change-[transform,_background-color]",
+        "absolute right-0 left-0 z-[2] -translate-y-[150%] transition-[background-color,_translate]",
         "rounded-br-[2rem] rounded-bl-[2rem] bg-interface/50",
         isOpen && "translate-y-0 bg-interface/90",
       )}
@@ -118,7 +118,7 @@ function Body({
         <div
           className={twMerge(
             "scale-x-0 border-t-[1px] border-solid border-t-white",
-            "transition-transform delay-150 will-change-transform",
+            "transition-transform delay-150",
             isOpen && "scale-x-100",
           )}
         />
@@ -129,7 +129,7 @@ function Body({
           <Link
             className={twMerge(
               "w-fit bg-none px-4 py-2",
-              "transition-transform will-change-transform",
+              "transition-transform",
               "hover:scale-105",
               "focus:scale-105",
               "active:scale-95",
@@ -147,7 +147,7 @@ function Body({
           <Link
             className={twMerge(
               "w-fit bg-none px-4 py-2",
-              "transition-transform will-change-transform",
+              "transition-transform",
               "hover:scale-105",
               "focus:scale-105",
               "active:scale-95",
@@ -165,7 +165,7 @@ function Body({
           <Link
             className={twMerge(
               "w-fit bg-none px-4 py-2",
-              "transition-transform will-change-transform",
+              "transition-transform",
               "hover:scale-105",
               "focus:scale-105",
               "active:scale-95",
@@ -184,7 +184,7 @@ function Body({
             className={twMerge(
               "rounded-2xl border-2 border-solid border-white",
               "w-fit bg-none px-4 py-2",
-              "transition-transform will-change-transform",
+              "transition-transform",
               "hover:scale-105",
               "focus:scale-105",
               "active:scale-95",
