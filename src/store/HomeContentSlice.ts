@@ -1,7 +1,5 @@
-import {
-  createServerSlice,
-  type CreateServerSliceTypes,
-} from "@agusmgarcia/react-essentials-store";
+import { ServerSlice } from "@agusmgarcia/react-essentials-store";
+import { type Const } from "@agusmgarcia/react-essentials-utils";
 
 export type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };
@@ -51,11 +49,17 @@ export type HomeContent = {
 
 type Image = { alt: string; src: string };
 
-export type HomeContentSlice = CreateServerSliceTypes.SliceOf<
-  "homeContent",
-  HomeContent
->;
+export default class HomeContentSlice extends ServerSlice<HomeContent> {
+  constructor(homeContent: HomeContent) {
+    super(homeContent);
+  }
 
-export default createServerSlice<HomeContentSlice>("homeContent", () =>
-  import("#public/contents/home.en.json").then((result) => result.default),
-);
+  protected override buildRequest(): undefined {
+    return undefined;
+  }
+
+  protected override async fetch(): Promise<Const<HomeContent>> {
+    const result = await import("#public/contents/home.en.json");
+    return result.default;
+  }
+}

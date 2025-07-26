@@ -17,8 +17,8 @@
     "test": "react-essentials-commands-test"
   },
   "dependencies": {
-    "@agusmgarcia/react-essentials-store": "^0.7.0",
-    "@agusmgarcia/react-essentials-utils": "^0.7.0",
+    "@agusmgarcia/react-essentials-store": "file:../react-essentials/packages/react-essentials-store/agusmgarcia-react-essentials-store-1.0.10-rc47.tgz",
+    "@agusmgarcia/react-essentials-utils": "file:../react-essentials/packages/react-essentials-utils/agusmgarcia-react-essentials-utils-1.0.11-rc47.tgz",
     "lazysizes": "^5.3.2",
     "next": "^15.4.4",
     "react": "^19.1.0",

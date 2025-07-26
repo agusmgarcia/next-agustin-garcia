@@ -1,42 +1,25 @@
-import {
-  createGlobalSlice,
-  type CreateGlobalSliceTypes,
-} from "@agusmgarcia/react-essentials-store";
-import { type Func } from "@agusmgarcia/react-essentials-utils";
+import { GlobalSlice } from "@agusmgarcia/react-essentials-store";
 
 export type Notification = {
-  close: Func;
   id: string;
   message: string;
   type: "error" | "success";
 };
 
-export type NotificationSlice = CreateGlobalSliceTypes.SliceOf<
-  "notification",
-  {
-    data: Notification | undefined;
-    set: Func<void, [notification: Pick<Notification, "message" | "type">]>;
+export default class NotificationSlice extends GlobalSlice<
+  Notification | undefined
+> {
+  constructor() {
+    super(undefined);
   }
->;
 
-export default createGlobalSlice<NotificationSlice>("notification", () => ({
-  data: undefined,
-  set,
-}));
+  set(notification: Pick<Notification, "message" | "type">): void {
+    const id = Math.random().toString();
+    this.state = { ...notification, id };
+  }
 
-function set(
-  notification: Pick<Notification, "message" | "type">,
-  context: CreateGlobalSliceTypes.Context<NotificationSlice>,
-) {
-  const id = Math.random().toString();
-  context.set({
-    data: {
-      ...notification,
-      close: () =>
-        context.regenerate().set((prevState) => ({
-          data: prevState.data?.id === id ? undefined : prevState.data,
-        })),
-      id,
-    },
-  });
+  close(id: string): void {
+    if (this.state?.id !== id) return;
+    this.state = undefined;
+  }
 }

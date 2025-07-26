@@ -1,3 +1,4 @@
+import { delay } from "@agusmgarcia/react-essentials-utils";
 import {
   type ChangeEventHandler,
   type FormEventHandler,
@@ -41,21 +42,7 @@ export default function useContactMe() {
 
       setSubmitting(true);
       try {
-        const response = await fetch(
-          "https://api.emailjs.com/api/v1.0/email/send",
-          {
-            body: JSON.stringify({
-              service_id: "service_vmkbm19",
-              template_id: "template_pav1yqi",
-              template_params: values,
-              user_id: "user_XKPaTWupTGOTu5zPzfiiF",
-            }),
-            headers: { "Content-Type": "application/json" },
-            method: "POST",
-          },
-        );
-
-        if (response.status !== 200) throw new Error();
+        await delay(3000);
 
         setValues(initialValues);
         setSubmitting(false);
@@ -75,7 +62,6 @@ export default function useContactMe() {
       homeContent?.contactMe.feedback.error,
       homeContent?.contactMe.feedback.success,
       setNotification,
-      values,
     ],
   );
 
