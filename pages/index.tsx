@@ -5,7 +5,7 @@ import { type HomeContent } from "#src/store";
 
 export const getStaticProps: GetStaticProps<{
   _app: {
-    initialsData: Partial<{ homeContent: HomeContent }>;
+    initialsData: Partial<{ homeContent: [HomeContent] }>;
     pageTitle: string;
   };
 }> = async () => {
@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps<{
   return {
     props: {
       _app: {
-        initialsData: { homeContent },
+        initialsData: { homeContent: [homeContent] },
         pageTitle: homeContent.title,
       },
     },

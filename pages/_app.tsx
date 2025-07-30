@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps<any>) {
         />
       </Head>
 
-      <StoreProvider initialState={appProps?.initialsData}>
+      <StoreProvider params={appProps?.initialsData}>
         <Component {...componentProps} />
       </StoreProvider>
     </>

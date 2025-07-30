@@ -1,9 +1,6 @@
-import {
-  createServerSlice,
-  type CreateServerSliceTypes,
-} from "@agusmgarcia/react-essentials-store";
+type Image = { alt: string; src: string };
 
-export type HomeContent = {
+type HomeContent = {
   aboutMe: { description: string; id: string; image: Image; name: string };
   banner: Image;
   companies: {
@@ -49,13 +46,6 @@ export type HomeContent = {
   title: string;
 };
 
-type Image = { alt: string; src: string };
+export type Request = {};
 
-export type HomeContentSlice = CreateServerSliceTypes.SliceOf<
-  "homeContent",
-  HomeContent
->;
-
-export default createServerSlice<HomeContentSlice>("homeContent", () =>
-  import("#public/contents/home.en.json").then((result) => result.default),
-);
+export default HomeContent;

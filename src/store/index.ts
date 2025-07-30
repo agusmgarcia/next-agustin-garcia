@@ -1,27 +1,32 @@
-import { createStore } from "@agusmgarcia/react-essentials-store";
+import { createReactStore } from "@agusmgarcia/react-essentials-store";
 
-import createHomeContentSlice from "./HomeContentSlice";
-import createNotificationSlice from "./NotificationSlice";
+import { type HomeContentSliceTypes } from "./HomeContentSlice";
+import HomeContentSlice from "./HomeContentSlice/HomeContentSlice";
+import { type NotificationSliceTypes } from "./NotificationSlice";
+import NotificationSlice from "./NotificationSlice/NotificationSlice";
 
-export { type HomeContent, type HomeContentSlice } from "./HomeContentSlice";
-export { type Notification, type NotificationSlice } from "./NotificationSlice";
+export type HomeContent = HomeContentSliceTypes.default;
+export type Notification = NotificationSliceTypes.default;
 
-const { useSelector, ...reactStore } = createStore(
-  createHomeContentSlice,
-  createNotificationSlice,
-);
+const { useSelector, ...reactStore } = createReactStore({
+  slices: {
+    homeContent: HomeContentSlice,
+    notification: NotificationSlice,
+  },
+});
 
 export const StoreProvider = reactStore.StoreProvider;
 
 export function useHomeContent() {
   return {
-    homeContent: useSelector((state) => state.homeContent.data),
+    homeContent: useSelector((state) => state.homeContent.response),
   };
 }
 
 export function useNotification() {
   return {
-    notification: useSelector((state) => state.notification.data),
+    closeNotification: useSelector((state) => state.notification.close),
+    notification: useSelector((state) => state.notification.state),
     setNotification: useSelector((state) => state.notification.set),
   };
 }

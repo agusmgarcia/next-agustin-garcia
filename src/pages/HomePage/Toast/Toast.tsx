@@ -9,7 +9,7 @@ import type ToastProps from "./Toast.types";
 
 export default function Toast(_: ToastProps) {
   const desktop = useMediaQuery("(min-width: 768px)");
-  const { notification } = useNotification();
+  const { closeNotification, notification } = useNotification();
 
   useEffect(() => {
     if (!notification) return;
@@ -21,14 +21,14 @@ export default function Toast(_: ToastProps) {
 
     const unsubscribe = toast.onChange((t) => {
       if (t.status !== "removed") return;
-      notification.close();
+      closeNotification(notification.id);
     });
 
     return () => {
       unsubscribe();
       toast.dismiss(toastId);
     };
-  }, [notification]);
+  }, [closeNotification, notification]);
 
   return (
     <ToastContainer
