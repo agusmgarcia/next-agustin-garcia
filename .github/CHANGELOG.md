@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.13](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.13)
+
+> August 4, 2025
+
+### Fixes 🎯
+
+- **store**: start using classes instead of functions
+- **README.md**: update file
+- bump dependencies
+
 ## [v1.5.12](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.12)
 
 > July 26, 2025
