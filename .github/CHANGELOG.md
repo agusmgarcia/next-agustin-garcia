@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 > August 4, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **store**: start using classes instead of functions
 - **README.md**: update file
@@ -24,7 +24,7 @@ All notable changes to this project will be documented in this file.
 
 > June 30, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - start using react-essentials
 
@@ -32,7 +32,7 @@ All notable changes to this project will be documented in this file.
 
 > June 11, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **NotificationSlice**: move close inside object
 - bump dependencies
@@ -41,7 +41,7 @@ All notable changes to this project will be documented in this file.
 
 > April 29, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - bump dependencies
 
@@ -52,13 +52,16 @@ All notable changes to this project will be documented in this file.
 ### Fixes 🎯
 
 - stop using document file
+
+### Chores ⚙️
+
 - bump dependencies
 
 ## [v1.5.7](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.7)
 
 > March 19, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - bump dependencies
 
@@ -66,7 +69,7 @@ All notable changes to this project will be documented in this file.
 
 > March 11, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **README.md**: update file
 
@@ -74,7 +77,7 @@ All notable changes to this project will be documented in this file.
 
 > March 10, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - bump dependencies
 
@@ -82,7 +85,7 @@ All notable changes to this project will be documented in this file.
 
 > March 2, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **README.md**: update file
 
@@ -94,13 +97,16 @@ All notable changes to this project will be documented in this file.
 
 - **Spinner**: animate it using tailwind
 - **ContactMe**: center the spinner
+
+### Chores ⚙️
+
 - change undefined, null and empty by exclamations
 
 ## [v1.5.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.2)
 
 > March 2, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - bump @agusmgarcia/react-core to 3.8.0
 
@@ -108,7 +114,7 @@ All notable changes to this project will be documented in this file.
 
 > February 12, 2025
 
-### Fixes 🎯
+### Chores ⚙️
 
 - bump @agusmgarcia/react-core to 3.5.0
 
@@ -123,15 +129,18 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
 - adjust footer content
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
 - bump dependencies
 
 ## [v1.4.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.4.1)
 
 > October 16, 2024
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - stop using clsx in favor of twMerge
@@ -161,11 +170,14 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
-- use node v20
 - **500.tsx**: alter title
 - **404.tsx**: alter title
 - adjust icon path
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
+- use node v20
 - stop being deployed into firebase
 - bump @agusmgarcia/react-core to 2.4.2
 - change the way modules are imported
@@ -176,7 +188,7 @@ All notable changes to this project will be documented in this file.
 
 > June 10, 2024
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - start using utils from @agusmgarcia/react-core
@@ -185,7 +197,7 @@ All notable changes to this project will be documented in this file.
 
 > June 10, 2024
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/react-core to 2.0.1
@@ -194,7 +206,7 @@ All notable changes to this project will be documented in this file.
 
 > June 5, 2024
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/react-swr to 6.1.0
@@ -207,7 +219,7 @@ All notable changes to this project will be documented in this file.
 
 - bump package dependencies
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump node 20
@@ -216,7 +228,7 @@ All notable changes to this project will be documented in this file.
 
 > December 25, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump package dependencies
@@ -225,7 +237,7 @@ All notable changes to this project will be documented in this file.
 
 > October 31, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/react-swr to 5.0.2
@@ -235,7 +247,7 @@ All notable changes to this project will be documented in this file.
 
 > October 27, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/react-swr to 5.0.1
@@ -245,7 +257,7 @@ All notable changes to this project will be documented in this file.
 
 > October 27, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - start using @agusmgarcia/react-core
@@ -254,7 +266,7 @@ All notable changes to this project will be documented in this file.
 
 > October 14, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump package dependencies
@@ -263,7 +275,7 @@ All notable changes to this project will be documented in this file.
 
 > October 3, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump package dependencies
@@ -272,7 +284,7 @@ All notable changes to this project will be documented in this file.
 
 > September 22, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump package dependencies
@@ -281,7 +293,7 @@ All notable changes to this project will be documented in this file.
 
 > September 11, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - update workflow
@@ -291,7 +303,7 @@ All notable changes to this project will be documented in this file.
 
 > September 8, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump package dependencies
@@ -300,7 +312,7 @@ All notable changes to this project will be documented in this file.
 
 > August 29, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump package dependencies
@@ -309,7 +321,7 @@ All notable changes to this project will be documented in this file.
 
 > August 20, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 4.7.0
@@ -318,7 +330,7 @@ All notable changes to this project will be documented in this file.
 
 > August 16, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - update workflow
@@ -329,7 +341,7 @@ All notable changes to this project will be documented in this file.
 
 > July 27, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump package dependencies
@@ -338,7 +350,7 @@ All notable changes to this project will be documented in this file.
 
 > July 14, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 4.5.3
@@ -347,7 +359,7 @@ All notable changes to this project will be documented in this file.
 
 > July 12, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 4.5.0
@@ -359,7 +371,7 @@ All notable changes to this project will be documented in this file.
 
 > July 3, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 4.4.0
@@ -374,7 +386,7 @@ All notable changes to this project will be documented in this file.
 
 - **ContactMe**: add autocomplete attribute
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - reimplement segments
@@ -387,7 +399,7 @@ All notable changes to this project will be documented in this file.
 
 > June 2, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 4.0.0
@@ -397,7 +409,7 @@ All notable changes to this project will be documented in this file.
 
 > May 25, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump to react 18
@@ -409,7 +421,7 @@ All notable changes to this project will be documented in this file.
 
 > May 15, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 3.8.1
@@ -420,7 +432,7 @@ All notable changes to this project will be documented in this file.
 
 > March 18, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 3.5.1
@@ -429,7 +441,7 @@ All notable changes to this project will be documented in this file.
 
 > March 15, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 3.4.1
@@ -439,7 +451,7 @@ All notable changes to this project will be documented in this file.
 
 > March 10, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - **tsconfig.json**: enable implicitOverride option
@@ -448,7 +460,7 @@ All notable changes to this project will be documented in this file.
 
 > March 8, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 3.4.0
@@ -457,7 +469,7 @@ All notable changes to this project will be documented in this file.
 
 > February 17, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 3.3.3
@@ -468,7 +480,7 @@ All notable changes to this project will be documented in this file.
 
 > January 4, 2023
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - adjust build script
@@ -489,9 +501,12 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
 - remove useIsomorphicLayout usage
 - **content**: update file
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
 - **store**: encapsulate useStore within hooks
 
 ## [v1.3.7](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.7)
@@ -504,7 +519,7 @@ All notable changes to this project will be documented in this file.
 - **Toast**: defer the load of the component
 - improve mobile navigation bar animation
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - rename index file
@@ -518,7 +533,7 @@ All notable changes to this project will be documented in this file.
 
 > December 12, 2022
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 3.2.0
@@ -530,11 +545,14 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
 - **\_app**: react to lang changes
+- **Notification**: dismiss old messages
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
 - move StoreProvider to the \_app
 - bump @agusmgarcia/swr to 3.1.1
-- **Notification**: dismiss old messages
 - **store**: change variable name
 - bump @agusmgarcia/swr to 3.1.0
 - set react-dom as dev dep
@@ -543,7 +561,7 @@ All notable changes to this project will be documented in this file.
 
 > December 8, 2022
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/swr to 3.0.2
@@ -556,14 +574,17 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
 - start routing not found traffic
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
 
 ## [v1.3.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.3.2)
 
 > December 8, 2022
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - adjust firebase configuration
@@ -576,7 +597,7 @@ All notable changes to this project will be documented in this file.
 
 - add i18n localized files
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - start routing not existing traffic to default page
@@ -593,14 +614,17 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
+- **ContactMe**: consume feedback from content
+- **MobileNavigationBar**: add aria-hidden when closed
+- **Link**: start using NextJS Link component
+
+### Chores ⚙️
+
 - **CHANGELOG.md**: update file
 - bump @agusmgarcia/eslint-config to 1.0.7
 - bump @agusmgarcia/swr to 3.0.1
-- **ContactMe**: consume feedback from content
 - bump @agusmgarcia/github-deploy-app to 1.0.6
 - bump @agusmgarcia/swr to 2.0.3
-- **MobileNavigationBar**: add aria-hidden when closed
-- **Link**: start using NextJS Link component
 
 ## [v1.2.6](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.6)
 
@@ -608,8 +632,11 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
 - **site.webmanifest**: change color
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
 
 ## [v1.2.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.5)
 
@@ -621,11 +648,14 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
+- **Toast**: adjust autoclose property
+- **\_app.css**: remove font-smoothing prop
+
+### Chores ⚙️
+
 - **CHANGELOG.md**: update file
 - add engines information
 - setup .nvmrc
-- **Toast**: adjust autoclose property
-- **\_app.css**: remove font-smoothing prop
 
 ## [v1.2.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.4)
 
@@ -633,16 +663,19 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
+- **HomePage**: adjust styles
+- **AboutMe**: reduce image size for desktop
+- **Toast**: allow dragging it on mobile
+
+### Chores ⚙️
+
 - **CHANGELOG.md**: update file
 - update eslint-config version
 - update github workflow
-- **HomePage**: adjust styles
 - **createNotification**: alter promise's resolve name
 - **Footer**: change content property name
 - set as property for Typographies
-- **AboutMe**: reduce image size for desktop
 - **Toast**: use clousure on the close argument
-- **Toast**: allow dragging it on mobile
 - rename resolve by close
 - stop using react-dom
 - stop using custom hooks in the store
@@ -651,7 +684,7 @@ All notable changes to this project will be documented in this file.
 
 > August 26, 2022
 
-### Fixes 🎯
+### Chores ⚙️
 
 - **CHANGELOG.md**: update file
 - align ignore files
@@ -669,10 +702,13 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
-- change colors name
 - **Image**: start delivering webp images
 - **createHomeContent**: adjust label
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
+- change colors name
 - **README.md**: update file
 
 ## [v1.2.1](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.1)
@@ -681,11 +717,14 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
 - **Image**: load blurred image on eager loading
 - **MobileNavigationBar**: alter button title
-- alter className's
 - start eager loading above-the-fold images
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
+- alter className's
 
 ## [v1.2.0](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.2.0)
 
@@ -693,11 +732,14 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
+- **Footer**: remove text-align property
+
+### Chores ⚙️
+
 - **CHANGELOG.md**: update file
 - **store**: start using zustand
 - stop using .npmrc file
 - start exporting component props
-- **Footer**: remove text-align property
 
 ## [v1.1.5](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.5)
 
@@ -705,8 +747,11 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
 - **MobileNavigationBar**: adjust transition-timing-delay
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
 
 ## [v1.1.4](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.4)
 
@@ -714,8 +759,11 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **CHANGELOG.md**: update file
 - adjust transition timing function
+
+### Chores ⚙️
+
+- **CHANGELOG.md**: update file
 
 ## [v1.1.3](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.3)
 
@@ -727,14 +775,17 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
+- **useHomeContent**: start targeting github link
+- **NavigationHeader**: close menu on image click
+
+### Chores ⚙️
+
 - **CHANGELOG.md**: update file
 - stop using package version
 - **site.webmanifest.json**: update file
 - **README.md**: update CI/CD instructions
 - **README.md**: update status badge
 - **useHomeContent**: translate some labels to english
-- **useHomeContent**: start targeting github link
-- **NavigationHeader**: close menu on image click
 
 ## [v1.1.2](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.1.2)
 
@@ -748,7 +799,7 @@ All notable changes to this project will be documented in this file.
 
 > July 10, 2022
 
-### Fixes 🎯
+### Chores ⚙️
 
 - whitelist font source
 
@@ -775,8 +826,11 @@ All notable changes to this project will be documented in this file.
 
 ### Fixes 🎯
 
-- **.eslintignore**: start ignoring service worker files
 - **firebase.json**: remove 404
+
+### Chores ⚙️
+
+- **.eslintignore**: start ignoring service worker files
 - start using new way
 - install required dependencies
 
@@ -788,7 +842,7 @@ All notable changes to this project will be documented in this file.
 
 - **agustin-garcia-cv.pdf**: update file
 
-### Fixes 🎯
+### Chores ⚙️
 
 - update workflows using the new mode
 - add eslint rule to sort properties
@@ -798,7 +852,7 @@ All notable changes to this project will be documented in this file.
 
 > May 9, 2022
 
-### Fixes 🎯
+### Chores ⚙️
 
 - rename to @agusmgarcia
 
@@ -819,7 +873,7 @@ All notable changes to this project will be documented in this file.
 - **Image**: add component
 - add public package
 
-### Fixes 🎯
+### Chores ⚙️
 
 - faet(NavigationBar): add component
 - setup project
