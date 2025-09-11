@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.16](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.16)
+
+> September 11, 2025
+
+### Fixes 🎯
+
+- **HomePage**: adjust version
+
 ## [v1.5.15](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.15)
 
 > September 11, 2025
