@@ -102,7 +102,7 @@ export default function Footer(props: FooterProps) {
           </div>
 
           <Typography as="p" className="self-end">
-            v{process.env.NEXT_PUBLIC_APP_VERSION ?? "0.0.0"}
+            v{process.env.APP_VERSION ?? "0.0.0"}
           </Typography>
         </div>
       </div>
