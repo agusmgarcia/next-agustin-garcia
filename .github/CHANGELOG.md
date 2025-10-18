@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.17](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.17)
+
+> October 18, 2025
+
+### Chores ⚙️
+
+- adjust folder structure
+
 ## [v1.5.16](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.16)
 
 > September 11, 2025
