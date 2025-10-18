@@ -1,8 +1,7 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-import { Typography } from "#src/components";
-
+import { Typography } from "../Typography";
 import type InputProps from "./Input.types";
 
 export default function Input({

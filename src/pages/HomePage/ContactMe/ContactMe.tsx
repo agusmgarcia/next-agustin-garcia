@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { Button, Input, Spinner, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
-import Section from "../Section";
+import { Section } from "../Section";
 import useContactMe from "./ContactMe.hooks";
 import type ContactMeProps from "./ContactMe.types";
 

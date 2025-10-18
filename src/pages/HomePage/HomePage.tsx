@@ -1,13 +1,13 @@
 import dynamic from "next/dynamic";
 
-import AboutMe from "./AboutMe";
-import Banner from "./Banner";
-import Companies from "./Companies";
-import ContactMe from "./ContactMe";
-import Footer from "./Footer";
+import { AboutMe } from "./AboutMe";
+import { Banner } from "./Banner";
+import { Companies } from "./Companies";
+import { ContactMe } from "./ContactMe";
+import { Footer } from "./Footer";
 import type HomePageProps from "./HomePage.types";
-import NavigationBar from "./NavigationBar";
-import Technologies from "./Technologies";
+import { NavigationBar } from "./NavigationBar";
+import { Technologies } from "./Technologies";
 
 export default function HomePage(_: HomePageProps) {
   return (
@@ -26,4 +26,6 @@ export default function HomePage(_: HomePageProps) {
   );
 }
 
-const Toast = dynamic(() => import("./Toast"), { ssr: false });
+const Toast = dynamic(() => import("./Toast").then((module) => module.Toast), {
+  ssr: false,
+});

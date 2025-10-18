@@ -1,7 +1,7 @@
 import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 
-import DesktopNavigationBar from "./DesktopNavigationBar";
-import MobileNavigationBar from "./MobileNavigationBar";
+import { DesktopNavigationBar } from "./DesktopNavigationBar";
+import { MobileNavigationBar } from "./MobileNavigationBar";
 import type NavigationBarProps from "./NavigationBar.types";
 
 export default function NavigationBar(props: NavigationBarProps) {

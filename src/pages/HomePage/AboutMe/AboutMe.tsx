@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import { Image, Typography } from "#src/components";
 import { useHomeContent } from "#src/store";
 
-import Section from "../Section";
+import { Section } from "../Section";
 import type AboutMeProps from "./AboutMe.types";
 
 export default function AboutMe(props: AboutMeProps) {
