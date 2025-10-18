@@ -1,7 +1,7 @@
 {
   "name": "@agusmgarcia/next-agustin-garcia",
   "core": "app",
-  "version": "1.5.17",
+  "version": "1.5.18",
   "private": true,
   "author": "Agus Garcia",
   "description": "Personal web site to show the technologies I have worked for and the technologies I use",
