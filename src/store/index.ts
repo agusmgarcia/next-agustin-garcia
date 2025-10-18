@@ -1,9 +1,13 @@
 import { createReactStore } from "@agusmgarcia/react-essentials-store";
 
-import { type HomeContentSliceTypes } from "./HomeContentSlice";
-import HomeContentSlice from "./HomeContentSlice/HomeContentSlice";
-import { type NotificationSliceTypes } from "./NotificationSlice";
-import NotificationSlice from "./NotificationSlice/NotificationSlice";
+import {
+  HomeContentSlice,
+  type HomeContentSliceTypes,
+} from "./HomeContentSlice";
+import {
+  NotificationSlice,
+  type NotificationSliceTypes,
+} from "./NotificationSlice";
 
 export type HomeContent = HomeContentSliceTypes.default;
 export type Notification = NotificationSliceTypes.default;
