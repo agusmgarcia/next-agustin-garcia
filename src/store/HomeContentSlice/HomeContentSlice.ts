@@ -11,7 +11,7 @@ export default class HomeContentSlice extends ServerSlice<
     super(homeContent);
   }
 
-  protected override onBuildRequest(): Request {
+  protected override onRequestBuild(): Request {
     return {};
   }
 
