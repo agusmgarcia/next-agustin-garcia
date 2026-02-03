@@ -15,28 +15,22 @@
     "test": "react-essentials-commands-test"
   },
   "dependencies": {
-    "@agusmgarcia/react-essentials-store": "^0.20.0",
-    "@agusmgarcia/react-essentials-utils": "^0.13.0",
+    "@agusmgarcia/react-essentials-store": "^0.22.0",
+    "@agusmgarcia/react-essentials-utils": "^0.14.0",
     "lazysizes": "^5.3.2",
-    "next": "^15.5.9",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-imgix": "^9.10.0",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-imgix": "^9.11.0",
     "react-toastify": "^11.0.5",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
-    "@agusmgarcia/react-essentials-commands": "^0.14.0",
+    "@agusmgarcia/react-essentials-commands": "^0.15.1",
     "@types/react-imgix": "^9.5.4",
     "del-cli": "^7.0.0"
   },
   "engines": {
     "node": "22.16.0"
-  },
-  "overrides": {
-    "react-imgix": {
-      "react": "^19.2.3",
-      "react-dom": "^19.2.3"
-    }
   }
 }
