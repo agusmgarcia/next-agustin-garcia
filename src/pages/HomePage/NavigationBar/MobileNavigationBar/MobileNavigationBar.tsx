@@ -189,7 +189,6 @@ function Body({
               "focus:scale-105",
               "active:scale-95",
             )}
-            download={homeContent.navigationBar.downloadCV.download}
             href={homeContent.navigationBar.downloadCV.href}
             onClick={() => setOpen(false)}
             tabIndex={!isOpen ? -1 : undefined}

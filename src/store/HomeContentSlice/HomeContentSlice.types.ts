@@ -33,7 +33,7 @@ type HomeContent = {
     aboutMe: { image: Image };
     companies: { text: string };
     contactMe: { text: string };
-    downloadCV: { download: string; href: string; text: string };
+    downloadCV: { href: string; text: string };
     name: string;
     technologies: { text: string };
     toogler: { closed: { title: string }; open: { title: string } };

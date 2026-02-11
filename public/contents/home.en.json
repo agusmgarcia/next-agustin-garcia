@@ -179,8 +179,7 @@
       "text": "Contact Me"
     },
     "downloadCV": {
-      "download": "agustin-garcia-cv.pdf",
-      "href": "https://github.com/agusmgarcia/tex-cv/raw/master/cv.english.pdf",
+      "href": "https://github.com/agusmgarcia/tex-cv/releases/latest/download/agustin-garcia-cv.pdf",
       "text": "Download CV"
     },
     "name": "Agustin Garcia",

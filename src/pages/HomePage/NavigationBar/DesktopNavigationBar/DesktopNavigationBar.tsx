@@ -100,7 +100,6 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",
           )}
-          download={homeContent.navigationBar.downloadCV.download}
           href={homeContent.navigationBar.downloadCV.href}
         >
           <Typography as="span">
