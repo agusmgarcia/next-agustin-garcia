@@ -1,17 +1,14 @@
-import React from "react";
 import { twMerge } from "tailwind-merge";
 
-import { Typography } from "../Typography";
+import { Typography } from "#src/components";
+
+import useInput from "./Input.hooks";
 import type InputProps from "./Input.types";
 
-export default function Input({
-  as,
-  children,
-  className,
-  label,
-  labelClassName,
-  ...props
-}: InputProps) {
+export default function Input(props: InputProps) {
+  const { as, children, className, label, labelClassName, ...rest } =
+    useInput(props);
+
   return (
     <Typography
       as="label"
@@ -21,10 +18,10 @@ export default function Input({
 
       <Typography
         as={as ?? "input"}
-        {...(props as any)}
+        {...(rest as any)}
         className={twMerge(
           "rounded-2xl border-2 border-solid border-white bg-transparent p-4 outline-none",
-          "transition-[box-shadow,_scale]",
+          "transition-[box-shadow,scale]",
           "disabled:cursor-not-allowed",
           "enabled:focus:scale-105 enabled:focus:shadow-[0_0_5px_5px] enabled:focus:shadow-interface",
           className,

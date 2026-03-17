@@ -8,10 +8,11 @@ import useMobileNavigationBar from "./MobileNavigationBar.hooks";
 import type MobileNavigationBarProps from "./MobileNavigationBar.types";
 
 export default function MobileNavigationBar(props: MobileNavigationBarProps) {
-  const { modalRef, setOpen, state } = useMobileNavigationBar();
+  const { className, modalRef, setOpen, state, ...rest } =
+    useMobileNavigationBar(props);
 
   return (
-    <nav ref={modalRef} className={twMerge(props.className, "w-full")}>
+    <nav {...rest} ref={modalRef} className={twMerge(className, "w-full")}>
       <div className="relative">
         <Bar isOpen={state === "open"} setOpen={setOpen} />
         <Body isOpen={state === "open"} setOpen={setOpen} />
@@ -34,7 +35,7 @@ function Bar({
   return (
     <div
       className={twMerge(
-        "relative z-[3] bg-interface/50 transition-colors",
+        "relative z-3 bg-interface/50 transition-colors",
         isOpen && "bg-interface/90",
       )}
     >
@@ -54,7 +55,7 @@ function Bar({
           >
             <Image
               alt={homeContent.navigationBar.aboutMe.image.alt}
-              className="size-[40px] rounded-full border-2 border-solid border-white bg-white object-cover"
+              className="size-10 rounded-full border-2 border-solid border-white bg-white object-cover"
               height={40}
               loading="eager"
               src={homeContent.navigationBar.aboutMe.image.src}
@@ -108,8 +109,8 @@ function Body({
     <div
       aria-hidden={isOpen ? undefined : true}
       className={twMerge(
-        "absolute right-0 left-0 z-[2] -translate-y-[150%] transition-[background-color,_translate]",
-        "rounded-br-[2rem] rounded-bl-[2rem] bg-interface/50",
+        "absolute right-0 left-0 z-2 -translate-y-[150%] transition-[background-color,translate]",
+        "rounded-br-4xl rounded-bl-4xl bg-interface/50",
         isOpen && "translate-y-0 bg-interface/90",
       )}
     >
@@ -117,7 +118,7 @@ function Body({
         {/* SEPARATOR */}
         <div
           className={twMerge(
-            "scale-x-0 border-t-[1px] border-solid border-t-white",
+            "scale-x-0 border-t border-solid border-t-white",
             "transition-transform delay-150",
             isOpen && "scale-x-100",
           )}
@@ -211,7 +212,7 @@ function Screen({
   return (
     <div
       className={twMerge(
-        "fixed z-[1] bg-black transition-opacity",
+        "fixed z-1 bg-black transition-opacity",
         state === "closing" && "top-0 right-0 bottom-0 left-0 opacity-0",
         state === "open" && "top-0 right-0 bottom-0 left-0 opacity-75",
         state === "closed" && "top-1/2 right-1/2 bottom-1/2 left-1/2 hidden",

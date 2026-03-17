@@ -1,23 +1,26 @@
-import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import { twMerge } from "tailwind-merge";
 
-import { Button, Input, Spinner, Typography } from "#src/components";
-import { useHomeContent } from "#src/store";
+import { Button, Input, Section, Spinner, Typography } from "#src/components";
 
-import { Section } from "../Section";
 import useContactMe from "./ContactMe.hooks";
 import type ContactMeProps from "./ContactMe.types";
 
 export default function ContactMe(props: ContactMeProps) {
-  const desktop = useMediaQuery("(min-width: 768px)");
-  const { homeContent } = useHomeContent();
-  const { form, handleChange, handleSubmit, isSubmitting } = useContactMe();
+  const {
+    desktop,
+    form,
+    handleChange,
+    handleSubmit,
+    homeContent,
+    isSubmitting,
+    ...rest
+  } = useContactMe(props);
 
   if (!homeContent) return <></>;
 
   return (
     <Section
-      className={props.className}
+      {...rest}
       id={homeContent.contactMe.id}
       title={homeContent.contactMe.subtitle}
     >

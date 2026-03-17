@@ -1,19 +1,23 @@
 import { twMerge } from "tailwind-merge";
 
 import { Image, Link, Typography } from "#src/components";
-import { useHomeContent } from "#src/store";
 
+import useDesktopNavigationBar from "./DesktopNavigationBar.hooks";
 import type DesktopNavigationBarProps from "./DesktopNavigationBar.types";
 
 export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
-  const { homeContent } = useHomeContent();
+  const { className, homeContent, ...rest } = useDesktopNavigationBar(props);
+
   if (!homeContent) return <></>;
 
   return (
-    <nav className={twMerge("h-24 w-full bg-interface/50", props.className)}>
+    <nav
+      {...rest}
+      className={twMerge("h-24 w-full bg-interface/50", className)}
+    >
       <div
         className={twMerge(
-          "mx-auto my-0 max-w-[calc(100%-4rem)] xl:max-w-[1216px]",
+          "mx-auto my-0 max-w-[calc(100%-4rem)] xl:max-w-304",
           "flex h-full flex-row items-center justify-between gap-4",
         )}
       >
@@ -30,7 +34,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         >
           <Image
             alt={homeContent.navigationBar.aboutMe.image.alt}
-            className="size-[48px] rounded-full border-2 border-solid border-white bg-white object-cover"
+            className="size-12 rounded-full border-2 border-solid border-white bg-white object-cover"
             height={48}
             loading="eager"
             src={homeContent.navigationBar.aboutMe.image.src}
@@ -47,7 +51,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "rounded-2xl px-4 py-2",
-            "transition-[background-color,_scale]",
+            "transition-[background-color,scale]",
             "hover:scale-105 hover:bg-interface",
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",
@@ -63,7 +67,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "rounded-2xl px-4 py-2",
-            "transition-[background-color,_scale]",
+            "transition-[background-color,scale]",
             "hover:scale-105 hover:bg-interface",
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",
@@ -79,7 +83,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "rounded-2xl px-4 py-2",
-            "transition-[background-color,_scale]",
+            "transition-[background-color,scale]",
             "hover:scale-105 hover:bg-interface",
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",
@@ -95,7 +99,7 @@ export default function DesktopNavigationBar(props: DesktopNavigationBarProps) {
         <Link
           className={twMerge(
             "rounded-2xl border-2 border-solid border-white px-4 py-2",
-            "transition-[background-color,_scale]",
+            "transition-[background-color,scale]",
             "hover:scale-105 hover:bg-interface",
             "focus:scale-105 focus:bg-interface",
             "active:scale-95",

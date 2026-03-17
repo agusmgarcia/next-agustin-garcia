@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export default function useMobileNavigationBar() {
+import type MobileNavigationBarProps from "./MobileNavigationBar.types";
+
+export default function useMobileNavigationBar(
+  props: MobileNavigationBarProps,
+) {
   const modalRef = useRef<HTMLElement>(null);
 
   const [state, setState] = useState<State>("closed");
@@ -87,7 +91,7 @@ export default function useMobileNavigationBar() {
     [],
   );
 
-  return { modalRef, setOpen, state };
+  return { ...props, modalRef, setOpen, state };
 }
 
 type State = "closed" | "closing" | "just-visible" | "open";

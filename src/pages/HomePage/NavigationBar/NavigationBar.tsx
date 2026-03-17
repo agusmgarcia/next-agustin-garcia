@@ -1,19 +1,12 @@
-import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
-
 import { DesktopNavigationBar } from "./DesktopNavigationBar";
 import { MobileNavigationBar } from "./MobileNavigationBar";
+import useNavigationBar from "./NavigationBar.hooks";
 import type NavigationBarProps from "./NavigationBar.types";
 
 export default function NavigationBar(props: NavigationBarProps) {
-  const desktop = useMediaQuery("(min-width: 768px)");
+  const { desktop, ...rest } = useNavigationBar(props);
 
-  return (
-    <>
-      {desktop ? (
-        <DesktopNavigationBar className={props.className} />
-      ) : (
-        <MobileNavigationBar className={props.className} />
-      )}
-    </>
-  );
+  if (desktop) return <DesktopNavigationBar {...rest} />;
+
+  return <MobileNavigationBar {...rest} />;
 }

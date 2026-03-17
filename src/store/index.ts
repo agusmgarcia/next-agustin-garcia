@@ -12,7 +12,7 @@ import {
 export type HomeContent = HomeContentSliceTypes.default;
 export type Notification = NotificationSliceTypes.default;
 
-const { useSelector, ...reactStore } = createReactStore({
+const reactStore = createReactStore({
   slices: {
     homeContent: HomeContentSlice,
     notification: NotificationSlice,
@@ -20,6 +20,8 @@ const { useSelector, ...reactStore } = createReactStore({
 });
 
 export const StoreProvider = reactStore.StoreProvider;
+
+const useSelector = reactStore.useSelector;
 
 export function useHomeContent() {
   return {

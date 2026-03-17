@@ -4,11 +4,14 @@ import "lazysizes/plugins/parent-fit/ls.parent-fit";
 import { useMemo } from "react";
 import Imgix, { type SharedImgixAndSourceProps } from "react-imgix";
 
+import useImage from "./Image.hooks";
 import type ImageProps from "./Image.types";
 
 export default function Image(props: ImageProps) {
-  if (process.env.NODE_ENV === "production") return ImageImgix(props);
-  return ImageSimple(props);
+  const { ...rest } = useImage(props);
+
+  if (process.env.NODE_ENV === "production") return ImageImgix(rest);
+  return ImageSimple(rest);
 }
 
 function ImageImgix({

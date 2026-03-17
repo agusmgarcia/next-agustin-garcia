@@ -1,27 +1,26 @@
-import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import { twMerge } from "tailwind-merge";
 
 import { Image, Link, Typography } from "#src/components";
-import { useHomeContent } from "#src/store";
 
+import useFooter from "./Footer.hooks";
 import type FooterProps from "./Footer.types";
 
 export default function Footer(props: FooterProps) {
-  const desktop = useMediaQuery("(min-width: 768px)");
-  const { homeContent } = useHomeContent();
+  const { className, desktop, homeContent, ...rest } = useFooter(props);
 
   if (!homeContent) return <></>;
 
   return (
     <footer
+      {...rest}
       className={twMerge(
-        "mt-12 w-full border-t-[1px] border-solid border-t-white bg-interface py-12",
-        props.className,
+        "mt-12 w-full border-t border-solid border-t-white bg-interface py-12",
+        className,
       )}
     >
       <div
         className={twMerge(
-          "mx-auto my-0 max-w-[calc(100%-4rem)] xl:max-w-[1216px]",
+          "mx-auto my-0 max-w-[calc(100%-4rem)] xl:max-w-304",
           "grid grid-cols-1 gap-4",
           "md:grid-cols-10 md:gap-0",
         )}
@@ -45,7 +44,7 @@ export default function Footer(props: FooterProps) {
         {/* SOCIAL LINKS */}
         <div
           className={twMerge(
-            "flex flex-row items-center border-t-[1px] border-b-[1px] border-solid border-t-white border-b-white py-4",
+            "flex flex-row items-center border-t border-b border-solid border-t-white border-b-white py-4",
             "md:col-span-4 md:flex-col md:border-none md:p-0 md:text-center",
           )}
         >
@@ -74,7 +73,7 @@ export default function Footer(props: FooterProps) {
               >
                 <Image
                   alt={sl.image.alt}
-                  className="size-[32px] object-contain md:size-[40px]"
+                  className="size-8 object-contain md:size-10"
                   height={desktop ? 40 : 32}
                   src={sl.image.src}
                   width={desktop ? 40 : 32}

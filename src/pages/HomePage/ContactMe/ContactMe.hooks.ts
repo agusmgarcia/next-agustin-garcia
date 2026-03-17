@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import {
   type ChangeEventHandler,
   type FormEventHandler,
@@ -7,6 +8,8 @@ import {
 
 import { useHomeContent, useNotification } from "#src/store";
 
+import type ContactMeProps from "./ContactMe.types";
+
 const initialValues = {
   company: "",
   details: "",
@@ -15,8 +18,10 @@ const initialValues = {
   phone: "",
 };
 
-export default function useContactMe() {
+export default function useContactMe(props: ContactMeProps) {
+  const desktop = useMediaQuery("(min-width: 768px)");
   const { homeContent } = useHomeContent();
+
   const [values, setValues] = useState(initialValues);
   const [isSubmitting, setSubmitting] = useState(false);
 
@@ -80,9 +85,12 @@ export default function useContactMe() {
   );
 
   return {
+    ...props,
+    desktop,
     form: values,
     handleChange,
     handleSubmit,
+    homeContent,
     isSubmitting,
   };
 }

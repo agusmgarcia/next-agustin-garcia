@@ -1,19 +1,16 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
+import useTypography from "./Typography.hooks";
 import type TypographyProps from "./Typography.types";
 
-export default function Typography({
-  as,
-  children,
-  className,
-  variant,
-  ...props
-}: TypographyProps) {
+export default function Typography(props: TypographyProps) {
+  const { as, children, className, variant, ...rest } = useTypography(props);
+
   return React.createElement(
     as ?? "p",
     {
-      ...props,
+      ...rest,
       className: twMerge(
         "font-medium text-white",
         variant === "1.875rem" && "text-3xl",

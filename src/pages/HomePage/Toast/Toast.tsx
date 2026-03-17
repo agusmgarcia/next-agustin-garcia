@@ -1,15 +1,13 @@
-import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import { useEffect } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 import { Typography } from "#src/components";
-import { useNotification } from "#src/store";
 
+import useToast from "./Toast.hooks";
 import type ToastProps from "./Toast.types";
 
-export default function Toast(_: ToastProps) {
-  const desktop = useMediaQuery("(min-width: 768px)");
-  const { closeNotification, notification } = useNotification();
+export default function Toast(props: ToastProps) {
+  const { closeNotification, desktop, notification, ...rest } = useToast(props);
 
   useEffect(() => {
     if (!notification) return;
@@ -32,6 +30,7 @@ export default function Toast(_: ToastProps) {
 
   return (
     <ToastContainer
+      {...rest}
       autoClose={2000}
       closeButton={desktop}
       closeOnClick={true}
@@ -45,6 +44,6 @@ export default function Toast(_: ToastProps) {
   );
 }
 
-function ToastBody(props: { message: string }) {
-  return <Typography as="span">{props.message}</Typography>;
+function ToastBody({ message }: { message: string }) {
+  return <Typography as="span">{message}</Typography>;
 }

@@ -2,17 +2,20 @@ import { twMerge } from "tailwind-merge";
 
 import { Typography } from "#src/components";
 
+import useSection from "./Section.hooks";
 import type SectionProps from "./Section.types";
 
-export default function Section({ title, ...props }: SectionProps) {
+export default function Section(props: SectionProps) {
+  const { children, className, title, ...rest } = useSection(props);
+
   return (
     <section
-      {...props}
+      {...rest}
       className={twMerge(
         "mx-auto my-0 min-h-screen w-full max-w-[calc(100%-6rem)]",
         "md:max-w-3xl",
         "flex flex-col items-center justify-center gap-8",
-        props.className,
+        className,
       )}
     >
       {/* TITLE */}
@@ -27,7 +30,7 @@ export default function Section({ title, ...props }: SectionProps) {
       )}
 
       {/* CHILDREN */}
-      {props.children}
+      {children}
     </section>
   );
 }

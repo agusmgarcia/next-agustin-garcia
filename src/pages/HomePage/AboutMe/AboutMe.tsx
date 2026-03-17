@@ -1,26 +1,23 @@
-import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import { twMerge } from "tailwind-merge";
 
-import { Image, Typography } from "#src/components";
-import { useHomeContent } from "#src/store";
+import { Image, Section, Typography } from "#src/components";
 
-import { Section } from "../Section";
+import useAboutMe from "./AboutMe.hooks";
 import type AboutMeProps from "./AboutMe.types";
 
 export default function AboutMe(props: AboutMeProps) {
-  const desktop = useMediaQuery("(min-width: 768px)");
-  const { homeContent } = useHomeContent();
+  const { desktop, homeContent, ...rest } = useAboutMe(props);
 
   if (!homeContent) return <></>;
 
   return (
-    <Section className={props.className} id={homeContent.aboutMe.id}>
+    <Section {...rest} id={homeContent.aboutMe.id}>
       <div className="flex flex-col items-center justify-center gap-12">
         <Image
           alt={homeContent.aboutMe.image.alt}
           className={twMerge(
             "rounded-full border-2 border-solid border-white object-cover",
-            "h-[224px] w-[224px] md:h-[256px] md:w-[256px]",
+            "h-56 w-56 md:h-64 md:w-[256px]",
           )}
           height={desktop ? 256 : 224}
           loading="eager"

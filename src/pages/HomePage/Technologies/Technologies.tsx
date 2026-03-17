@@ -1,21 +1,18 @@
-import { useMediaQuery } from "@agusmgarcia/react-essentials-utils";
 import { twMerge } from "tailwind-merge";
 
-import { Image, Link } from "#src/components";
-import { useHomeContent } from "#src/store";
+import { Image, Link, Section } from "#src/components";
 
-import { Section } from "../Section";
+import useTechnologies from "./Technologies.hooks";
 import type TechnologiesProps from "./Technologies.types";
 
 export default function Technologies(props: TechnologiesProps) {
-  const desktop = useMediaQuery("(min-width: 768px)");
-  const { homeContent } = useHomeContent();
+  const { desktop, homeContent, ...rest } = useTechnologies(props);
 
   if (!homeContent) return <></>;
 
   return (
     <Section
-      className={props.className}
+      {...rest}
       id={homeContent.technologies.id}
       title={homeContent.technologies.subtitle}
     >
@@ -30,7 +27,7 @@ export default function Technologies(props: TechnologiesProps) {
             key={t.href}
             className={twMerge(
               "flex items-center justify-center rounded-2xl p-4",
-              "transition-[background-color,_scale]",
+              "transition-[background-color,scale]",
               "hover:scale-105 hover:bg-interface",
               "focus:scale-105 focus:bg-interface",
               "active:scale-95",
@@ -41,7 +38,7 @@ export default function Technologies(props: TechnologiesProps) {
           >
             <Image
               alt={t.image.alt}
-              className="size-[64px] md:size-[96px]"
+              className="size-16 md:size-24"
               height={desktop ? 96 : 64}
               src={t.image.src}
               width={desktop ? 96 : 64}
