@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v1.5.22](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.22)
+
+> May 14, 2026
+
+### Chores ⚙️
+
+- adjust project structure
+- bump vulnerable dependencies
+
 ## [v1.5.21](https://github.com/agusmgarcia/next-agustin-garcia/tree/v1.5.21)
 
 > February 11, 2026
